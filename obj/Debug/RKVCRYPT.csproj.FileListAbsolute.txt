@@ -1,0 +1,8 @@
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\bin\Debug\RKVCRYPT.exe.config
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\bin\Debug\RKVCRYPT.exe
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\bin\Debug\RKVCRYPT.pdb
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\obj\Debug\RKVCRYPT.csproj.AssemblyReference.cache
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\obj\Debug\RKVCRYPT.csproj.SuggestedBindingRedirects.cache
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\obj\Debug\RKVCRYPT.csproj.CoreCompileInputs.cache
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\obj\Debug\RKVCRYPT.exe
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\obj\Debug\RKVCRYPT.pdb

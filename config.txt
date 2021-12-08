@@ -1,0 +1,45 @@
+########################################################################
+# FICHIER DE CONFIGURATION DE RKV-CRYPT PAR ROSKOVA         2021-12-07 #
+# Ce fichier permet de configurer les différent composant de RKV-CRYPT #
+# This file is used to configure the different components of RKV-CRYPT #
+########################################################################
+#  Active la prise en charge du fichier de configuration               #
+#  Lorsque désactivées, les configurations par défaut seront utilisées #
+########################################################################
+ENABLE-CONFIG=true
+########################################################################
+# Active la prise en charge du cryptage par décalage CESAR3            #
+# rendant le code plus difficile à lire https://roskova.ca/CESAR3      #
+# LORSQUE ACTIVÉ, LE LOGICIEL RKV-CRYPT DISTANT DOIT AVOIR LA MÊME CLÉ #
+########################################################################
+CESAR3-ENABLE=false
+CESAR3-KEY=CFL
+########################################################################
+# Configuration du système de gestion de chiffrement MK (MasterKey)    #
+# REGEX CORRESPONDANT: /^[RBLNPKCH](-[RBLNPKCH])*$/                    #
+# FORMAT DE NUMÉRISATION, CHAQUE NIVEAU INCLUS LE PRÉCÉDENT            #
+# L'utilisation de nu1 prends uniquement en charge Lettres et Chiffre  #
+# L'utilisation de nu2 permet la prise en charge des Spécial et accent #
+# L'utilisation de nu3 permet la prise en charge des Maj               #
+# L'utulisation de nu4 permet la prise en charge du cyrillique         #
+########################################################################
+MK-CONFIG-OVERPASS=false
+MK-DEFAULT=N-R-K-R-H-K-R-L
+NUM-FORMAT=nu3
+########################################################################
+# Personnalisation du logo RKV-CRYPT 6x11                              #
+########################################################################
+LOGO-ENABLE=true
+LOGO-CUSTOM=true
+L1=          #
+L2=@....@    #
+L3=(------)  #
+L4=(> ___ <) #
+L5=^^ ~~~ ^^ #
+L6=RKV-CRYPT #
+########################################################################
+# MESSAGE D'ERREUR ET MESSAGE GÉNÉRAL                                  #
+########################################################################
+TXT-MESSAGE=Veuillez entrer votre message à crypter
+MESSAGE-INPUT-MK=Veuillez entrer le format de MK
+INVALIDE-FORMAT-MK=Méthode de chiffrement invalide
