@@ -7,7 +7,7 @@ namespace RKVCRYPT
         public static string configLoad(string op)
         {
             bool enable = false;
-            string[] config = System.IO.File.ReadAllLines(@"C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\config.txt");
+            string[] config = System.IO.File.ReadAllLines(@"C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKV-CRYPT\config.txt");
 
             for (int i = 0; i < config.Length; i++)
             {

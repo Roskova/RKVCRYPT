@@ -106,7 +106,7 @@ namespace RKVCRYPT
             info.ligne3 = "# " + L4 + " Début du projet: 06-12-2021 16h40                        #";
             info.ligne4 = "# " + L3 + " Dernière version publié: 08-12-2021 01h06                #";
             info.ligne5 = "# " + L5 + " Version du logiciel: 1.0.0                               #";
-            info.ligne6 = "# " + L6 + " Github: http://github.com/roskova/RKV-CRYPT/ x            #";
+            info.ligne6 = "# " + L6 + " Github: http://github.com/Roskova/RKV-CRYPT/             #";
             info.ligne7 = "# " + L1 + " ROSKOVA@PROTONMAIL.COM                   ROSKOVA © 2021  #";
             info.ligne8 = "########################################################################";
             return print(info);

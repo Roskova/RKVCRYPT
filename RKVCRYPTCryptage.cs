@@ -29,7 +29,7 @@ namespace RKVCRYPT
             }
             return chaine;
         }
-        public static string binarosk(string chaine)
+        public static string binarosky(string chaine)
         {
             string tabRef = table("bin¬");
             tabRef = tabRef.Remove(0, 4);
@@ -62,7 +62,7 @@ namespace RKVCRYPT
         }
         public static string table(string op)
         {
-            string[] config = System.IO.File.ReadAllLines(@"C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\table.txt");
+            string[] config = System.IO.File.ReadAllLines(@"C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKV-CRYPT\table.txt");
             for (int i = 0; i < config.Length; i++)
             {
                 if (config[i].StartsWith(op))
@@ -114,10 +114,7 @@ namespace RKVCRYPT
                         }
                     }
                 }
-                for (int i = 0; i < tab.Length; i++)
-                {
-                    Console.Write("\t" + tab[i] + " " + tab2[i]);
-                }
+               
                 string ch = espacement(chaine);
                 string[] numC = ch.Split('¬');
                 for (int j = 0; j < numC.Length; j++)
@@ -229,10 +226,10 @@ namespace RKVCRYPT
                         tab2[i] = "" + i;
                     }
                 }
-                /*for (int i = 0; i < tab.Length; i++)
+                for (int i = 0; i < tab.Length; i++)
                 {
                     Console.Write("\t"+tab[i]+" " + tab2[i]);
-                }*/
+                }
                 string ch = espacement(chaine);
                 string[] numC = ch.Split('¬');
                 for (int j = 0; j < numC.Length; j++)
@@ -295,7 +292,7 @@ namespace RKVCRYPT
             //gestionMK();
             string input = Message();
             string num = Num(input);
-            string bin = binarosk(num);
+            string bin = binarosky(num);
             affichage(bin, num, input);
         }
     }
