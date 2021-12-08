@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace RKVCRYPT
 {
@@ -21,6 +22,7 @@ namespace RKVCRYPT
              * C KEY DE CESAR3 DE 3-5 CARACTÈRE DE LONG RESPECTANT LE FORMAT DE TEST CFL. 
              * H CONVERSION EN HEXADÉCIMAL
         */
+        //Permet de récupéré le nom de la table de chiffrement à utilisé dans le config.txt
         public static string format()
         {
             string nu = Program.Search("NUM-FORMAT=");
@@ -200,11 +202,6 @@ namespace RKVCRYPT
                     }
                 }
             }
-           
-            for (int i = 0; i < tab.Length; i++)
-            {
-                Console.Write( tab[i] + " " + tab2[i]+ "   ");
-            }
             string ch = espacement(chaine);
             string[] numC = ch.Split('¬');
             for (int j = 0; j < numC.Length; j++)
@@ -225,35 +222,45 @@ namespace RKVCRYPT
             return output;
         }
 
-        public static void gestionMK()
+        public static string gestionMK(string message)
         {
             string invmessageMK = Program.Search("INVALIDE-FORMAT-MK=");
             Console.WriteLine(Program.Search("MESSAGE-INPUT-MK="));
-            string mk = Console.ReadLine().ToUpper();
-            if (mk.Length != 0)
+            Console.Write(Program.Search("MESSAGE-FORMAT-MK="));
+            string pattern = @"^[RBLNPKCH](-[RBLNPKCH])*$";
+            string input = Console.ReadLine();
+            Match mk = Regex.Match(input, pattern, RegexOptions.IgnoreCase);
+            if (mk.Success)
             {
-                mk = Num(mk);
-                Console.WriteLine(mk);
+                //input = espacement(input);
+                string[] mkformat = input.Split('-');
+                for (int i = 0; i < mkformat.Length; i++)
+                {
+                    switch (mkformat[i])
+                    {
+                        case "R": message = binarosky(message); break;
+                        case "N": message = Num(message); break;
+                    }
+                }
             }
             else
             {
                 Console.WriteLine(invmessageMK);
             }
+            return message;
         }
-        public static void affichage(string chaine, string num, string input)
+        public static void affichageOutput(string input, string chaine)
         {
             Console.Clear();
             RKVCRYPTInterface.information();
-            Console.WriteLine("Message d'origine: " + input + "\n" + "Chiffrage: " + num + "\n" + "Résultat: " + chaine);
+            Console.WriteLine("Message d'origine: " + input + "\n"+ "Résultat: " + chaine);
         }
         public static void main()
         {
-            //gestionMK();
+
             string input = Message();
-            string num = Num(input);
-            string bin = binarosky(num);
-            Console.ReadKey();
-            affichage(bin, num, input);
+            string chaine = gestionMK(input);
+            affichageOutput(input, chaine);
         }
     }
 }
