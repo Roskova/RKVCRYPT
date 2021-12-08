@@ -42,5 +42,6 @@ L6=RKV-CRYPT #
 ########################################################################
 TXT-MESSAGE=Veuillez entrer votre message à crypter
 MESSAGE-INPUT-MK=Veuillez entrer le format de MK
+MESSAGE-INPUT-KEY=Veuillez entrer la |NOMBRE|e clé de chiffrement: 
 MESSAGE-FORMAT-MK=
 INVALIDE-FORMAT-MK=Méthode de chiffrement invalide
