@@ -1,0 +1,28 @@
+#########################################################################
+#   FICHIER CONFIGURATION POUR LES TABLES DE CHIFFREMENT DE RKV-CRYPT   #
+# Ce fichier permet de configurer les différentes tables de chiffrement #
+# LA MODIFICATION DE CE FICHIER ENTRAINERA UNE INCOMPATIBILITÉ DISTANTE #
+# MAIS AUGMENTE CONSIDÉRABLEMENT LA SÉCURITÉ DU CHIFFREMENT CAR POUR    #
+# QUE QUELQU'UN PUISSE DÉCHIFFRER VOTRE MESSAGE, IL DOIT AVOIR UNE      #
+# COPIE DES TABLES DE CHIFFREMENT PRÉSENT DANS VOTRE FICHIER TABLE.TXT  #
+#########################################################################
+# TABLE DE NUMÉRISATION: TRANSFORME LES LETTRES EN CHIFFRES             #
+#########################################################################
+nu1¬A¬B¬C¬D¬E¬F¬G¬H¬I¬J¬K¬L¬M¬N¬O¬P¬Q¬R¬S¬T¬U¬V¬W¬X¬Y¬Z¬0¬1¬2¬3¬4¬5¬6¬7¬8¬9¬ ¬,¬.¬'
+nu2¬A¬B¬C¬D¬E¬F¬G¬H¬I¬J¬K¬L¬M¬N¬O¬P¬Q¬R¬S¬T¬U¬V¬W¬X¬Y¬Z¬0¬1¬2¬3¬4¬5¬6¬7¬8¬9¬ ¬,¬.¬'¬;¬:¬(¬)¬«¬»¬+¬-¬/¬#¬*¬[¬]¬=¬<¬>¬?¬!¬$¬¢¬@¬%¬\¬²¬³¬~¬{¬}¬_¬±¬|¬É¬È¬Ê¬Ç¬Ù¬Û¬À¬Â¬Î¬Ô¬`¬^¬¸¬€¬‚¬©¬°¬¶¬÷¬"
+nu3¬a¬b¬c¬d¬e¬f¬g¬h¬i¬j¬k¬l¬m¬n¬o¬p¬q¬r¬s¬t¬u¬v¬w¬x¬y¬z¬A¬B¬C¬D¬E¬F¬G¬H¬I¬J¬K¬L¬M¬N¬O¬P¬Q¬R¬S¬T¬U¬V¬W¬X¬Y¬Z¬0¬1¬2¬3¬4¬5¬6¬7¬8¬9¬ ¬,¬.¬'¬;¬:¬(¬)¬«¬»¬+¬-¬/¬#¬*¬[¬]¬=¬<¬>¬?¬!¬$¬¢¬@¬%¬\¬²¬³¬~¬{¬}¬_¬±¬|¬É¬È¬Ê¬Ç¬Ù¬Û¬À¬Â¬Î¬é¬è¬ê¬ç¬û¬ù¬à¬â¬î¬ô¬Ô¬`¬^¬¸¬€¬‚¬ƒ¬„¬…¬†¬‡¬ˆ¬‰¬Š¬‹¬Œ¬ ¬Ž¬ ¬ ¬‘¬’¬“¬”¬•¬–¬—¬˜¬™¬š¬›¬œ¬ž¬Ÿ¬¡¬£¬¤¬¥¬¦¬§¬¨¬©¬ª¬®¬¯¬°¬´¬µ¬¶¬·¬¸¬¹¬º¬¼¬½¬¾¬¿¬Å¬Æ¬Ð¬×¬Ø¬Þ¬å¬÷¬"
+nu4¬a¬b¬c¬d¬e¬f¬g¬h¬i¬j¬k¬l¬m¬n¬o¬p¬q¬r¬s¬t¬u¬v¬w¬x¬y¬z¬A¬B¬C¬D¬E¬F¬G¬H¬I¬J¬K¬L¬M¬N¬O¬P¬Q¬R¬S¬T¬U¬V¬W¬X¬Y¬Z¬0¬1¬2¬3¬4¬5¬6¬7¬8¬9¬ ¬,¬.¬'¬;¬:¬(¬)¬«¬»¬+¬-¬/¬#¬*¬[¬]¬=¬<¬>¬?¬!¬$¬¢¬@¬%¬\¬²¬³¬~¬{¬}¬_¬±¬|¬ô¬Ô¬É¬È¬Ê¬Ç¬Ù¬Û¬À¬Â¬Î¬é¬è¬ê¬ç¬û¬ù¬à¬â¬î¬`¬^¬¸¬€¬‚¬ƒ¬„¬…¬†¬‡¬ˆ¬‰¬Š¬‹¬Œ¬ ¬Ž¬ ¬ ¬‘¬’¬“¬”¬•¬–¬—¬˜¬™¬š¬›¬œ¬ž¬Ÿ¬¡¬£¬¤¬¥¬¦¬§¬¨¬©¬ª¬®¬¯¬°¬´¬µ¬¶¬·¬¸¬¹¬º¬¼¬½¬¾¬¿¬Å¬Æ¬Ð¬×¬Ø¬Þ¬å¬÷¬"¬А¬а¬Б¬б¬В¬в¬Г¬г¬Д¬д¬Е¬е¬Ё¬ё¬Ж¬ж¬З¬з¬И¬и¬Й¬й¬К¬к¬Л¬л¬М¬м¬Н¬н¬О¬о¬П¬п¬Р¬р¬С¬с¬Т¬т¬У¬у¬Ф¬ф¬Х¬х¬Ц¬ц¬Ч¬ч¬Ш¬ш¬Щ¬щ¬Ъ¬ъ¬Ы¬ы¬Ь¬ь¬Э¬э¬Ю¬ю¬Я¬я
+#########################################################################
+# TABLE DE RÉFÉRENCE: BINAROSKY, HEX, BINAIRE                           #
+# Bin = Conversion des chiffres en BINAROSKY. Modifier la ligne bin     #
+#       pour changer l'exportation. NE PAS MODIFIER LE NOMBRE DE CASE   #
+# hex = Table de référence pour la conversion Hexadécimal INPUT         #
+# hev = Table de référence pour la conversion Hexadécimal OUTPUT        #
+#########################################################################
+bin¬1000¬0100¬0010¬0001¬1100¬0011¬1011¬1101¬1001¬0110
+hex=0000-0001-0010-0011-0100-0101-0110-0111-1000-1001-1010-1011-1100-1101-1110-1111
+hev=0-1-2-3-4-5-6-7-8-9-A-B-C-D-E-F
+#########################################################################
+# LISTE DES CLÉ CESAR3 VALIDE                                           #
+#########################################################################
+VALIDE-CESAR3-KEY=CFL,FCL,FLC,LCF,LFC

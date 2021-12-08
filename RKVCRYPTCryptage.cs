@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+
 namespace RKVCRYPT
 {
     class RKVCRYPTCryptage
@@ -19,6 +21,12 @@ namespace RKVCRYPT
              * C KEY DE CESAR3 DE 3-5 CARACTÈRE DE LONG RESPECTANT LE FORMAT DE TEST CFL. 
              * H CONVERSION EN HEXADÉCIMAL
         */
+        public static string format()
+        {
+            string nu = Program.Search("NUM-FORMAT=");
+            return nu;
+        }
+        //Ajoute des ¬ entre chaque caractère d'une chaine donnée
         public static string espacement(string chaine)
         {
             for (int i = 0; i < chaine.Length - 1; i++)
@@ -29,11 +37,68 @@ namespace RKVCRYPT
             }
             return chaine;
         }
+        //Permet de récupéré la table de chiffrement indiquer
+        public static string cutter(string op)
+        {
+            string nu = table(op);
+            string[] LV = nu.Split('¬');
+            nu = LV[1];
+            return nu;
+        }
+        public static string bincutter(string op)
+        {
+            string nu = table(op);
+            string[] LV = nu.Split('=');
+            nu = LV[1];
+            return nu;
+        }
+        //Vérifie si la table contient un caractère spécifier
+        public static bool contain(char op, string chaine)
+        {
+            bool rep = false;
+            for (int i = 0; i < chaine.Length; i++)
+            {
+                if (chaine[i] == op)
+                {
+                    rep = true;
+                }
+            }
+            return rep;
+        }
+        public static string table(string op)
+        {
+            string path = Path.Combine(Environment.CurrentDirectory, @"ref\table.txt");
+            string[] config = System.IO.File.ReadAllLines(path);
+            for (int i = 0; i < config.Length; i++)
+            {
+                if (config[i].StartsWith(op))
+                {
+                    return config[i];
+                }
+            }
+            return op;
+        }
+        public static string Message()
+        {
+            Console.WriteLine(Program.Search("TXT-MESSAGE="));
+            string message = Console.ReadLine();
+            if (message.Length >= 0)
+            {
+                if (contain('a', cutter(format())) && contain('A', cutter(format())))
+                {
+                    return message;
+                }
+                else
+                {
+                    return message.ToUpper();
+                }
+            }
+            return "Erreur";
+        }
         public static string binarosky(string chaine)
         {
-            string tabRef = table("bin¬");
-            tabRef = tabRef.Remove(0, 4);
-            string[] tab = tabRef.Split('¬');
+            string tabRef = bincutter("bin=");
+            string[] tab = tabRef.Split('-');
             chaine = espacement(chaine);
             string[] bin = chaine.Split('¬');
             for (int i = 0; i < bin.Length; i++)
@@ -52,7 +117,6 @@ namespace RKVCRYPT
                     case "0": bin[i] = tab[9]; break;
                 }
             }
-            Console.ReadKey();
             string output = "";
             for (int i = 0; i < bin.Length; i++)
             {
@@ -60,212 +124,107 @@ namespace RKVCRYPT
             }
             return output;
         }
-        public static string table(string op)
-        {
-            string[] config = System.IO.File.ReadAllLines(@"C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKV-CRYPT\table.txt");
-            for (int i = 0; i < config.Length; i++)
-            {
-                if (config[i].StartsWith(op))
-                {
-                    return config[i];
-                }
-            }
-            return op;
-        }
+
         public static string Num(string chaine)
         {
-            if(Program.Search("NUM-FORMAT=") == "nu3" || Program.Search("NUM-FORMAT=") == "nu4")
+            string nu = format();
+            string tabC = espacement(cutter(nu));
+            string[] tab = tabC.Split('¬');
+            string[] tab2 = new string[tabC.Length];
+            if (tab.Length >= 100 && tab.Length < 1000)
             {
-                string nu = "nu3";
-                if(Program.Search("NUM-FORMAT=")== "nu4")
-                {
-                    nu = "nu4";
-                }
-                string tabRef = table(nu);
-                tabRef = tabRef.Remove(0, 3);
-                string[] tab = tabRef.Split('¬');
-                string[] tab2 = new string[tabRef.Length];
-                for (int i = 1; i < tab.Length + 1; i++)
-                {
-                    if (i < 100)
-                    {
-
-                        if (i < 10)
-                        {
-                            tab2[i] = "00" + (i);
-                        }
-                        else
-                        {
-                            tab2[i] = "0" + i;
-                        }
-                    }
-                    else
-                    {
-                        {
-
-                            if (i < 110 && i >= 100)
-                            {
-                                tab2[i] = "" + (i);
-                            }
-                            else
-                            {
-                                tab2[i] = "" + i;
-                            }
-                        }
-                    }
-                }
-               
-                string ch = espacement(chaine);
-                string[] numC = ch.Split('¬');
-                for (int j = 0; j < numC.Length; j++)
-                {
-                    for (int i = 0; i < tab.Length; i++)
-                    {
-                        if (numC[j] == tab[i])
-                        {
-                            numC[j] = tab2[i];
-                        }
-                    }
-                }
-                string output = "";
-                for (int i = 0; i < numC.Length; i++)
-                {
-                    output += numC[i];
-                }
-                return output;
-            }
-            else if (Program.Search("NUM-FORMAT=") == "nu1")
-            {
-                string tabRef = table("nu1¬");
-                tabRef = tabRef.Remove(0, 3);
-                string[] tab = tabRef.Split('¬'); //Tableau de caractères
-                string[] tab2 = new string[tabRef.Length];
-                for (int i = 1; i < tab.Length + 1; i++)
-                {
-                    if (i < 100)
-                    {
-
-                        if (i < 10)
-                        {
-                            tab2[i] = "0" + (i);
-                        }
-                        else
-                        {
-                            tab2[i] = "" + i;
-                        }
-                    }
-                    else
-                    {
-                        {
-
-                            if (i < 110 && i >= 100)
-                            {
-                                tab2[i] = "" + (i);
-                            }
-                            else
-                            {
-                                tab2[i] = "" + i;
-                            }
-                        }
-                    }
-                }
                 for (int i = 0; i < tab.Length; i++)
                 {
-                    Console.Write("\t" + tab[i] + " " + tab2[i]);
-                }
-                string ch = espacement(chaine);
-                string[] numC = ch.Split('¬');
-                for (int i = 0; i < numC.Length; i++)
-                {
-                    bool correspond = false;
-                    for (int j = 0; j < tab.Length; j++)
-                    {
-                        
-                        if (numC[i] == tab[j])
-                        {
-                            correspond = true;
-                        }
-                    }
-                    if (!correspond)
-                    {
-                        numC[i] = "";
-                    }
-                }
 
-                for (int j = 0; j < numC.Length; j++)
-                {
-                    for (int i = 0; i < tab.Length; i++)
+                    if (i < 100)
                     {
-                        if (numC[j] == tab[i])
+
+                        if (i < 10)
                         {
-                            numC[j] = tab2[i];
+                            tab2[i] = "00" + (i + 1);
                         }
-                    }
-                }
-                string output = "";
-                for (int i = 0; i < numC.Length; i++)
-                {
-                    output += numC[i];
-                }
-                return output;
-            }
-            else
-            {
-                string tabRef = table("nu2¬");
-                tabRef = tabRef.Remove(0, 3);
-                string[] tab = tabRef.Split('¬');
-                string[] tab2 = new string[tabRef.Length];
-                for (int i = 1; i < tab.Length + 1; i++)
-                {
-                    if (i < 10)
-                    {
-                        tab2[i] = "0" + (i);
+                        else
+                        {
+                            tab2[i] = "0" + (i + 1);
+                        }
+
+
                     }
                     else
                     {
                         tab2[i] = "" + i;
                     }
                 }
+            }
+            else if (tab.Length >= 1000)
+            {
                 for (int i = 0; i < tab.Length; i++)
                 {
-                    Console.Write("\t"+tab[i]+" " + tab2[i]);
-                }
-                string ch = espacement(chaine);
-                string[] numC = ch.Split('¬');
-                for (int j = 0; j < numC.Length; j++)
-                {
-                    for (int i = 0; i < tab.Length; i++)
+
+                    if (i < 100)
                     {
-                        if (numC[j] == tab[i])
+
+                        if (i < 10)
                         {
-                            numC[j] = tab2[i];
+                            tab2[i] = "000" + (i + 1);
                         }
+                        else if(i < 100)
+                        {
+                            tab2[i] = "00" + (i + 1);
+                        }
+                        else
+                        {
+                            tab2[i] = "0" + (i + 1);
+                        }
+
+
+                    }
+                    else
+                    {
+                        tab2[i] = "" + i;
                     }
                 }
-                string output = "";
-                for (int i = 0; i < numC.Length; i++)
-                {
-                    output += numC[i];
-                }
-                return output;
             }
-        }
-        public static string Message()
-        {
-            Console.WriteLine(Program.Search("TXT-MESSAGE="));
-            string message = Console.ReadLine();
-            if (message.Length >= 0)
+            else
             {
-                if(Program.Search("NUM-FORMAT=") == "nu3" || Program.Search("NUM-FORMAT=") == "nu4") {
-                    return message;
-                }
-                else
+                for (int i = 0; i < tab.Length; i++)
                 {
-                    return message.ToUpper();
+
+                        if (i < 10)
+                        {
+                            tab2[i] = "0" + (i + 1);
+                        }
+                    else
+                    {
+                        tab2[i] = "" + (i + 1);
+                    }
                 }
             }
-            return "Erreur";
+           
+            for (int i = 0; i < tab.Length; i++)
+            {
+                Console.Write( tab[i] + " " + tab2[i]+ "   ");
+            }
+            string ch = espacement(chaine);
+            string[] numC = ch.Split('¬');
+            for (int j = 0; j < numC.Length; j++)
+            {
+                for (int i = 0; i < tab.Length; i++)
+                {
+                    if (numC[j] == tab[i])
+                    {
+                        numC[j] = tab2[i];
+                    }
+                }
+            }
+            string output = "";
+            for (int i = 0; i < numC.Length; i++)
+            {
+                output += numC[i];
+            }
+            return output;
         }
+
         public static void gestionMK()
         {
             string invmessageMK = Program.Search("INVALIDE-FORMAT-MK=");
@@ -285,7 +244,7 @@ namespace RKVCRYPT
         {
             Console.Clear();
             RKVCRYPTInterface.information();
-            Console.WriteLine("Message d'origine: "+input+"\n" + "Chiffrage: " + num+"\n"+"Résultat: " + chaine);
+            Console.WriteLine("Message d'origine: " + input + "\n" + "Chiffrage: " + num + "\n" + "Résultat: " + chaine);
         }
         public static void main()
         {
@@ -293,6 +252,7 @@ namespace RKVCRYPT
             string input = Message();
             string num = Num(input);
             string bin = binarosky(num);
+            Console.ReadKey();
             affichage(bin, num, input);
         }
     }

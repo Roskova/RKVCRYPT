@@ -1,13 +1,19 @@
 ﻿using System;
+using System.IO;
+using System.Text;
 
 namespace RKVCRYPT
 {
+
     class Program
     {
+
+
         public static string configLoad(string op)
         {
             bool enable = false;
-            string[] config = System.IO.File.ReadAllLines(@"C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKV-CRYPT\config.txt");
+            string path = Path.Combine(Environment.CurrentDirectory, @"ref\config.txt");
+            string[] config = System.IO.File.ReadAllLines(path);
 
             for (int i = 0; i < config.Length; i++)
             {
@@ -69,6 +75,7 @@ namespace RKVCRYPT
         }
         static void Main(string[] args)
         {
+            Console.OutputEncoding = Encoding.UTF8;
             RKVCRYPTInterface.main();
             Cryptage();
             Console.ReadKey();

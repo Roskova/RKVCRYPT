@@ -83,8 +83,9 @@ namespace RKVCRYPT
             return chaine.ligne0 + "\n" + chaine.ligne1 + "\n" + chaine.ligne2 + "\n" + chaine.ligne3 + "\n" + chaine.ligne4 + "\n" + chaine.ligne5 + "\n" + chaine.ligne6 + "\n" + chaine.ligne7 + "\n" + chaine.ligne8;
         }
 
-        public static string headAccueil(string L1, string L2, string L3, string L4, string L5, string L6)
+        public static void accueil()
         {
+            Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
             affichage accueil = new affichage();
             accueil.ligne0 = "########################################################################";
             accueil.ligne1 = "# " + L1 + " Interface d'accueil                                      #";
@@ -93,34 +94,41 @@ namespace RKVCRYPT
             accueil.ligne4 = "# " + L4 + "                                                          #";
             accueil.ligne5 = "# " + L5 + "                                                          #";
             accueil.ligne6 = "# " + L6 + "                                                          #";
-            accueil.ligne7 = "# " + L1 + " ROSKOVA@PROTONMAIL.COM                   ROSKOVA © 2021  #";
+            accueil.ligne7 = "# " + L1 + " ROSKOVA@PROTONMAIL.COM                   Роскова © 2021  #";
             accueil.ligne8 = "########################################################################";
-            return print(accueil);
-        }
-        public static string headInformation(string L1, string L2, string L3, string L4, string L5, string L6)
-        {
-            affichage info = new affichage();
-            info.ligne0 = "########################################################################";
-            info.ligne1 = "# " + L1 + " Interface d'information                                  #";
-            info.ligne2 = "# " + L2 + " RKV-CRYPT: Cryptage Modulaire par Roskova                #";
-            info.ligne3 = "# " + L4 + " Début du projet: 06-12-2021 16h40                        #";
-            info.ligne4 = "# " + L3 + " Dernière version publié: 08-12-2021 01h06                #";
-            info.ligne5 = "# " + L5 + " Version du logiciel: 1.0.0                               #";
-            info.ligne6 = "# " + L6 + " Github: http://github.com/Roskova/RKV-CRYPT/             #";
-            info.ligne7 = "# " + L1 + " ROSKOVA@PROTONMAIL.COM                   ROSKOVA © 2021  #";
-            info.ligne8 = "########################################################################";
-            return print(info);
-        }
-        public static void accueil()
-        {
-            Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
-            Console.WriteLine(headAccueil(L1, L2, L3, L4, L5, L6));
+            Console.WriteLine(print(accueil));
         }
         public static void information()
         {
             Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
-            Console.WriteLine(headInformation(L1, L2, L3, L4, L5, L6));
+            affichage info = new affichage();
+            info.ligne0 = "########################################################################";
+            info.ligne1 = "# " + L1 + " Interface d'information de RKV-CRYPT                     #";
+            info.ligne2 = "# " + L2 + " RKV-CRYPT: Cryptage Modulaire par Roskova                #";
+            info.ligne3 = "# " + L3 + " Début du projet: 06-12-2021 16h40                        #";
+            info.ligne4 = "# " + L4 + " Dernière version publié: 08-12-2021 01h06                #";
+            info.ligne5 = "# " + L5 + " Version du logiciel: 1.0.0                               #";
+            info.ligne6 = "# " + L6 + " Github: http://github.com/Roskova/RKV-CRYPT/             #";
+            info.ligne7 = "# " + L1 + " ROSKOVA@PROTONMAIL.COM                   Роскова © 2021  #";
+            info.ligne8 = "########################################################################";
+            Console.WriteLine(print(info));
         }
+        public static void cryptage()
+        {
+            Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
+            affichage cryptage = new affichage();
+            cryptage.ligne0 = "########################################################################";
+            cryptage.ligne1 = "# " + L1 + " Interface du module de cryptage                          #";
+            cryptage.ligne2 = "# " + L2 + " RKV-CRYPT: Cryptage Modulaire par Roskova                #";
+            cryptage.ligne3 = "# " + L3 + "                                                          #";
+            cryptage.ligne4 = "# " + L4 + "                                                          #";
+            cryptage.ligne5 = "# " + L5 + "                                                          #";
+            cryptage.ligne6 = "# " + L6 + "                                                          #";
+            cryptage.ligne7 = "# " + L1 + " ROSKOVA@PROTONMAIL.COM                   Роскова © 2021  #";
+            cryptage.ligne8 = "########################################################################";
+            Console.WriteLine(print(cryptage));
+        }
+
         public static void main()
         {
             accueil();

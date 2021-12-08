@@ -21,7 +21,7 @@ CESAR3-KEY=CFL
 # L'utilisation de nu1 prends uniquement en charge Lettres et Chiffre  #
 # L'utilisation de nu2 permet la prise en charge des Spécial et accent #
 # L'utilisation de nu3 permet la prise en charge des Maj               #
-# L'utulisation de nu4 permet la prise en charge du cyrillique         #
+# L'utilisation de nu4 permet la prise en charge du cyrillique         #
 ########################################################################
 MK-CONFIG-OVERPASS=false
 MK-DEFAULT=N-R-K-R-H-K-R-L
