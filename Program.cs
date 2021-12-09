@@ -68,15 +68,19 @@ namespace RKVCRYPT
             chaine = LV[1];
             return chaine;
         }
+        static void Decryptage()
+        {
+            RKVCRYPTDeCryptage.main();
+        }
         static void Cryptage()
         {
             RKVCRYPTCryptage.main();
-            Console.WriteLine();
         }
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
             RKVCRYPTInterface.main();
+            Decryptage();
             Cryptage();
             Console.ReadKey();
         }
