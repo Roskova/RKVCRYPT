@@ -80,9 +80,6 @@ namespace RKVCRYPT
         {
             Console.OutputEncoding = Encoding.UTF8;
             RKVCRYPTInterface.main();
-            Decryptage();
-            Cryptage();
-            Console.ReadKey();
         }
     }
 }

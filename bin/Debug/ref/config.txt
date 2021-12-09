@@ -41,8 +41,11 @@ L6=RKV-CRYPT #
 # MESSAGE D'ERREUR ET MESSAGE GÉNÉRAL                                  #
 ########################################################################
 TXT-MESSAGE=Veuillez entrer votre message à crypter
+MESSAGE-SELECTEUR-OPTION=1: Crypter 2: Décrypter 3: Configuration Q: Quitter
 MESSAGE-INPUT-MK=Veuillez entrer le format de MK
 MESSAGE-FORMAT-DECRYPT=Veuillez entrer le nom de la table de chiffrement
 MESSAGE-INPUT-KEY=Veuillez entrer la |NOMBRE|e clé de chiffrement: 
 MESSAGE-FORMAT-MK=
+MESSAGE-SELECTEUR-INVALIDE=Veuillez selectionner une options valide
 INVALIDE-FORMAT-MK=Méthode de chiffrement invalide
+INVMESSAGE-OPTION=L'option que vous avez sélectionner d'existe pas

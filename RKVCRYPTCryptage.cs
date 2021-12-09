@@ -28,37 +28,11 @@ namespace RKVCRYPT
             string nu = Program.Search("NUM-FORMAT=");
             return nu;
         }
-        public static string substringByFour(string chaine)
+        public static string substring(int nb, string chaine)
         {
-            for (int i = 0; i < chaine.Length - 4; i++)
+            for (int i = 0; i < chaine.Length - nb; i++)
             {
-                i++;
-                i++;
-                i++;
-                i++;
-                chaine = chaine.Insert(i, "¬");
-
-            }
-            return chaine;
-        }
-        public static string substringByThree(string chaine)
-        {
-            for (int i = 0; i < chaine.Length - 3; i++)
-            {
-                i++;
-                i++;
-                i++;
-                chaine = chaine.Insert(i, "¬");
-
-            }
-            return chaine;
-        }
-        public static string substringByTwo(string chaine)
-        {
-            for (int i = 0; i < chaine.Length - 2; i++)
-            {
-                i++;
-                i++;
+                i = i+nb;
                 chaine = chaine.Insert(i, "¬");
 
             }
@@ -83,18 +57,10 @@ namespace RKVCRYPT
             return chaine;
         }
         // Permet de récupéré la table de chiffrement
-        public static string cutter(string op)
+        public static string cutter(char sym, string op)
         {
             string nu = table(op);
-            string[] LV = nu.Split('¬');
-            nu = LV[1];
-            return nu;
-        }
-        //Permet de récupéré la table de chiffrement binaire
-        public static string bincutter(string op)
-        {
-            string nu = table(op);
-            string[] LV = nu.Split('=');
+            string[] LV = nu.Split(sym);
             nu = LV[1];
             return nu;
         }
@@ -129,7 +95,7 @@ namespace RKVCRYPT
         public static void ConvTable(out string[] tab, out string[] tab2)
         {
             string nu = format();
-            string tabC = espacement(cutter(nu));
+            string tabC = espacement(cutter('¬',nu));
             tab = tabC.Split('¬');
             tab2 = new string[tabC.Length];
             if (tab.Length >= 100 && tab.Length < 1000)
@@ -206,8 +172,8 @@ namespace RKVCRYPT
        
         public static string hex(string chaine)
         {
-            chaine = substringByFour(chaine);
-            string tabRef = bincutter("hev=");
+            chaine = substring(4,chaine);
+            string tabRef = cutter('=',"hev=");
             string[] tab = tabRef.Split('-');
             string[] bin = chaine.Split('¬');
             for (int i = 0; i < bin.Length; i++)
@@ -242,7 +208,7 @@ namespace RKVCRYPT
         }
         public static string binarosk(string chaine)
         {
-            string tabRef = bincutter("bin=");
+            string tabRef = cutter('=',"bin=");
             string[] tab = tabRef.Split('-');
             chaine = espacement(chaine);
             string[] bin = chaine.Split('¬');
@@ -296,13 +262,13 @@ namespace RKVCRYPT
         {
             //Tab = Table Lettre tab2 = Table chiffre
             ConvTable(out string[] tab, out string[] tab2);
-            if (contain('a', cutter(format())) && contain('A', cutter(format())))
+            if (contain('a', cutter('¬', format())) && contain('A', cutter('¬', format())))
             {
-                chaine = substringByThree(chaine);
+                chaine = substring(3,chaine);
             }
             else
             {
-                chaine = substringByTwo(chaine);
+                chaine = substring(2, chaine);
             }
             //Module de lettrage
             string[] numC = chaine.Split('¬');
@@ -328,6 +294,7 @@ namespace RKVCRYPT
         }
         public static string key(string chaine, int nb)
         {
+            affichage();
             string messageinputkey = Program.Search("MESSAGE-INPUT-KEY=");
             string[] Y = messageinputkey.Split('|');
             messageinputkey = Y[0] + nb + Y[2];
@@ -371,12 +338,11 @@ namespace RKVCRYPT
             {
                 output += e[i];
             }
-            Console.WriteLine(output);
-            Console.ReadLine();
             return output;
         }
         public static string gestionMK(string message)
         {
+            affichage();
             int keynb = 0;
             string invmessageMK = Program.Search("INVALIDE-FORMAT-MK=");
             Console.WriteLine(Program.Search("MESSAGE-INPUT-MK="));
@@ -409,11 +375,12 @@ namespace RKVCRYPT
         }
         public static string Message()
         {
+            affichage();
             Console.WriteLine(Program.Search("TXT-MESSAGE="));
             string message = Console.ReadLine();
             if (message.Length >= 0)
             {
-                if (contain('a', cutter(format())) && contain('A', cutter(format())))
+                if (contain('a', cutter('¬', format())) && contain('A', cutter('¬', format())))
                 {
                     return message;
                 }
@@ -426,9 +393,22 @@ namespace RKVCRYPT
         }
         public static void affichageOutput(string input, string chaine)
         {
-            Console.Clear();
-            RKVCRYPTInterface.information();
+            affichage();
             Console.WriteLine("Message d'origine: " + input + "\n" + "Résultat: " + chaine);
+            Console.WriteLine("Appuyez sur Q pour quitter");
+            if(Console.ReadKey().Key == ConsoleKey.Q)
+            {
+                RKVCRYPTInterface.InterfaceDaccueil();
+            }
+            else
+            {
+                main();
+            }
+        }
+        public static void affichage()
+        {
+            Console.Clear();
+            RKVCRYPTInterface.cryptage();
         }
         public static void main()
         {

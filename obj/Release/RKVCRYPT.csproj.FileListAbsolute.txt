@@ -14,3 +14,7 @@ C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKV-CRYPT\obj\Release\RKVCRYP
 C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKV-CRYPT\obj\Release\RKVCRYPT.csproj.CoreCompileInputs.cache
 C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKV-CRYPT\obj\Release\RKVCRYPT.exe
 C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKV-CRYPT\obj\Release\RKVCRYPT.pdb
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKV-CRYPT\bin\Release\RKVCRYPT.exe.manifest
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKV-CRYPT\bin\Release\RKVCRYPT.application
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKV-CRYPT\obj\Release\RKVCRYPT.exe.manifest
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKV-CRYPT\obj\Release\RKVCRYPT.application
