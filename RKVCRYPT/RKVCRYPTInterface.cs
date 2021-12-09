@@ -113,7 +113,7 @@ namespace RKVCRYPT
             cryptage.ligne0 = "########################################################################";
             cryptage.ligne1 = "# " + L1 + " Interface du module de cryptage                          #";
             cryptage.ligne2 = "# " + L2 + " RKV-CRYPT: Cryptage Modulaire par Roskova                #";
-            cryptage.ligne3 = "# " + L3 + " FONCTION MK ACTIVÉ: P L                                  #";
+            cryptage.ligne3 = "# " + L3 + " FONCTION MK ACTIVÉ: N L K B H R                          #";
             cryptage.ligne4 = "# " + L4 + "                                                          #";
             cryptage.ligne5 = "# " + L5 + "                                                          #";
             cryptage.ligne6 = "# " + L6 + "                                                          #";
