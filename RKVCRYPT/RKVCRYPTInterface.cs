@@ -1,10 +1,8 @@
 ﻿using System;
 namespace RKVCRYPT
 {
-
     internal class RKVCRYPTInterface
     {
-
         public struct logoLoad
         {
             public string L1;
@@ -13,8 +11,7 @@ namespace RKVCRYPT
             public string L4;
             public string L5;
             public string L6;
-        }
-       
+        }       
         public static void Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6)
         {
             logoLoad log = new logoLoad();
@@ -78,6 +75,7 @@ namespace RKVCRYPT
 
         public static void accueil()
         {
+            Console.Clear();
             Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
             affichage accueil = new affichage();
             accueil.ligne0 = "########################################################################";
@@ -93,6 +91,7 @@ namespace RKVCRYPT
         }
         public static void information()
         {
+            Console.Clear();
             Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
             affichage info = new affichage();
             info.ligne0 = "########################################################################";
@@ -108,12 +107,13 @@ namespace RKVCRYPT
         }
         public static void cryptage()
         {
+            Console.Clear();
             Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
             affichage cryptage = new affichage();
             cryptage.ligne0 = "########################################################################";
             cryptage.ligne1 = "# " + L1 + " Interface du module de cryptage                          #";
             cryptage.ligne2 = "# " + L2 + " RKV-CRYPT: Cryptage Modulaire par Roskova                #";
-            cryptage.ligne3 = "# " + L3 + "                                                          #";
+            cryptage.ligne3 = "# " + L3 + " FONCTION MK ACTIVÉ: P L                                  #";
             cryptage.ligne4 = "# " + L4 + "                                                          #";
             cryptage.ligne5 = "# " + L5 + "                                                          #";
             cryptage.ligne6 = "# " + L6 + "                                                          #";
@@ -123,12 +123,13 @@ namespace RKVCRYPT
         }
         public static void decryptage()
         {
+            Console.Clear();
             Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
             affichage cryptage = new affichage();
             cryptage.ligne0 = "########################################################################";
-            cryptage.ligne1 = "# " + L1 + " Interface du module de décryptage                          #";
+            cryptage.ligne1 = "# " + L1 + " Interface du module de décryptage                        #";
             cryptage.ligne2 = "# " + L2 + " RKV-CRYPT: Cryptage Modulaire par Roskova                #";
-            cryptage.ligne3 = "# " + L3 + "                                                          #";
+            cryptage.ligne3 = "# " + L3 + " FONCTION MK ACTIVÉ: P L                                  #";
             cryptage.ligne4 = "# " + L4 + "                                                          #";
             cryptage.ligne5 = "# " + L5 + "                                                          #";
             cryptage.ligne6 = "# " + L6 + "                                                          #";
