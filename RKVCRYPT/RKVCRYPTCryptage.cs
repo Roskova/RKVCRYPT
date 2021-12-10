@@ -1,6 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 
 namespace RKVCRYPT
 {
@@ -32,7 +30,7 @@ namespace RKVCRYPT
         {
             for (int i = 0; i < chaine.Length - nb; i++)
             {
-                i = i+nb;
+                i = i + nb;
                 chaine = chaine.Insert(i, "¬");
             }
             return chaine;
@@ -49,8 +47,8 @@ namespace RKVCRYPT
         }
         public static string Lecture(string chaine)
         {
-             chaine = chaine.Replace('0', 'A').Replace('1', 'B');
-             chaine = chaine.Replace("AAAAAA", "60").Replace("AAAAA", "50").Replace("AAAA", "40").Replace("AAA", "30").Replace("AA", "20").Replace("A", "10");
+            chaine = chaine.Replace('0', 'A').Replace('1', 'B');
+            chaine = chaine.Replace("AAAAAA", "60").Replace("AAAAA", "50").Replace("AAAA", "40").Replace("AAA", "30").Replace("AA", "20").Replace("A", "10");
             chaine = chaine.Replace("BBBBBB", "61").Replace("BBBBB", "51").Replace("BBBB", "41").Replace("BBB", "31").Replace("BB", "21").Replace("B", "11");
             return chaine;
         }
@@ -93,7 +91,7 @@ namespace RKVCRYPT
         public static void ConvTable(out string[] tab, out string[] tab2)
         {
             string nu = format();
-            string tabC = espacement(cutter('¬',nu));
+            string tabC = espacement(cutter('¬', nu));
             tab = tabC.Split('¬');
             tab2 = new string[tabC.Length];
             if (tab.Length >= 100 && tab.Length < 1000)
@@ -158,12 +156,12 @@ namespace RKVCRYPT
                 }
             }
         }
-       
-       
+
+
         public static string hex(string chaine)
         {
-            chaine = substring(4,chaine);
-            string tabRef = cutter('=',"hev=");
+            chaine = substring(4, chaine);
+            string tabRef = cutter('=', "hev=");
             string[] tab = tabRef.Split('-');
             string[] bin = chaine.Split('¬');
             for (int i = 0; i < bin.Length; i++)
@@ -198,7 +196,7 @@ namespace RKVCRYPT
         }
         public static string binarosk(string chaine)
         {
-            string tabRef = cutter('=',"bin=");
+            string tabRef = cutter('=', "bin=");
             string[] tab = tabRef.Split('-');
             chaine = espacement(chaine);
             string[] bin = chaine.Split('¬');
@@ -254,7 +252,7 @@ namespace RKVCRYPT
             ConvTable(out string[] tab, out string[] tab2);
             if (contain('a', cutter('¬', format())) && contain('A', cutter('¬', format())))
             {
-                chaine = substring(3,chaine);
+                chaine = substring(3, chaine);
             }
             else
             {
@@ -270,7 +268,7 @@ namespace RKVCRYPT
                     {
                         numC[j] = tab[i];
 
-                       
+
                     }
                 }
             }
@@ -385,7 +383,7 @@ namespace RKVCRYPT
             affichage();
             Console.WriteLine("Message d'origine: " + input + "\n" + "Résultat: " + chaine);
             Console.WriteLine("Appuyez sur Q pour quitter");
-            if(Console.ReadKey().Key == ConsoleKey.Q)
+            if (Console.ReadKey().Key == ConsoleKey.Q)
             {
                 RKVCRYPTInterface.InterfaceDaccueil();
             }

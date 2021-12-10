@@ -1,5 +1,4 @@
-﻿using System;
-namespace RKVCRYPT
+﻿namespace RKVCRYPT
 {
     internal class RKVCRYPTInterface
     {
@@ -11,7 +10,7 @@ namespace RKVCRYPT
             public string L4;
             public string L5;
             public string L6;
-        }       
+        }
         public static void Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6)
         {
             logoLoad log = new logoLoad();
@@ -79,13 +78,13 @@ namespace RKVCRYPT
             Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
             affichage accueil = new affichage();
             accueil.ligne0 = "########################################################################";
-            accueil.ligne1 = "# " + L1 + " Interface d'accueil                                      #";
-            accueil.ligne2 = "# " + L2 + "                                                          #";
-            accueil.ligne3 = "# " + L3 + "                                                          #";
+            accueil.ligne1 = "# " + L1 + "                                                          #";
+            accueil.ligne2 = "# " + L2 + "                     RKV-CRYPT                            #";
+            accueil.ligne3 = "# " + L3 + "            Cryptage Modulaire par Roskova                #";
             accueil.ligne4 = "# " + L4 + "                                                          #";
             accueil.ligne5 = "# " + L5 + "                                                          #";
             accueil.ligne6 = "# " + L6 + "                                                          #";
-            accueil.ligne7 = "# " + L1 + " ROSKOVA@PROTONMAIL.COM                   Роскова © 2021  #";
+            accueil.ligne7 = "# " + L1 + " Release 1.0.1.4                          Роскова © 2021  #";
             accueil.ligne8 = "########################################################################";
             Console.WriteLine(print(accueil));
         }
@@ -99,9 +98,9 @@ namespace RKVCRYPT
             info.ligne2 = "# " + L2 + " RKV-CRYPT: Cryptage Modulaire par Roskova                #";
             info.ligne3 = "# " + L3 + " Début du projet: 06-12-2021 16h40                        #";
             info.ligne4 = "# " + L4 + " Dernière version publié: 09-12-2021 22h30                #";
-            info.ligne5 = "# " + L5 + " Version du logiciel: 1.0.1.3                             #";
+            info.ligne5 = "# " + L5 + " Version du logiciel: 1.0.1.4                             #";
             info.ligne6 = "# " + L6 + " Github: http://github.com/Roskova/RKV-CRYPT/             #";
-            info.ligne7 = "# " + L1 + " ROSKOVA@PROTONMAIL.COM                   Роскова © 2021  #";
+            info.ligne7 = "# " + L1 + " Email: roskova@protonmail.com            Роскова © 2021  #";
             info.ligne8 = "########################################################################";
             Console.WriteLine(print(info));
         }
@@ -114,10 +113,10 @@ namespace RKVCRYPT
             cryptage.ligne1 = "# " + L1 + " Interface du module de cryptage                          #";
             cryptage.ligne2 = "# " + L2 + " RKV-CRYPT: Cryptage Modulaire par Roskova                #";
             cryptage.ligne3 = "# " + L3 + " FONCTION MK ACTIVÉ: N = numération du message            #";
-            cryptage.ligne4 = "# " + L4 + "    N-R-H-L-K        L = Lecture du Binarosky             #";
-            cryptage.ligne5 = "# " + L5 + " K = Applique un clé H = Transforme en Hexadécimal        #";
+            cryptage.ligne4 = "# " + L4 + "    N-R-H-L-K       *L = Lecture du Binarosky             #";
+            cryptage.ligne5 = "# " + L5 + "*K = Applique un clé H = Transforme en Hexadécimal        #";
             cryptage.ligne6 = "# " + L6 + " R = Transforme en binarosk le message chiffré            #";
-            cryptage.ligne7 = "# " + L1 + " ROSKOVA@PROTONMAIL.COM                   Роскова © 2021  #";
+            cryptage.ligne7 = "# " + L1 + " Release 1.0.1.4     *Expérimentale       Роскова © 2021  #";
             cryptage.ligne8 = "########################################################################";
             Console.WriteLine(print(cryptage));
         }
@@ -130,10 +129,10 @@ namespace RKVCRYPT
             cryptage.ligne1 = "# " + L1 + " Interface du module de décryptage                        #";
             cryptage.ligne2 = "# " + L2 + " RKV-CRYPT: Cryptage Modulaire par Roskova                #";
             cryptage.ligne3 = "# " + L3 + " FONCTION MK ACTIVÉ: N = Inverse la numération            #";
-            cryptage.ligne4 = "# " + L4 + "                     L = Inverse la lecture du Binarosk   #";
+            cryptage.ligne4 = "# " + L4 + "       N-L          *L = Inverse la lecture du Binarosk   #";
             cryptage.ligne5 = "# " + L5 + "                                                          #";
             cryptage.ligne6 = "# " + L6 + "                                                          #";
-            cryptage.ligne7 = "# " + L1 + " ROSKOVA@PROTONMAIL.COM                   Роскова © 2021  #";
+            cryptage.ligne7 = "# " + L1 + " Release 1.0.1.4     *Expérimentale       Роскова © 2021  #";
             cryptage.ligne8 = "########################################################################";
             Console.WriteLine(print(cryptage));
         }
@@ -143,7 +142,7 @@ namespace RKVCRYPT
             Console.Clear();
             accueil();
             Console.WriteLine(Program.Search("MESSAGE-SELECTEUR-OPTION="));
-            while(!k)
+            while (!k)
             {
                 ConsoleKey key = Console.ReadKey().Key;
                 if (key == ConsoleKey.D1)
@@ -170,7 +169,7 @@ namespace RKVCRYPT
                     Console.WriteLine(Program.Search("MESSAGE-SELECTEUR-OPTION="));
                 }
             }
-            
+
         }
         public static void main()
         {

@@ -232,3 +232,4 @@ C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\obj\Release\net6.0\w
 C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\obj\Release\net6.0\win-x64\RKV-CRYPT.dll
 C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\obj\Release\net6.0\win-x64\ref\RKV-CRYPT.dll
 C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\obj\Release\net6.0\win-x64\RKVCRYPT.genruntimeconfig.cache
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\obj\Release\net6.0\win-x64\RKVCRYPT.csproj.AssemblyReference.cache

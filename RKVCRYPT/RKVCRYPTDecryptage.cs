@@ -1,6 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 
 namespace RKVCRYPT
 {
@@ -28,6 +26,10 @@ namespace RKVCRYPT
             affichage();
             Console.WriteLine(Program.Search("MESSAGE-FORMAT-DECRYPT="));
             string nu = Console.ReadLine();
+            if(nu == "")
+            {
+                nu = "nu3";
+            }
             return nu;
         }
         public static string substringByFour(string chaine)
@@ -79,10 +81,10 @@ namespace RKVCRYPT
         }
         public static string Lecture(string chaine)
         {
-            
-            chaine = chaine.Replace("60", "AAAAAA").Replace("50", "AAAAA").Replace("40", "AAAA").Replace( "30", "AAA").Replace("20", "AA").Replace("10", "A");
-            chaine = chaine.Replace("61", "BBBBBB").Replace( "51", "BBBBB").Replace("41", "BBBB").Replace("31", "BBB").Replace( "21", "BB").Replace("11", "B");
-            chaine = chaine.Replace('A', '0').Replace('B', '1'); 
+
+            chaine = chaine.Replace("60", "AAAAAA").Replace("50", "AAAAA").Replace("40", "AAAA").Replace("30", "AAA").Replace("20", "AA").Replace("10", "A");
+            chaine = chaine.Replace("61", "BBBBBB").Replace("51", "BBBBB").Replace("41", "BBBB").Replace("31", "BBB").Replace("21", "BB").Replace("11", "B");
+            chaine = chaine.Replace('A', '0').Replace('B', '1');
             return chaine;
         }
         // Permet de récupéré la table de chiffrement
@@ -274,7 +276,7 @@ namespace RKVCRYPT
         }
         public static string Num(string format, string chaine)
         {
-            ConvTable(format,out string[] tab, out string[] tab2);
+            ConvTable(format, out string[] tab, out string[] tab2);
             string ch = espacement(chaine);
             string[] numC = ch.Split('¬');
             for (int j = 0; j < numC.Length; j++)
@@ -400,8 +402,8 @@ namespace RKVCRYPT
                         //case "N": message = Num(format, message); break;
                         //case "H": message = hex(message); break;
                         //case "K": keynb++; message = key(format, message, keynb); break;
-                         case "N": message = Lettre(format, message); break;
-                         case "L": message = Lecture(message); break;
+                        case "N": message = Lettre(format, message); break;
+                        case "L": message = Lecture(message); break;
                     }
                 }
             }
