@@ -75,6 +75,7 @@
 
         public static void accueil()
         {
+            string v = Program.Search("PROGRAM-VERSION=");
             Console.Clear();
             Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
             affichage accueil = new affichage();
@@ -91,6 +92,7 @@
         }
         public static void information()
         {
+            string v = Program.Search("PROGRAM-VERSION=");
             Console.Clear();
             Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
             affichage info = new affichage();
@@ -98,7 +100,7 @@
             info.ligne1 = "# " + L1 + " Interface d'information de RKV-CRYPT                     #";
             info.ligne2 = "# " + L2 + " RKV-CRYPT: Cryptage Modulaire par Roskova                #";
             info.ligne3 = "# " + L3 + " Début du projet: 06-12-2021 16h40                        #";
-            info.ligne4 = "# " + L4 + " Dernière version publié: 09-12-2021 22h30                #";
+            info.ligne4 = "# " + L4 + " Dernière version publié: 09-12-2021 23h25                #";
             info.ligne5 = "# " + L5 + " Version du logiciel: "+ v + "                     #";
             info.ligne6 = "# " + L6 + " Github: http://github.com/Roskova/RKV-CRYPT/             #";
             info.ligne7 = "# " + L1 + " Email: roskova@protonmail.com            Роскова © 2021  #";
@@ -107,6 +109,7 @@
         }
         public static void cryptage()
         {
+            string v = Program.Search("PROGRAM-VERSION=");
             Console.Clear();
             Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
             affichage cryptage = new affichage();
@@ -123,6 +126,7 @@
         }
         public static void decryptage()
         {
+            string v = Program.Search("PROGRAM-VERSION=");
             Console.Clear();
             Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
             affichage cryptage = new affichage();
