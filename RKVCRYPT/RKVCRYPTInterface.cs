@@ -98,8 +98,8 @@ namespace RKVCRYPT
             info.ligne1 = "# " + L1 + " Interface d'information de RKV-CRYPT                     #";
             info.ligne2 = "# " + L2 + " RKV-CRYPT: Cryptage Modulaire par Roskova                #";
             info.ligne3 = "# " + L3 + " Début du projet: 06-12-2021 16h40                        #";
-            info.ligne4 = "# " + L4 + " Dernière version publié: 08-12-2021 01h06                #";
-            info.ligne5 = "# " + L5 + " Version du logiciel: 1.0.0                               #";
+            info.ligne4 = "# " + L4 + " Dernière version publié: 09-12-2021 22h30                #";
+            info.ligne5 = "# " + L5 + " Version du logiciel: 1.0.1.3                             #";
             info.ligne6 = "# " + L6 + " Github: http://github.com/Roskova/RKV-CRYPT/             #";
             info.ligne7 = "# " + L1 + " ROSKOVA@PROTONMAIL.COM                   Роскова © 2021  #";
             info.ligne8 = "########################################################################";
@@ -113,10 +113,10 @@ namespace RKVCRYPT
             cryptage.ligne0 = "########################################################################";
             cryptage.ligne1 = "# " + L1 + " Interface du module de cryptage                          #";
             cryptage.ligne2 = "# " + L2 + " RKV-CRYPT: Cryptage Modulaire par Roskova                #";
-            cryptage.ligne3 = "# " + L3 + " FONCTION MK ACTIVÉ: N L K B H R                          #";
-            cryptage.ligne4 = "# " + L4 + "                                                          #";
-            cryptage.ligne5 = "# " + L5 + "                                                          #";
-            cryptage.ligne6 = "# " + L6 + "                                                          #";
+            cryptage.ligne3 = "# " + L3 + " FONCTION MK ACTIVÉ: N = numération du message            #";
+            cryptage.ligne4 = "# " + L4 + "    N-R-H-L-K        L = Lecture du Binarosky             #";
+            cryptage.ligne5 = "# " + L5 + " K = Applique un clé H = Transforme en Hexadécimal        #";
+            cryptage.ligne6 = "# " + L6 + " R = Transforme en binarosk le message chiffré            #";
             cryptage.ligne7 = "# " + L1 + " ROSKOVA@PROTONMAIL.COM                   Роскова © 2021  #";
             cryptage.ligne8 = "########################################################################";
             Console.WriteLine(print(cryptage));
@@ -129,8 +129,8 @@ namespace RKVCRYPT
             cryptage.ligne0 = "########################################################################";
             cryptage.ligne1 = "# " + L1 + " Interface du module de décryptage                        #";
             cryptage.ligne2 = "# " + L2 + " RKV-CRYPT: Cryptage Modulaire par Roskova                #";
-            cryptage.ligne3 = "# " + L3 + " FONCTION MK ACTIVÉ: P L                                  #";
-            cryptage.ligne4 = "# " + L4 + "                                                          #";
+            cryptage.ligne3 = "# " + L3 + " FONCTION MK ACTIVÉ: N = Inverse la numération            #";
+            cryptage.ligne4 = "# " + L4 + "                     L = Inverse la lecture du Binarosk   #";
             cryptage.ligne5 = "# " + L5 + "                                                          #";
             cryptage.ligne6 = "# " + L6 + "                                                          #";
             cryptage.ligne7 = "# " + L1 + " ROSKOVA@PROTONMAIL.COM                   Роскова © 2021  #";

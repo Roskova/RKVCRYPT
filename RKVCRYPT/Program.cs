@@ -4,17 +4,13 @@ using System.Text;
 
 namespace RKVCRYPT
 {
-
     class Program
     {
-
-
         public static string configLoad(string op)
         {
             bool enable = false;
             string path = Path.Combine(Environment.CurrentDirectory, @"ref\config.txt");
             string[] config = System.IO.File.ReadAllLines(path);
-
             for (int i = 0; i < config.Length; i++)
             {
                 if (config[i].StartsWith("ENABLE-CONFIG="))
@@ -67,14 +63,6 @@ namespace RKVCRYPT
             string[] LV = chaine.Split('=');
             chaine = LV[1];
             return chaine;
-        }
-        static void Decryptage()
-        {
-            RKVCRYPTDeCryptage.main();
-        }
-        static void Cryptage()
-        {
-            RKVCRYPTCryptage.main();
         }
         static void Main(string[] args)
         {

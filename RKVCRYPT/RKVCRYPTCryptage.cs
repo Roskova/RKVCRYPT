@@ -34,7 +34,6 @@ namespace RKVCRYPT
             {
                 i = i+nb;
                 chaine = chaine.Insert(i, "¬");
-
             }
             return chaine;
         }
@@ -45,7 +44,6 @@ namespace RKVCRYPT
             {
                 i++;
                 chaine = chaine.Insert(i, "¬");
-
             }
             return chaine;
         }
@@ -102,10 +100,8 @@ namespace RKVCRYPT
             {
                 for (int i = 0; i < tab.Length; i++)
                 {
-
                     if (i < 100)
                     {
-
                         if (i < 10)
                         {
                             tab2[i] = "00" + (i + 1);
@@ -114,8 +110,6 @@ namespace RKVCRYPT
                         {
                             tab2[i] = "0" + (i + 1);
                         }
-
-
                     }
                     else
                     {
@@ -123,14 +117,12 @@ namespace RKVCRYPT
                     }
                 }
             }
-            /*else if (tab.Length >= 1000)
+            else if (tab.Length >= 1000)
             {
                 for (int i = 0; i < tab.Length; i++)
                 {
-
                     if (i < 100)
                     {
-
                         if (i < 10)
                         {
                             tab2[i] = "000" + (i + 1);
@@ -143,15 +135,13 @@ namespace RKVCRYPT
                         {
                             tab2[i] = "0" + (i + 1);
                         }
-
-
                     }
                     else
                     {
                         tab2[i] = "" + i;
                     }
                 }
-            }*/
+            }
             else
             {
                 for (int i = 0; i < tab.Length; i++)
@@ -352,7 +342,6 @@ namespace RKVCRYPT
             Match mk = Regex.Match(input, pattern, RegexOptions.IgnoreCase);
             if (mk.Success)
             {
-                //input = espacement(input);
                 string[] mkformat = input.Split('-');
                 for (int i = 0; i < mkformat.Length; i++)
                 {

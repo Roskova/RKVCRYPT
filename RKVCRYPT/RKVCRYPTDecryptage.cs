@@ -400,7 +400,7 @@ namespace RKVCRYPT
                         //case "N": message = Num(format, message); break;
                         //case "H": message = hex(message); break;
                         //case "K": keynb++; message = key(format, message, keynb); break;
-                         case "P": message = Lettre(format, message); break;
+                         case "N": message = Lettre(format, message); break;
                          case "L": message = Lecture(message); break;
                     }
                 }
