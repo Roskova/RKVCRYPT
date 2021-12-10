@@ -4,22 +4,6 @@ namespace RKVCRYPT
 {
     class RKVCRYPTCryptage
     {
-        /* 
-             * MÉTHODE DE CHIFFREMENT 
-             *                  # # # # # # # 
-             * FORMAT VOULU IP> N-R-K-R-H-K-R-L
-             * EXÉCUTE Key B K D INPUT--> A DEVIENT 01 DEVIENT 01101000 DEVIENT 03121202
-             * DEVIENT 01100010100001001000010001100100 DEVIENT 62848464 DEVIENT 00110100110100011101000100110001
-             * DEVIENT 11221211221211122212111211221112
-             # R BINAROSK 1 = 1000 2 = 0100 3 = 0010 4 = 0001 5 = 1100 6 = 0011 7 = 1011 8 = 1101 9 = 1001 0 = 0110
-             * B CONVERSION EN BINAIRE
-             * L LECTURE DU BINAROSK 01101000 = 1021101130
-             # N CONVERSION EN CHIFFRE
-             & P CONVERSION EN LETTRE
-             # K Key de chiffrement en numérique.
-             # H CONVERSION EN HEXADÉCIMAL
-             * C KEY DE CESAR3 DE 3-5 CARACTÈRE DE LONG RESPECTANT LE FORMAT DE TEST CFL.
-        */
         //Permet de récupéré le nom de la table de chiffrement à utilisé dans le config.txt
         public static string format()
         {

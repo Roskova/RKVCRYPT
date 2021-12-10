@@ -2,6 +2,7 @@
 {
     internal class RKVCRYPTInterface
     {
+        const string v = "Release 1.0.1.4";
         public struct logoLoad
         {
             public string L1;
@@ -84,7 +85,7 @@
             accueil.ligne4 = "# " + L4 + "                                                          #";
             accueil.ligne5 = "# " + L5 + "                                                          #";
             accueil.ligne6 = "# " + L6 + "                                                          #";
-            accueil.ligne7 = "# " + L1 + " Release 1.0.1.4                          Роскова © 2021  #";
+            accueil.ligne7 = "# " + L1 + " " + v + "                          Роскова © 2021  #";
             accueil.ligne8 = "########################################################################";
             Console.WriteLine(print(accueil));
         }
@@ -98,7 +99,7 @@
             info.ligne2 = "# " + L2 + " RKV-CRYPT: Cryptage Modulaire par Roskova                #";
             info.ligne3 = "# " + L3 + " Début du projet: 06-12-2021 16h40                        #";
             info.ligne4 = "# " + L4 + " Dernière version publié: 09-12-2021 22h30                #";
-            info.ligne5 = "# " + L5 + " Version du logiciel: 1.0.1.4                             #";
+            info.ligne5 = "# " + L5 + " Version du logiciel: "+ v + "                     #";
             info.ligne6 = "# " + L6 + " Github: http://github.com/Roskova/RKV-CRYPT/             #";
             info.ligne7 = "# " + L1 + " Email: roskova@protonmail.com            Роскова © 2021  #";
             info.ligne8 = "########################################################################";
@@ -116,7 +117,7 @@
             cryptage.ligne4 = "# " + L4 + "    N-R-H-L-K       *L = Lecture du Binarosky             #";
             cryptage.ligne5 = "# " + L5 + "*K = Applique un clé H = Transforme en Hexadécimal        #";
             cryptage.ligne6 = "# " + L6 + " R = Transforme en binarosk le message chiffré            #";
-            cryptage.ligne7 = "# " + L1 + " Release 1.0.1.4     *Expérimentale       Роскова © 2021  #";
+            cryptage.ligne7 = "# " + L1 + " " + v + "     *Expérimentale       Роскова © 2021  #";
             cryptage.ligne8 = "########################################################################";
             Console.WriteLine(print(cryptage));
         }
@@ -132,7 +133,7 @@
             cryptage.ligne4 = "# " + L4 + "       N-L          *L = Inverse la lecture du Binarosk   #";
             cryptage.ligne5 = "# " + L5 + "                                                          #";
             cryptage.ligne6 = "# " + L6 + "                                                          #";
-            cryptage.ligne7 = "# " + L1 + " Release 1.0.1.4     *Expérimentale       Роскова © 2021  #";
+            cryptage.ligne7 = "# " + L1 + " " + v + "     *Expérimentale       Роскова © 2021  #"; 
             cryptage.ligne8 = "########################################################################";
             Console.WriteLine(print(cryptage));
         }

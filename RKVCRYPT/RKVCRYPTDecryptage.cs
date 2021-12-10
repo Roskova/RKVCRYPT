@@ -26,7 +26,7 @@ namespace RKVCRYPT
             affichage();
             Console.WriteLine(Program.Search("MESSAGE-FORMAT-DECRYPT="));
             string nu = Console.ReadLine();
-            if(nu == "")
+            if (nu == "")
             {
                 nu = "nu3";
             }
