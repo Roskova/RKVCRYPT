@@ -2,7 +2,7 @@
 {
     internal class RKVCRYPTInterface
     {
-        const string v = "Release 1.0.1.4";
+        string v = Program.Search("PROGRAM-VERSION=");
         public struct logoLoad
         {
             public string L1;
