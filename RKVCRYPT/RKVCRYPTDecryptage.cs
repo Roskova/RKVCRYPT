@@ -400,7 +400,7 @@ namespace RKVCRYPT
         public static string Message(string format)
         {
             affichage();
-            Console.WriteLine(Program.Search("DECRYPT-MESSAGE="));
+            Console.WriteLine(Program.Search("MESSAGE-DECRYPT="));
             string message = Console.ReadLine();
             if (message.Length >= 0)
             {

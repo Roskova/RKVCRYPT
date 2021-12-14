@@ -348,7 +348,7 @@ namespace RKVCRYPT
         public static string Message()
         {
             affichage();
-            Console.WriteLine(Program.Search("CRYPT-MESSAGE="));
+            Console.WriteLine(Program.Search("MESSAGE-CRYPT="));
             string message = Console.ReadLine();
             if (message.Length >= 0)
             {
