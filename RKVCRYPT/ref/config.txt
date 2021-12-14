@@ -1,4 +1,4 @@
-##########################################################################au
+##########################################################################
 # FICHIER DE CONFIGURATION DE RKV-CRYPT PAR ROSKOVA         2021-12-14   #
 # Ce fichier permet de configurer les différents composants de RKV-CRYPT #
 # This file is used to configure the different components of RKV-CRYPT   #
@@ -8,7 +8,7 @@
 # Lorsque désactivées, les configurations par défaut seront utilisées    #
 ##########################################################################
 PROGRAM-CONFIG-ENABLE=true
-PROGRAM-VERSION=Release 1.0.1.6
+PROGRAM-VERSION=Release 1.0.1.7
 ##########################################################################
 # Active la prise en charge du cryptage par décalage CESAR3              #
 # rendant le code plus difficile à lire https://roskova.ca/CESAR3        #
