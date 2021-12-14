@@ -75,10 +75,11 @@ namespace RKVCRYPT
         public static void ConvTable(out string[] tab, out string[] tab2)
         {
             string nu = format();
-            string tabC = espacement(cutter('¬', nu));
+            string table = cutter('¬', nu);
+            string tabC = espacement(table);
             tab = tabC.Split('¬');
             tab2 = new string[tabC.Length];
-            if (tab.Length >= 100 && tab.Length < 1000)
+            if (table.Length >= 100 && table.Length < 1000)
             {
                 for (int i = 0; i < tab.Length; i++)
                 {
@@ -99,7 +100,7 @@ namespace RKVCRYPT
                     }
                 }
             }
-            else if (tab.Length >= 1000)
+            /*else if (tab.Length >= 1000)
             {
                 for (int i = 0; i < tab.Length; i++)
                 {
@@ -123,7 +124,7 @@ namespace RKVCRYPT
                         tab2[i] = "" + i;
                     }
                 }
-            }
+            }*/
             else
             {
                 for (int i = 0; i < tab.Length; i++)
