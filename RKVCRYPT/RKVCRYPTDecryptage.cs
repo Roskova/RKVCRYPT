@@ -119,7 +119,7 @@ namespace RKVCRYPT
 
         public static string hex(string chaine)
         {
-            chaine = RKVCRYPTCryptage.substring(4,chaine);
+            chaine = RKVCRYPTCryptage.substring(4, chaine);
             string tabRef = RKVCRYPTCryptage.cutter('=', "hev=");
             string[] tab = tabRef.Split('-');
             string[] bin = chaine.Split('¬');
@@ -211,11 +211,11 @@ namespace RKVCRYPT
             ConvTable(format, out string[] tab, out string[] tab2);
             if (RKVCRYPTCryptage.contain('a', RKVCRYPTCryptage.cutter('¬', format)) && RKVCRYPTCryptage.contain('A', RKVCRYPTCryptage.cutter('¬', format)))
             {
-                chaine = RKVCRYPTCryptage.substring(3,chaine);
+                chaine = RKVCRYPTCryptage.substring(3, chaine);
             }
             else
             {
-                chaine = RKVCRYPTCryptage.substring(2,chaine);
+                chaine = RKVCRYPTCryptage.substring(2, chaine);
             }
             //Module de lettrage
             string[] numC = chaine.Split('¬');

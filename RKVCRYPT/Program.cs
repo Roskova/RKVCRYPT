@@ -34,16 +34,31 @@ namespace RKVCRYPT
             else
             {
                 string[] configFalse = {
+                    "MESSAGE-SELECTEUR-INVALIDE=Veuillez sélectionnée une option valide",
+                    "MESSAGE-SELECTEUR-OPTION=1: Crypter 2: Décrypter 3: Information du logiciel Q: Quitter",
+                    "MESSAGE-DECRYPT-FORMAT=Veuillez entrer le nom de la table de chiffrement",
+                    "MESSAGE-DECRYPT=Veuillez entrer votre message à décrypter",
+                    "MESSAGE-MK-INPUT=Veuillez entrer le format de MK",
+                    "MESSAGE-MK-FORMAT=",
+                    "MESSAGE-KEY-INPUT=Veuillez entrer la | NOMBRE |e clé de chiffrement:",
+                    "MESSAGE-CRYPT=Veuillez entrer votre message à crypter",
+                    "INVALIDE-MK-FORMAT=Méthode de chiffrement invalide",
+                    "INVMESSAGE-OPTION=L'option que vous avez sélectionnée n'existe pas",
                     "LOGO-ENABLE=true",
-                    "LOGO-CUSTOM=false",
-                    "NUM-FORMAT=nu2",
+                    "LOGO-CUSTOM=true",
+                    "L1=          #",
+                    "L2=@....@    #",
+                    "L3=(------)  #",
+                    "L4=(> ___ <) #",
+                    "L5=^^ ~~~ ^^ #",
+                    "L6=RKV-CRYPT #",
                     "CESAR3-ENABLE=false",
                     "CESAR3-KEY=CFL",
-                    "MK-OVERPASS-CONFIG=false",
+                    "MK-CONFIG-OVERPASS=false",
                     "MK-DEFAULT=N-R-K-R-H-K-R-L",
-                    "MESSAGE-INPUT-MK=Veuillez entrer le Format MK",
-                    "INVALIDE-FORMAT-MK=Méthode de chiffrement invalide",
-                    "TXT-MESSAGE=Veuillez entrer votre message à crypter"
+                    "NUM-FORMAT=nu3",
+                    "PROGRAM-CONFIG-ENABLE=true",
+                    "PROGRAM-VERSION=Release 1.0.1.6"
                 };
                 for (int i = 0; i < configFalse.Length; i++)
                 {

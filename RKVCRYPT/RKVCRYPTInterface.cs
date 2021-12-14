@@ -101,7 +101,7 @@
             info.ligne2 = "# " + L2 + " RKV-CRYPT: Cryptage Modulaire par Roskova                #";
             info.ligne3 = "# " + L3 + " Début du projet: 06-12-2021 16h40                        #";
             info.ligne4 = "# " + L4 + " Dernière version publié: 09-12-2021 23h25                #";
-            info.ligne5 = "# " + L5 + " Version du logiciel: "+ v + "                     #";
+            info.ligne5 = "# " + L5 + " Version du logiciel: " + v + "                     #";
             info.ligne6 = "# " + L6 + " Github: http://github.com/Roskova/RKV-CRYPT/             #";
             info.ligne7 = "# " + L1 + " Email: roskova@protonmail.com            Роскова © 2021  #";
             info.ligne8 = "########################################################################";
@@ -137,7 +137,7 @@
             cryptage.ligne4 = "# " + L4 + "       N-L          *L = Inverse la lecture du Binarosk   #";
             cryptage.ligne5 = "# " + L5 + "                                                          #";
             cryptage.ligne6 = "# " + L6 + "                                                          #";
-            cryptage.ligne7 = "# " + L1 + " " + v + "     *Expérimentale       Роскова © 2021  #"; 
+            cryptage.ligne7 = "# " + L1 + " " + v + "     *Expérimentale       Роскова © 2021  #";
             cryptage.ligne8 = "########################################################################";
             Console.WriteLine(print(cryptage));
         }
