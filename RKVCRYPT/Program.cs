@@ -11,7 +11,7 @@ namespace RKVCRYPT
             string[] config = System.IO.File.ReadAllLines(path);
             for (int i = 0; i < config.Length; i++)
             {
-                if (config[i].StartsWith("ENABLE-CONFIG="))
+                if (config[i].StartsWith("PROGRAM-CONFIG-ENABLE="))
                 {
                     if (config[i].EndsWith("true"))
                     {

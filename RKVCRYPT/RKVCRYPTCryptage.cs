@@ -268,7 +268,7 @@ namespace RKVCRYPT
         public static string key(string chaine, int nb)
         {
             affichage();
-            string messageinputkey = Program.Search("MESSAGE-INPUT-KEY=");
+            string messageinputkey = Program.Search("MESSAGE-KEY-INPUT=");
             string[] Y = messageinputkey.Split('|');
             messageinputkey = Y[0] + nb + Y[2];
             Console.WriteLine(messageinputkey);
@@ -317,9 +317,9 @@ namespace RKVCRYPT
         {
             affichage();
             int keynb = 0;
-            string invmessageMK = Program.Search("INVALIDE-FORMAT-MK=");
-            Console.WriteLine(Program.Search("MESSAGE-INPUT-MK="));
-            Console.Write(Program.Search("MESSAGE-FORMAT-MK="));
+            string invmessageMK = Program.Search("INVALIDE-MK-FORMAT=");
+            Console.WriteLine(Program.Search("MESSAGE-MK-INPUT="));
+            Console.Write(Program.Search("MESSAGE-MK-FORMAT="));
             string pattern = @"^[RBLNPKCH](-[RBLNPKCH])*$";
             string input = Console.ReadLine();
             Match mk = Regex.Match(input, pattern, RegexOptions.IgnoreCase);

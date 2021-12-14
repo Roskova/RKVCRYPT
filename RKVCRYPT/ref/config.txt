@@ -3,10 +3,12 @@
 # Ce fichier permet de configurer les différent composant de RKV-CRYPT #
 # This file is used to configure the different components of RKV-CRYPT #
 ########################################################################
-#  Active la prise en charge du fichier de configuration               #
-#  Lorsque désactivées, les configurations par défaut seront utilisées #
+# Configuration lier au information logiciel de RKV-CRYPT              #
+# Active la prise en charge du fichier de configuration                #
+# Lorsque désactivées, les configurations par défaut seront utilisées  #
 ########################################################################
-ENABLE-CONFIG=true
+PROGRAM-CONFIG-ENABLE=true
+PROGRAM-VERSION=Release 1.0.1.6
 ########################################################################
 # Active la prise en charge du cryptage par décalage CESAR3            #
 # rendant le code plus difficile à lire https://roskova.ca/CESAR3      #
@@ -25,7 +27,7 @@ CESAR3-KEY=CFL
 ########################################################################
 MK-CONFIG-OVERPASS=false
 MK-DEFAULT=N-R-K-R-H-K-R-L
-NUM-FORMAT=nu4
+NUM-FORMAT=nu3
 ########################################################################
 # Personnalisation du logo RKV-CRYPT 6x11                              #
 ########################################################################
@@ -42,12 +44,11 @@ L6=RKV-CRYPT #
 ########################################################################
 MESSAGE-SELECTEUR-INVALIDE=Veuillez selectionner une options valide
 MESSAGE-SELECTEUR-OPTION=1: Crypter 2: Décrypter 3: Configuration Q: Quitter
-MESSAGE-INPUT-MK=Veuillez entrer le format de MK
-MESSAGE-FORMAT-DECRYPT=Veuillez entrer le nom de la table de chiffrement
-MESSAGE-INPUT-KEY=Veuillez entrer la |NOMBRE|e clé de chiffrement: 
+MESSAGE-DECRYPT-FORMAT=Veuillez entrer le nom de la table de chiffrement
 MESSAGE-DECRYPT=Veuillez entrer votre message à décrypter
+MESSAGE-MK-INPUT=Veuillez entrer le format de MK
+MESSAGE-MK-FORMAT=
+MESSAGE-KEY-INPUT=Veuillez entrer la |NOMBRE|e clé de chiffrement: 
 MESSAGE-CRYPT=Veuillez entrer votre message à crypter
-MESSAGE-FORMAT-MK=
-INVALIDE-FORMAT-MK=Méthode de chiffrement invalide
+INVALIDE-MK-FORMAT=Méthode de chiffrement invalide
 INVMESSAGE-OPTION=L'option que vous avez sélectionner d'existe pas
-PROGRAM-VERSION=Release 1.0.1.4
