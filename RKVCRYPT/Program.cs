@@ -55,6 +55,7 @@ namespace RKVCRYPT
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
+            RKVCRYPTConfig.main();
             RKVCRYPTInterface.main();
         }
     }
