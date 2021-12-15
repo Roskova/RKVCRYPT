@@ -47,7 +47,7 @@ namespace RKVCRYPT
             }
             else
             {
-                string[] p = { "MESSAGE-AFFICHAGE-QUITTER=Appuyez sur Q pour quitter", "MESSAGE-AFFICHAGE-INPUT=Message d'origine:", "MESSAGE-AFFICHAGE-RESULTAT=Résultat:", "PROGRAM-CONFIG-ENABLE=true", "PROGRAM-VERSION=Release 1.0.1.7", "MK-CONFIG-OVERPASS=false", "MK-DEFAULT=N-R-K-R-H-K-R-L", "NUM-FORMAT=nu3", "CESAR3-ENABLE=false", "CESAR3-KEY=CFL", "LOGO-ENABLE=true", "LOGO-CUSTOM=true", "L1=          #", "L2=@....@    #", "L3=(------)  #", "L4=(> ___ <) #", "L5=^^ ~~~ ^^ #", "L6=RKV-CRYPT #", "MESSAGE-SELECTEUR-INVALIDE=Veuillez sélectionnée une option valide", "MESSAGE-SELECTEUR-OPTION=1: Crypter 2: Décrypter 3: Information du logiciel Q: Quitter", "MESSAGE-DECRYPT-FORMAT=Veuillez entrer le nom de la table de chiffrement", "MESSAGE-DECRYPT=Veuillez entrer votre message à décrypter", "MESSAGE-MK-INPUT=Veuillez entrer le format de MK", "MESSAGE-MK-FORMAT=", "MESSAGE-KEY-INPUT=Veuillez entrer la | NOMBRE |e clé de chiffrement:", "MESSAGE-CRYPT=Veuillez entrer votre message à crypter", "INVALIDE-MK-FORMAT=Méthode de chiffrement invalide", "INVMESSAGE-OPTION=L'option que vous avez sélectionnée n'existe pas" };
+                string[] p = { "PROGRAM-CONSOLE-TITLE=RKV-CRYPT", "MESSAGE-AFFICHAGE-QUITTER=Appuyez sur Q pour quitter", "MESSAGE-AFFICHAGE-INPUT=Message d'origine:", "MESSAGE-AFFICHAGE-RESULTAT=Résultat:", "PROGRAM-CONFIG-ENABLE=true", "PROGRAM-VERSION=Release 1.0.1.7", "MK-CONFIG-OVERPASS=false", "MK-DEFAULT=N-R-K-R-H-K-R-L", "NUM-FORMAT=nu3", "CESAR3-ENABLE=false", "CESAR3-KEY=CFL", "LOGO-ENABLE=true", "LOGO-CUSTOM=true", "L1=          #", "L2=@....@    #", "L3=(------)  #", "L4=(> ___ <) #", "L5=^^ ~~~ ^^ #", "L6=RKV-CRYPT #", "MESSAGE-SELECTEUR-INVALIDE=Veuillez sélectionnée une option valide", "MESSAGE-SELECTEUR-OPTION=1: Crypter 2: Décrypter 3: Information du logiciel Q: Quitter", "MESSAGE-DECRYPT-FORMAT=Veuillez entrer le nom de la table de chiffrement", "MESSAGE-DECRYPT=Veuillez entrer votre message à décrypter", "MESSAGE-MK-INPUT=Veuillez entrer le format de MK", "MESSAGE-MK-FORMAT=", "MESSAGE-KEY-INPUT=Veuillez entrer la | NOMBRE |e clé de chiffrement:", "MESSAGE-CRYPT=Veuillez entrer votre message à crypter", "INVALIDE-MK-FORMAT=Méthode de chiffrement invalide", "INVMESSAGE-OPTION=L'option que vous avez sélectionnée n'existe pas" };
                 config = p;
                 for (int i = 0; i < config.Length; i++)
                 {
@@ -73,7 +73,7 @@ namespace RKVCRYPT
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.White;
             Console.CursorVisible = true;
-            Console.Title = Config.Search("PROGRAM-TITLE=")+ " " + Config.Search("PROGRAM-VERSION=");
+            Console.Title = Config.Search("PROGRAM-CONSOLE-TITLE=")+ " " + Config.Search("PROGRAM-VERSION=");
             Console.SetWindowSize(75, 25);
             Console.SetBufferSize(10000, 250);
             Console.OutputEncoding = Encoding.UTF8;
