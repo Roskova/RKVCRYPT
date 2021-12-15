@@ -41,7 +41,7 @@ namespace RKVCRYPT
         public static void ConvTable(string format, out string[] tab, out string[] tab2)
         {
             string nu = format;
-            string tabC = RKVCRYPTCryptage.espacement(RKVCRYPTCryptage.cutter('¬', nu));
+            string tabC = Cryptage.espacement(Cryptage.cutter('¬', nu));
             tab = tabC.Split('¬');
             tab2 = new string[tabC.Length];
             if (tab.Length >= 100 && tab.Length < 1000)
@@ -110,8 +110,8 @@ namespace RKVCRYPT
         }
         public static string hex(string chaine)
         {
-            chaine = RKVCRYPTCryptage.substring(4, chaine);
-            string tabRef = RKVCRYPTCryptage.cutter('=', "hev=");
+            chaine = Cryptage.substring(4, chaine);
+            string tabRef = Cryptage.cutter('=', "hev=");
             string[] tab = tabRef.Split('-');
             string[] bin = chaine.Split('¬');
             for (int i = 0; i < bin.Length; i++)
@@ -146,9 +146,9 @@ namespace RKVCRYPT
         }
         public static string binarosk(string chaine)
         {
-            string tabRef = RKVCRYPTCryptage.cutter('¬', "bin=");
+            string tabRef = Cryptage.cutter('¬', "bin=");
             string[] tab = tabRef.Split('-');
-            chaine = RKVCRYPTCryptage.espacement(chaine);
+            chaine = Cryptage.espacement(chaine);
             string[] bin = chaine.Split('¬');
             for (int i = 0; i < bin.Length; i++)
             {
@@ -176,7 +176,7 @@ namespace RKVCRYPT
         public static string Num(string format, string chaine)
         {
             ConvTable(format, out string[] tab, out string[] tab2);
-            string ch = RKVCRYPTCryptage.espacement(chaine);
+            string ch = Cryptage.espacement(chaine);
             string[] numC = ch.Split('¬');
             for (int j = 0; j < numC.Length; j++)
             {
@@ -200,13 +200,13 @@ namespace RKVCRYPT
         {
             //Tab = Table Lettre tab2 = Table chiffre
             ConvTable(format, out string[] tab, out string[] tab2);
-            if (RKVCRYPTCryptage.contain('a', RKVCRYPTCryptage.cutter('¬', format)) && RKVCRYPTCryptage.contain('A', RKVCRYPTCryptage.cutter('¬', format)))
+            if (Cryptage.contain('a', Cryptage.cutter('¬', format)) && Cryptage.contain('A', Cryptage.cutter('¬', format)))
             {
-                chaine = RKVCRYPTCryptage.substring(3, chaine);
+                chaine = Cryptage.substring(3, chaine);
             }
             else
             {
-                chaine = RKVCRYPTCryptage.substring(2, chaine);
+                chaine = Cryptage.substring(2, chaine);
             }
             //Module de lettrage
             string[] numC = chaine.Split('¬');
@@ -246,8 +246,8 @@ namespace RKVCRYPT
             key = key.Insert(chaine.Length, "¬");
             string[] keyS = key.Split('¬');
             key = keyS[0];
-            string[] k = RKVCRYPTCryptage.espacement(key).Split('¬');
-            string[] e = RKVCRYPTCryptage.espacement(chaine).Split('¬');
+            string[] k = Cryptage.espacement(key).Split('¬');
+            string[] e = Cryptage.espacement(chaine).Split('¬');
             for (int i = 0; i < chaine.Length; i++)
             {
                 if (e[i] == "0" && k[i] == "0")
@@ -317,7 +317,7 @@ namespace RKVCRYPT
             string message = Console.ReadLine();
             if (message.Length >= 0)
             {
-                if (RKVCRYPTCryptage.contain('a', RKVCRYPTCryptage.cutter('¬', format)) && RKVCRYPTCryptage.contain('A', RKVCRYPTCryptage.cutter('¬', format)))
+                if (Cryptage.contain('a', Cryptage.cutter('¬', format)) && Cryptage.contain('A', Cryptage.cutter('¬', format)))
                 {
                     return message;
                 }

@@ -2,12 +2,12 @@
 
 namespace RKVCRYPT
 {
-    class RKVCRYPTCryptage
+    class Cryptage
     {
         //Permet de récupéré le nom de la table de chiffrement à utilisé dans le config.txt
         public static string format()
         {
-            string nu = Program.Search("NUM-FORMAT=");
+            string nu = Config.Search("NUM-FORMAT=");
             return nu;
         }
         //Divise une chaine de caractère en sous-chaine d'une longueur donnée
@@ -264,7 +264,7 @@ namespace RKVCRYPT
         public static string key(string chaine, int nb)
         {
             affichage();
-            string messagekeyinput = Program.Search("MESSAGE-KEY-INPUT=");
+            string messagekeyinput = Config.Search("MESSAGE-KEY-INPUT=");
             string[] Y = messagekeyinput.Split('|');
             messagekeyinput = Y[0] + nb + Y[2];
             Console.WriteLine(messagekeyinput);
@@ -313,9 +313,9 @@ namespace RKVCRYPT
         {
             affichage();
             int keynb = 0;
-            string invmessageMK = Program.Search("MESSAGE-MK-FORMAT-INVALIDE=");
-            Console.WriteLine(Program.Search("MESSAGE-MK-INPUT="));
-            Console.Write(Program.Search("MESSAGE-MK-FORMAT="));
+            string invmessageMK = Config.Search("MESSAGE-MK-FORMAT-INVALIDE=");
+            Console.WriteLine(Config.Search("MESSAGE-MK-INPUT="));
+            Console.Write(Config.Search("MESSAGE-MK-FORMAT="));
             string pattern = @"^[RBLNPKCH](-[RBLNPKCH])*$";
             string input = Console.ReadLine();
             Match mk = Regex.Match(input, pattern, RegexOptions.IgnoreCase);
@@ -344,7 +344,7 @@ namespace RKVCRYPT
         public static string Message()
         {
             affichage();
-            Console.WriteLine(Program.Search("MESSAGE-CRYPT="));
+            Console.WriteLine(Config.Search("MESSAGE-CRYPT="));
             string message = Console.ReadLine();
             if (message.Length >= 0)
             {
@@ -362,8 +362,8 @@ namespace RKVCRYPT
         public static void affichageOutput(string input, string chaine)
         {
             affichage();
-            Console.WriteLine(Program.Search("MESSAGE-AFFICHAGE-INPUT=") + input + "\n" + Program.Search("MESSAGE-AFFICHAGE-RESULTAT=") + chaine);
-            Console.WriteLine(Program.Search("MESSAGE-AFFICHAGE-QUITTER="));
+            Console.WriteLine(Config.Search("MESSAGE-AFFICHAGE-INPUT=") + input + "\n" + Config.Search("MESSAGE-AFFICHAGE-RESULTAT=") + chaine);
+            Console.WriteLine(Config.Search("MESSAGE-AFFICHAGE-QUITTER="));
             if (Console.ReadKey().Key == ConsoleKey.Q)
             {
                 RKVCRYPTInterface.InterfaceDaccueil();

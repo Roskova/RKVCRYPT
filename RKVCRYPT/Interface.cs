@@ -1,8 +1,8 @@
 ﻿namespace RKVCRYPT
 {
-    internal class RKVCRYPTInterface
+    internal class Interface
     {
-        readonly string v = Program.Search("PROGRAM-VERSION=");
+        readonly string v = Config.Search("PROGRAM-VERSION=");
         public struct logoLoad
         {
             public string L1; public string L2; public string L3; public string L4; public string L5; public string L6;
@@ -10,13 +10,13 @@
         public static void Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6)
         {
             logoLoad log = new logoLoad();
-            string custom = Program.Search("LOGO-CUSTOM=");
-            string logo = Program.Search("LOGO-ENABLE=");
+            string custom = Config.Search("LOGO-CUSTOM=");
+            string logo = Config.Search("LOGO-ENABLE=");
             if (logo == "true")
             {
                 if (custom == "true")
                 {
-                    log.L1 = Program.Search("L1="); log.L2 = Program.Search("L2="); log.L3 = Program.Search("L3="); log.L4 = Program.Search("L4="); log.L5 = Program.Search("L5="); log.L6 = Program.Search("L6=");
+                    log.L1 = Config.Search("L1="); log.L2 = Config.Search("L2="); log.L3 = Config.Search("L3="); log.L4 = Config.Search("L4="); log.L5 = Config.Search("L5="); log.L6 = Config.Search("L6=");
                 }
                 else
                 {
@@ -39,7 +39,7 @@
         }
         public static void accueil()
         {
-            string v = Program.Search("PROGRAM-VERSION=");
+            string v = Config.Search("PROGRAM-VERSION=");
             Console.Clear();
             Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
             affichage accueil = new affichage();
@@ -56,7 +56,7 @@
         }
         public static void information()
         {
-            string v = Program.Search("PROGRAM-VERSION=");
+            string v = Config.Search("PROGRAM-VERSION=");
             Console.Clear();
             Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
             affichage info = new affichage();
@@ -73,7 +73,7 @@
         }
         public static void cryptage()
         {
-            string v = Program.Search("PROGRAM-VERSION=");
+            string v = Config.Search("PROGRAM-VERSION=");
             Console.Clear();
             Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
             affichage cryptage = new affichage();
@@ -90,7 +90,7 @@
         }
         public static void decryptage()
         {
-            string v = Program.Search("PROGRAM-VERSION=");
+            string v = Config.Search("PROGRAM-VERSION=");
             Console.Clear();
             Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
             affichage cryptage = new affichage();
@@ -110,17 +110,17 @@
             bool k = false;
             Console.Clear();
             accueil();
-            Console.WriteLine(Program.Search("MESSAGE-SELECTEUR-OPTION="));
+            Console.WriteLine(Config.Search("MESSAGE-SELECTEUR-OPTION="));
             while (!k)
             {
                 ConsoleKey key = Console.ReadKey().Key;
                 if (key == ConsoleKey.D1)
                 {
-                    RKVCRYPTCryptage.main();
+                    Cryptage.main();
                 }
                 else if (key == ConsoleKey.D2)
                 {
-                    RKVCRYPTDeCryptage.main();
+                    Decryptage.main();
                 }
                 else if (key == ConsoleKey.D3)
                 {
@@ -134,7 +134,7 @@
                 {
                     Console.Clear();
                     accueil();
-                    Console.WriteLine(Program.Search("MESSAGE-SELECTEUR-INVALIDE=")+ "\n"+ Program.Search("MESSAGE-SELECTEUR-OPTION="));
+                    Console.WriteLine(Config.Search("MESSAGE-SELECTEUR-INVALIDE=")+ "\n"+ Config.Search("MESSAGE-SELECTEUR-OPTION="));
                 }
             }
         }
