@@ -60,15 +60,15 @@
             Console.Clear();
             Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
             affichage info = new affichage();
-            info.ligne0 = "########################################################################";
-            info.ligne1 = "# " + L1 + " Interface d'information de RKV-CRYPT                     #";
-            info.ligne2 = "# " + L2 + " RKV-CRYPT: Cryptage Modulaire par Roskova                #";
-            info.ligne3 = "# " + L3 + " Début du projet: 06-12-2021 16h40                        #";
-            info.ligne4 = "# " + L4 + " Dernière version publié: 15-12-2021 01h04                #";
-            info.ligne5 = "# " + L5 + " Version du logiciel: " + v + "                     #";
-            info.ligne6 = "# " + L6 + " Github: http://github.com/Roskova/RKV-CRYPT/             #";
-            info.ligne7 = "# " + L1 + " Email: roskova@protonmail.com            Роскова © 2021  #";
-            info.ligne8 = "########################################################################";
+            info.ligne0 = "##########################################################################";
+            info.ligne1 = "# " + L1 + " Interface d'information de RKV-CRYPT                       #";
+            info.ligne2 = "# " + L2 + " RKV-CRYPT: Cryptage Modulaire par Roskova                  #";
+            info.ligne3 = "# " + L3 + " Début du projet: 06-12-2021 16h40                          #";
+            info.ligne4 = "# " + L4 + " Dernière version publié: 15-12-2021 01h04                  #";
+            info.ligne5 = "# " + L5 + " Version du logiciel: " + v + "                       #";
+            info.ligne6 = "# " + L6 + " Github: http://github.com/Roskova/RKV-CRYPT/               #";
+            info.ligne7 = "# " + L1 + " Email: roskova@protonmail.com              Роскова © 2021  #";
+            info.ligne8 = "##########################################################################";
             Console.WriteLine(print(info));
         }
         public static void cryptage()
@@ -77,15 +77,15 @@
             Console.Clear();
             Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
             affichage cryptage = new affichage();
-            cryptage.ligne0 = "########################################################################";
-            cryptage.ligne1 = "# " + L1 + " Interface du module de cryptage                          #";
-            cryptage.ligne2 = "# " + L2 + " RKV-CRYPT: Cryptage Modulaire par Roskova                #";
-            cryptage.ligne3 = "# " + L3 + " FONCTION MK ACTIVÉ: N = numération du message            #";
-            cryptage.ligne4 = "# " + L4 + "    N-R-H-L-K       *L = Lecture du Binarosky             #";
-            cryptage.ligne5 = "# " + L5 + "*K = Applique un clé H = Transforme en Hexadécimal        #";
-            cryptage.ligne6 = "# " + L6 + " R = Transforme en binarosk le message chiffré            #";
-            cryptage.ligne7 = "# " + L1 + " " + v + "     *Expérimentale       Роскова © 2021  #";
-            cryptage.ligne8 = "########################################################################";
+            cryptage.ligne0 = "##########################################################################";
+            cryptage.ligne1 = "# " + L1 + " Interface du module de cryptage                            #";
+            cryptage.ligne2 = "# " + L2 + " RKV-CRYPT: Cryptage Modulaire par Roskova                  #";
+            cryptage.ligne3 = "# " + L3 + " FONCTION MK ACTIVÉ: N = numération du message              #";
+            cryptage.ligne4 = "# " + L4 + "    N-R-H-L-K       *L = Lecture du Binarosky               #";
+            cryptage.ligne5 = "# " + L5 + "*K = Applique un clé H = Transforme en Hexadécimal          #";
+            cryptage.ligne6 = "# " + L6 + " R = Transforme en binarosk le message chiffré              #";
+            cryptage.ligne7 = "# " + L1 + " " + v + "     *Expérimentale         Роскова © 2021  #";
+            cryptage.ligne8 = "##########################################################################";
             Console.WriteLine(print(cryptage));
         }
         public static void decryptage()
@@ -94,15 +94,15 @@
             Console.Clear();
             Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
             affichage cryptage = new affichage();
-            cryptage.ligne0 = "########################################################################";
-            cryptage.ligne1 = "# " + L1 + " Interface du module de décryptage                        #";
-            cryptage.ligne2 = "# " + L2 + " RKV-CRYPT: Cryptage Modulaire par Roskova                #";
-            cryptage.ligne3 = "# " + L3 + " FONCTION MK ACTIVÉ: N = Inverse la numération            #";
-            cryptage.ligne4 = "# " + L4 + "       N-L          *L = Inverse la lecture du Binarosk   #";
-            cryptage.ligne5 = "# " + L5 + "                                                          #";
-            cryptage.ligne6 = "# " + L6 + "                                                          #";
-            cryptage.ligne7 = "# " + L1 + " " + v + "     *Expérimentale       Роскова © 2021  #";
-            cryptage.ligne8 = "########################################################################";
+            cryptage.ligne0 = "##########################################################################";
+            cryptage.ligne1 = "# " + L1 + " Interface du module de décryptage                          #";
+            cryptage.ligne2 = "# " + L2 + " RKV-CRYPT: Cryptage Modulaire par Roskova                  #";
+            cryptage.ligne3 = "# " + L3 + " FONCTION MK ACTIVÉ: N = Inverse la numération              #";
+            cryptage.ligne4 = "# " + L4 + "       N-L          *L = Inverse la lecture du Binarosk     #";
+            cryptage.ligne5 = "# " + L5 + "                                                            #";
+            cryptage.ligne6 = "# " + L6 + "                                                            #";
+            cryptage.ligne7 = "# " + L1 + " " + v + "     *Expérimentale         Роскова © 2021  #";
+            cryptage.ligne8 = "##########################################################################";
             Console.WriteLine(print(cryptage));
         }
         public static void InterfaceDaccueil()

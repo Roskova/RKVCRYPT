@@ -1,4 +1,6 @@
-﻿namespace RKVCRYPT
+﻿using System.Text;
+
+namespace RKVCRYPT
 {
     class Config
     {
@@ -64,6 +66,17 @@
             string[] LV = chaine.Split('=');
             chaine = LV[1];
             return chaine;
+        }
+        //Configure les paramètres par défault de la Console
+        public static void console()
+        {
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.CursorVisible = true;
+            Console.Title = Config.Search("PROGRAM-TITLE=")+ " " + Config.Search("PROGRAM-VERSION=");
+            Console.SetWindowSize(75, 25);
+            Console.SetBufferSize(10000, 250);
+            Console.OutputEncoding = Encoding.UTF8;
         }
     }
 }
