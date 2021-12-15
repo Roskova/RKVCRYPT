@@ -3,13 +3,13 @@
     internal class Interface
     {
         readonly string v = Config.Search("PROGRAM-VERSION=");
-        public struct logoLoad
+        public struct logo
         {
             public string L1; public string L2; public string L3; public string L4; public string L5; public string L6;
         }
         public static void Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6)
         {
-            logoLoad log = new logoLoad();
+            logo log = new logo();
             string custom = Config.Search("LOGO-CUSTOM=");
             string logo = Config.Search("LOGO-ENABLE=");
             if (logo == "true")

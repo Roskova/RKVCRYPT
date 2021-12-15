@@ -2,13 +2,13 @@
 
 namespace RKVCRYPT
 {
-    class RKVCRYPTDeCryptage
+    class Decryptage
     {
         //Permet de récupéré le nom de la table de chiffrement à utilisé dans le config.txt
         public static string format()
         {
             affichage();
-            Console.WriteLine(Program.Search("MESSAGE-DECRYPT-FORMAT="));
+            Console.WriteLine(Config.Search("MESSAGE-DECRYPT-FORMAT="));
             string nu = Console.ReadLine();
             if (nu == "")
             {
@@ -22,20 +22,6 @@ namespace RKVCRYPT
             chaine = chaine.Replace("61", "BBBBBB").Replace("51", "BBBBB").Replace("41", "BBBB").Replace("31", "BBB").Replace("21", "BB").Replace("11", "B");
             chaine = chaine.Replace('A', '0').Replace('B', '1');
             return chaine;
-        }
-        //Permet de récupéré le fichier de configuration des tables de chiffrements
-        public static string table(string op)
-        {
-            string path = Path.Combine(Environment.CurrentDirectory, @"ref\table.txt");
-            string[] config = System.IO.File.ReadAllLines(path);
-            for (int i = 0; i < config.Length; i++)
-            {
-                if (config[i].StartsWith(op))
-                {
-                    return config[i];
-                }
-            }
-            return op;
         }
         //Converti la table de chiffrement en tableau de string[]
         public static void ConvTable(string format, out string[] tab, out string[] tab2)
@@ -230,7 +216,7 @@ namespace RKVCRYPT
         }
         public static string key(string format, string chaine, int nb)
         {
-            string messagekeyinput = Program.Search("MESSAGE-KEY-INPUT=");
+            string messagekeyinput = Config.Search("MESSAGE-KEY-INPUT=");
             string[] Y = messagekeyinput.Split('|');
             messagekeyinput = Y[0] + nb + Y[2];
             Console.WriteLine(messagekeyinput);
@@ -281,9 +267,9 @@ namespace RKVCRYPT
         {
             affichage();
             int keynb = 0;
-            string invmessageMK = Program.Search("MESSAGE-MK-FORMAT-INVALIDE=");
-            Console.WriteLine(Program.Search("MESSAGE-MK-INPUT="));
-            Console.Write(Program.Search("MESSAGE-MK-FORMAT="));
+            string invmessageMK = Config.Search("MESSAGE-MK-FORMAT-INVALIDE=");
+            Console.WriteLine(Config.Search("MESSAGE-MK-INPUT="));
+            Console.Write(Config.Search("MESSAGE-MK-FORMAT="));
             string pattern = @"^[RBLNPKCH](-[RBLNPKCH])*$";
             string input = Console.ReadLine();
             Match mk = Regex.Match(input, pattern, RegexOptions.IgnoreCase);
@@ -313,7 +299,7 @@ namespace RKVCRYPT
         public static string Message(string format)
         {
             affichage();
-            Console.WriteLine(Program.Search("MESSAGE-DECRYPT="));
+            Console.WriteLine(Config.Search("MESSAGE-DECRYPT="));
             string message = Console.ReadLine();
             if (message.Length >= 0)
             {
@@ -331,11 +317,10 @@ namespace RKVCRYPT
         public static void affichageOutput(string input, string chaine)
         {
             affichage();
-            Console.WriteLine(Program.Search("MESSAGE-AFFICHAGE-INPUT=") + input + "\n" + Program.Search("MESSAGE-AFFICHAGE-RESULTAT=") + chaine);
-            Console.WriteLine(Program.Search("MESSAGE-AFFICHAGE-QUITTER="));
+            Console.WriteLine(Config.Search("MESSAGE-AFFICHAGE-INPUT=") + input + "\n" + Config.Search("MESSAGE-AFFICHAGE-RESULTAT=") + chaine + "\n" + Config.Search("MESSAGE-AFFICHAGE-QUITTER="));
             if (Console.ReadKey().Key == ConsoleKey.Q)
             {
-                RKVCRYPTInterface.InterfaceDaccueil();
+                Interface.InterfaceDaccueil();
             }
             else
             {
@@ -345,7 +330,7 @@ namespace RKVCRYPT
         public static void affichage()
         {
             Console.Clear();
-            RKVCRYPTInterface.decryptage();
+            Interface.decryptage();
         }
         public static void main()
         {

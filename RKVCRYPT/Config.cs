@@ -2,6 +2,21 @@
 {
     class Config
     {
+        //Permet de récupéré le fichier de configuration des tables de chiffrements
+        public static string table(string op)
+        {
+            string path = Path.Combine(Environment.CurrentDirectory, @"ref\table.txt");
+            string[] config = System.IO.File.ReadAllLines(path);
+            for (int i = 0; i < config.Length; i++)
+            {
+                if (config[i].StartsWith(op))
+                {
+                    return config[i];
+                }
+            }
+            return op;
+        }
+        //Permet de vérifier la présence d'une ligne dans le fichier config.txt
         public static string configLoad(string op)
         {
             bool enable = false;
@@ -25,7 +40,6 @@
                     if (config[i].StartsWith(op))
                     {
                         return config[i];
-
                     }
                 }
             }
@@ -43,16 +57,13 @@
             }
             return op;
         }
+        //Recherche et renvoie le contenu d'un paramètre présent dans le fichier de configuration.
         public static string Search(string chaine)
         {
             chaine = configLoad(chaine);
             string[] LV = chaine.Split('=');
             chaine = LV[1];
             return chaine;
-        }
-        public static void main()
-        {
-
         }
     }
 }

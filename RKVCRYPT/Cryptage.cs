@@ -40,7 +40,7 @@ namespace RKVCRYPT
         // Permet de récupéré la table de chiffrement
         public static string cutter(char sym, string op)
         {
-            string nu = table(op);
+            string nu = Config.table(op);
             string[] LV = nu.Split(sym);
             nu = LV[1];
             return nu;
@@ -58,20 +58,7 @@ namespace RKVCRYPT
             }
             return rep;
         }
-        //Permet de récupéré le fichier de configuration des tables de chiffrements
-        public static string table(string op)
-        {
-            string path = Path.Combine(Environment.CurrentDirectory, @"ref\table.txt");
-            string[] config = System.IO.File.ReadAllLines(path);
-            for (int i = 0; i < config.Length; i++)
-            {
-                if (config[i].StartsWith(op))
-                {
-                    return config[i];
-                }
-            }
-            return op;
-        }
+        
         //Converti la table de chiffrement en tableau de string[]
         public static void ConvTable(out string[] tab, out string[] tab2)
         {
@@ -366,7 +353,7 @@ namespace RKVCRYPT
             Console.WriteLine(Config.Search("MESSAGE-AFFICHAGE-QUITTER="));
             if (Console.ReadKey().Key == ConsoleKey.Q)
             {
-                RKVCRYPTInterface.InterfaceDaccueil();
+                Interface.InterfaceDaccueil();
             }
             else
             {
@@ -376,7 +363,7 @@ namespace RKVCRYPT
         public static void affichage()
         {
             Console.Clear();
-            RKVCRYPTInterface.cryptage();
+            Interface.cryptage();
         }
         public static void main()
         {
