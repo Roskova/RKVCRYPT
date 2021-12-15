@@ -17,7 +17,7 @@
             return op;
         }
         //Permet de vérifier la présence d'une ligne dans le fichier config.txt
-        public static string configLoad(string op)
+        public static string verification(string op)
         {
             bool enable = false;
             string path = Path.Combine(Environment.CurrentDirectory, @"ref\config.txt");
@@ -60,7 +60,7 @@
         //Recherche et renvoie le contenu d'un paramètre présent dans le fichier de configuration.
         public static string Search(string chaine)
         {
-            chaine = configLoad(chaine);
+            chaine = verification(chaine);
             string[] LV = chaine.Split('=');
             chaine = LV[1];
             return chaine;
