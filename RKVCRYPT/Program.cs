@@ -58,7 +58,7 @@ namespace RKVCRYPT
                     "MK-DEFAULT=N-R-K-R-H-K-R-L",
                     "NUM-FORMAT=nu3",
                     "PROGRAM-CONFIG-ENABLE=true",
-                    "PROGRAM-VERSION=Release 1.0.1.6"
+                    "PROGRAM-VERSION=Release 1.0.1.7"
                 };
                 for (int i = 0; i < configFalse.Length; i++)
                 {

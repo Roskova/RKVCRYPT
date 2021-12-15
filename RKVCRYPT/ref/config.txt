@@ -20,10 +20,10 @@ CESAR3-KEY=CFL
 # Configuration du système de gestion de chiffrement MK (MasterKey)      #
 # REGEX CORRESPONDANT: /^[RBLNPKCH](-[RBLNPKCH])*$/                      #
 # FORMAT DE NUMÉRISATION, CHAQUE NIVEAU INCLUT LE PRÉCÉDENT              #
-# L'utilisation de nu1 prend uniquement en charge Lettres et Chiffre     #
-# L'utilisation de nu2 permet la prise en charge des Spécial et accent   #
-# L'utilisation de nu3 permet la prise en charge des Maj                 #
-# L'utilisation de nu4 permet la prise en charge du cyrillique           #
+# L'utilisation de nu1 prend uniquement en charge lettres et chiffre.    #
+# L'utilisation de nu2 permet la prise en charge des spéciaux et accent. #
+# L'utilisation de nu3 permet la prise en charge des majuscules.         #
+# L'utilisation de nu4 permet la prise en charge du cyrillique.          #
 ##########################################################################
 MK-CONFIG-OVERPASS=false
 MK-DEFAULT=N-R-K-R-H-K-R-L
