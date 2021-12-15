@@ -1,10 +1,4 @@
+![Logo](https://raw.githubusercontent.com/Roskova/RKV-CRYPT/main/logo.png)
 # RKV-CRYPT
-Logiciel de cryptage modulaire par ROSKOVA
-FORMAT VOULU IP> N-R-K-R-H-K-R-L
-R BINAROSK 1 = 1000 2 = 0100 3 = 0010 4 = 0001 5 = 1100 6 = 0011 7 = 1011 8 = 1101 9 = 1001 0 = 0110
-B CONVERSION EN BINAIRE
-L LECTURE DU BINAROSK 01101000 = 1021101130
-N CONVERSION EN CHIFFRE
-P CONVERSION EN LETTRE
-K Key de chiffrement en numérique.
-H CONVERSION EN HEXADÉCIMAL
+### Logiciel de cryptage modulaire par ROSKOVA
+**README en cours de création**
