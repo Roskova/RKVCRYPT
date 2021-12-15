@@ -2,15 +2,10 @@
 {
     internal class RKVCRYPTInterface
     {
-        string v = Program.Search("PROGRAM-VERSION=");
+        readonly string v = Program.Search("PROGRAM-VERSION=");
         public struct logoLoad
         {
-            public string L1;
-            public string L2;
-            public string L3;
-            public string L4;
-            public string L5;
-            public string L6;
+            public string L1; public string L2; public string L3; public string L4; public string L5; public string L6;
         }
         public static void Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6)
         {
@@ -21,58 +16,27 @@
             {
                 if (custom == "true")
                 {
-                    log.L1 = Program.Search("L1=");
-                    log.L2 = Program.Search("L2=");
-                    log.L3 = Program.Search("L3=");
-                    log.L4 = Program.Search("L4=");
-                    log.L5 = Program.Search("L5=");
-                    log.L6 = Program.Search("L6=");
+                    log.L1 = Program.Search("L1="); log.L2 = Program.Search("L2="); log.L3 = Program.Search("L3="); log.L4 = Program.Search("L4="); log.L5 = Program.Search("L5="); log.L6 = Program.Search("L6=");
                 }
                 else
                 {
-                    log.L1 = "          #";
-                    log.L2 = "@....@    #";
-                    log.L3 = "(------)  #";
-                    log.L4 = "(> ___ <) #";
-                    log.L5 = "^^ ~~~ ^^ #";
-                    log.L6 = "RKV-CRYPT #";
+                    log.L1 = "          #"; log.L2 = "@....@    #"; log.L3 = "(------)  #"; log.L4 = "(> ___ <) #"; log.L5 = "^^ ~~~ ^^ #"; log.L6 = "RKV-CRYPT #";
                 }
-                L1 = log.L1;
-                L2 = log.L2;
-                L3 = log.L3;
-                L4 = log.L4;
-                L5 = log.L5;
-                L6 = log.L6;
+                L1 = log.L1; L2 = log.L2; L3 = log.L3; L4 = log.L4; L5 = log.L5; L6 = log.L6;
             }
             else
             {
-                L1 = "           ";
-                L2 = L1;
-                L3 = L1;
-                L4 = L1;
-                L5 = L1;
-                L6 = L1;
+                L1 = "           "; L2 = L1; L3 = L1; L4 = L1; L5 = L1; L6 = L1;
             }
-
         }
-
         public struct affichage
         {
-            public string ligne0;
-            public string ligne1;
-            public string ligne2;
-            public string ligne3;
-            public string ligne4;
-            public string ligne5;
-            public string ligne6;
-            public string ligne7;
-            public string ligne8;
+            public string ligne0; public string ligne1; public string ligne2; public string ligne3; public string ligne4; public string ligne5; public string ligne6; public string ligne7; public string ligne8;
         }
         public static string print(affichage chaine)
         {
             return chaine.ligne0 + "\n" + chaine.ligne1 + "\n" + chaine.ligne2 + "\n" + chaine.ligne3 + "\n" + chaine.ligne4 + "\n" + chaine.ligne5 + "\n" + chaine.ligne6 + "\n" + chaine.ligne7 + "\n" + chaine.ligne8;
         }
-
         public static void accueil()
         {
             string v = Program.Search("PROGRAM-VERSION=");
@@ -100,7 +64,7 @@
             info.ligne1 = "# " + L1 + " Interface d'information de RKV-CRYPT                     #";
             info.ligne2 = "# " + L2 + " RKV-CRYPT: Cryptage Modulaire par Roskova                #";
             info.ligne3 = "# " + L3 + " Début du projet: 06-12-2021 16h40                        #";
-            info.ligne4 = "# " + L4 + " Dernière version publié: 09-12-2021 23h25                #";
+            info.ligne4 = "# " + L4 + " Dernière version publié: 15-12-2021 01h04                #";
             info.ligne5 = "# " + L5 + " Version du logiciel: " + v + "                     #";
             info.ligne6 = "# " + L6 + " Github: http://github.com/Roskova/RKV-CRYPT/             #";
             info.ligne7 = "# " + L1 + " Email: roskova@protonmail.com            Роскова © 2021  #";
@@ -164,17 +128,15 @@
                 }
                 else if (key == ConsoleKey.Q)
                 {
-                    int exit = Convert.ToInt32("banane");
+                    int exit = Convert.ToInt32("");
                 }
                 else
                 {
                     Console.Clear();
                     accueil();
-                    Console.WriteLine(Program.Search("MESSAGE-SELECTEUR-INVALIDE="));
-                    Console.WriteLine(Program.Search("MESSAGE-SELECTEUR-OPTION="));
+                    Console.WriteLine(Program.Search("MESSAGE-SELECTEUR-INVALIDE=")+ "\n"+ Program.Search("MESSAGE-SELECTEUR-OPTION="));
                 }
             }
-
         }
         public static void main()
         {

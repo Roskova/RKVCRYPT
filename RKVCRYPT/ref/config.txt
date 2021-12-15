@@ -1,5 +1,5 @@
 ##########################################################################
-# FICHIER DE CONFIGURATION DE RKV-CRYPT PAR ROSKOVA         2021-12-14   #
+# FICHIER DE CONFIGURATION DE RKV-CRYPT PAR ROSKOVA         2021-12-15   #
 # Ce fichier permet de configurer les différents composants de RKV-CRYPT #
 # This file is used to configure the different components of RKV-CRYPT   #
 ##########################################################################
@@ -8,7 +8,7 @@
 # Lorsque désactivées, les configurations par défaut seront utilisées    #
 ##########################################################################
 PROGRAM-CONFIG-ENABLE=true
-PROGRAM-VERSION=Release 1.0.1.7
+PROGRAM-VERSION=Release 1.0.1.8
 ##########################################################################
 # Active la prise en charge du cryptage par décalage CESAR3              #
 # rendant le code plus difficile à lire https://roskova.ca/CESAR3        #
@@ -47,11 +47,11 @@ MESSAGE-SELECTEUR-OPTION=1: Crypter 2: Décrypter 3: Information du logiciel Q: 
 MESSAGE-DECRYPT-FORMAT=Veuillez entrer le nom de la table de chiffrement
 MESSAGE-DECRYPT=Veuillez entrer votre message à décrypter
 MESSAGE-MK-INPUT=Veuillez entrer le format de MK
+MESSAGE-MK-FORMAT-INVALIDE=Méthode de chiffrement invalide
 MESSAGE-MK-FORMAT=
 MESSAGE-KEY-INPUT=Veuillez entrer la |NOMBRE|e clé de chiffrement: 
 MESSAGE-CRYPT=Veuillez entrer votre message à crypter
 MESSAGE-AFFICHAGE-QUITTER=Appuyez sur Q pour quitter
 MESSAGE-AFFICHAGE-INPUT=Message d'origine: 
 MESSAGE-AFFICHAGE-RESULTAT=Résultat: 
-INVALIDE-MK-FORMAT=Méthode de chiffrement invalide
-INVMESSAGE-OPTION=L'option que vous avez sélectionnée n'existe pas
+MESSAGE-OPTION-INVALIDE=L'option que vous avez sélectionnée n'existe pas

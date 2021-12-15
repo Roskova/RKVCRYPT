@@ -10,6 +10,7 @@ namespace RKVCRYPT
             string nu = Program.Search("NUM-FORMAT=");
             return nu;
         }
+        //Divise une chaine de caractère en sous-chaine d'une longueur donnée
         public static string substring(int nb, string chaine)
         {
             for (int i = 0; i < chaine.Length - nb; i++)
@@ -100,7 +101,7 @@ namespace RKVCRYPT
                     }
                 }
             }
-            /*else if (tab.Length >= 1000)
+            else if (tab.Length >= 1000)
             {
                 for (int i = 0; i < tab.Length; i++)
                 {
@@ -124,7 +125,7 @@ namespace RKVCRYPT
                         tab2[i] = "" + i;
                     }
                 }
-            }*/
+            }
             else
             {
                 for (int i = 0; i < tab.Length; i++)
@@ -141,8 +142,6 @@ namespace RKVCRYPT
                 }
             }
         }
-
-
         public static string hex(string chaine)
         {
             chaine = substring(4, chaine);
@@ -151,7 +150,6 @@ namespace RKVCRYPT
             string[] bin = chaine.Split('¬');
             for (int i = 0; i < bin.Length; i++)
             {
-
                 switch (bin[i])
                 {
                     case "0000": bin[i] = tab[0]; break;
@@ -252,8 +250,6 @@ namespace RKVCRYPT
                     if (numC[j] == tab2[i])
                     {
                         numC[j] = tab[i];
-
-
                     }
                 }
             }
@@ -317,7 +313,7 @@ namespace RKVCRYPT
         {
             affichage();
             int keynb = 0;
-            string invmessageMK = Program.Search("INVALIDE-MK-FORMAT=");
+            string invmessageMK = Program.Search("MESSAGE-MK-FORMAT-INVALIDE=");
             Console.WriteLine(Program.Search("MESSAGE-MK-INPUT="));
             Console.Write(Program.Search("MESSAGE-MK-FORMAT="));
             string pattern = @"^[RBLNPKCH](-[RBLNPKCH])*$";
