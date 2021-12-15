@@ -226,8 +226,6 @@ namespace RKVCRYPT
                     if (numC[j] == tab2[i])
                     {
                         numC[j] = tab[i];
-
-
                     }
                 }
             }
@@ -241,10 +239,10 @@ namespace RKVCRYPT
         }
         public static string key(string format, string chaine, int nb)
         {
-            string messageinputkey = Program.Search("MESSAGE-KEY-INPUT=");
-            string[] Y = messageinputkey.Split('|');
-            messageinputkey = Y[0] + nb + Y[2];
-            Console.WriteLine(messageinputkey);
+            string messagekeyinput = Program.Search("MESSAGE-KEY-INPUT=");
+            string[] Y = messagekeyinput.Split('|');
+            messagekeyinput = Y[0] + nb + Y[2];
+            Console.WriteLine(messagekeyinput);
             string key = binarosk(Num(format, Console.ReadLine()));
             chaine = binarosk(Num(format, chaine));
             if (key.Length < chaine.Length)
@@ -337,13 +335,13 @@ namespace RKVCRYPT
                     return message.ToUpper();
                 }
             }
-            return "Erreur";
+            return "";
         }
         public static void affichageOutput(string input, string chaine)
         {
             affichage();
-            Console.WriteLine("Message: " + input + "\n" + "Message décrypté: " + chaine);
-            Console.WriteLine("Appuyez sur Q pour quitter");
+            Console.WriteLine(Program.Search("MESSAGE-AFFICHAGE-INPUT=") + input + "\n" + Program.Search("MESSAGE-AFFICHAGE-RESULTAT=") + chaine);
+            Console.WriteLine(Program.Search("MESSAGE-AFFICHAGE-QUITTER="));
             if (Console.ReadKey().Key == ConsoleKey.Q)
             {
                 RKVCRYPTInterface.InterfaceDaccueil();
