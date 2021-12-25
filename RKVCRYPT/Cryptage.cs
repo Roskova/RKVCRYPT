@@ -58,7 +58,7 @@ namespace RKVCRYPT
             }
             return rep;
         }
-        
+
         //Converti la table de chiffrement en tableau de string[]
         public static void ConvTable(out string[] tab, out string[] tab2)
         {
@@ -313,12 +313,12 @@ namespace RKVCRYPT
                 {
                     switch (mkformat[i])
                     {
-                        case "R": message = binarosk(message); break;
+                        //case "R": message = binarosk(message); break;
                         case "N": message = Num(message); break;
-                        case "H": message = hex(message); break;
-                        case "K": keynb++; message = key(message, keynb); break;
+                        // case "H": message = hex(message); break;
+                        //case "K": keynb++; message = key(message, keynb); break;
                         //case "P": message = Lettre(message); break;
-                        case "L": message = Lecture(message); break;
+                        //case "L": message = Lecture(message); break;
                     }
                 }
             }

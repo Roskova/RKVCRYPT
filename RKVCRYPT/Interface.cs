@@ -134,7 +134,7 @@
                 {
                     Console.Clear();
                     accueil();
-                    Console.WriteLine(Config.Search("MESSAGE-SELECTEUR-INVALIDE=")+ "\n"+ Config.Search("MESSAGE-SELECTEUR-OPTION="));
+                    Console.WriteLine(Config.Search("MESSAGE-SELECTEUR-INVALIDE=") + "\n" + Config.Search("MESSAGE-SELECTEUR-OPTION="));
                 }
             }
         }

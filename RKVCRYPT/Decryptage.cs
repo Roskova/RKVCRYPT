@@ -23,6 +23,8 @@ namespace RKVCRYPT
             chaine = chaine.Replace('A', '0').Replace('B', '1');
             return chaine;
         }
+        //Permet de récupéré le fichier de configuration des tables de chiffrements
+
         //Converti la table de chiffrement en tableau de string[]
         public static void ConvTable(string format, out string[] tab, out string[] tab2)
         {
@@ -286,7 +288,7 @@ namespace RKVCRYPT
                         //case "H": message = hex(message); break;
                         //case "K": keynb++; message = key(format, message, keynb); break;
                         case "N": message = Lettre(format, message); break;
-                        case "L": message = Lecture(message); break;
+                        //case "L": message = Lecture(message); break;
                     }
                 }
             }
