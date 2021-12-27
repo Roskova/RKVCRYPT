@@ -67,7 +67,7 @@
                 ligne1 = "# " + L1 + " Interface d'information de RKV-CRYPT                       #",
                 ligne2 = "# " + L2 + " RKV-CRYPT: Cryptage Modulaire par Roskova                  #",
                 ligne3 = "# " + L3 + " Début du projet: 06-12-2021 16h40                          #",
-                ligne4 = "# " + L4 + " Dernière version publié: 28-12-2021 04h 9                  #",
+                ligne4 = "# " + L4 + " Dernière version publié: 28-12-2021 04h09                  #",
                 ligne5 = "# " + L5 + " Version du logiciel: " + v + "                       #",
                 ligne6 = "# " + L6 + " Github: http://github.com/Roskova/RKV-CRYPT/               #",
                 ligne7 = "# " + L1 + " Email: roskova@protonmail.com              Роскова © 2021  #",
