@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\Users\\Utilisateur\\Documents\\Github (Hors-ligne)\\RKVCRYPT\\RKVCRYPT.csproj": {
-      "version": "1.0.1.9",
+      "version": "1.0.2",
       "restore": {
         "projectUniqueName": "C:\\Users\\Utilisateur\\Documents\\Github (Hors-ligne)\\RKVCRYPT\\RKVCRYPT.csproj",
         "projectName": "RKV-CRYPT",
@@ -24,15 +24,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net6.0-windows7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
             "projectReferences": {}
           }
         },
@@ -43,8 +43,8 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
           "imports": [
             "net461",
             "net462",

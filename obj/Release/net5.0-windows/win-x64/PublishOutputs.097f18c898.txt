@@ -1,0 +1,10 @@
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\publish\clrcompression.dll
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\publish\clrjit.dll
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\publish\coreclr.dll
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\publish\mscordaccore.dll
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\publish\D3DCompiler_47_cor3.dll
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\publish\PenImc_cor3.dll
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\publish\PresentationNative_cor3.dll
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\publish\vcruntime140_cor3.dll
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\publish\wpfgfx_cor3.dll
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\publish\RKV-CRYPT.exe

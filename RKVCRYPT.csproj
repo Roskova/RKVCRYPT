@@ -2,12 +2,12 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
+	<TargetFramework>net6.0-windows</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <Authors>ROSKOVA</Authors>
     <Product>RKV-CRYPT</Product>
-    <Version>1.0.1.9</Version>
+    <Version>1.0.2</Version>
     <SignAssembly>False</SignAssembly>
     <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
     <AssemblyName>RKV-CRYPT</AssemblyName>
@@ -20,8 +20,10 @@
     <RepositoryUrl>http://github.com/Roskova/RKV-CRYPT</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <NeutralLanguage>fr-CA</NeutralLanguage>
-    <AssemblyVersion>1.0.1.9</AssemblyVersion>
-    <FileVersion>1.0.1.9</FileVersion>
+    <AssemblyVersion>1.0.2</AssemblyVersion>
+    <FileVersion>1.0.2</FileVersion>
+    <LangVersion>preview</LangVersion>
+    <StartupObject>RKVCRYPT.Program</StartupObject>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

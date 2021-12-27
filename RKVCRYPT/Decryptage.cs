@@ -2,18 +2,12 @@
 
 namespace RKVCRYPT
 {
-    class Decryptage
+    internal class Decryptage
     {
         //Permet de récupéré le nom de la table de chiffrement à utilisé dans le config.txt
-        public static string format()
+        public static string Format()
         {
-            affichage();
-            Console.WriteLine(Config.Search("MESSAGE-DECRYPT-FORMAT="));
-            string nu = Console.ReadLine();
-            if (nu == "")
-            {
-                nu = "nu3";
-            }
+            string nu = Config.Search("NUM-FORMAT=");
             return nu;
         }
         public static string Lecture(string chaine)
@@ -29,7 +23,7 @@ namespace RKVCRYPT
         public static void ConvTable(string format, out string[] tab, out string[] tab2)
         {
             string nu = format;
-            string tabC = Cryptage.espacement(Cryptage.cutter('¬', nu));
+            string tabC = Cryptage.Espacement(Cryptage.cutter('¬', nu));
             tab = tabC.Split('¬');
             tab2 = new string[tabC.Length];
             if (tab.Length >= 100 && tab.Length < 1000)
@@ -96,9 +90,9 @@ namespace RKVCRYPT
                 }
             }
         }
-        public static string hex(string chaine)
+        public static string Hex(string chaine)
         {
-            chaine = Cryptage.substring(4, chaine);
+            chaine = Cryptage.Substring(4, chaine);
             string tabRef = Cryptage.cutter('=', "hev=");
             string[] tab = tabRef.Split('-');
             string[] bin = chaine.Split('¬');
@@ -132,11 +126,11 @@ namespace RKVCRYPT
             }
             return output;
         }
-        public static string binarosk(string chaine)
+        public static string Binarosk(string chaine)
         {
             string tabRef = Cryptage.cutter('¬', "bin=");
             string[] tab = tabRef.Split('-');
-            chaine = Cryptage.espacement(chaine);
+            chaine = Cryptage.Espacement(chaine);
             string[] bin = chaine.Split('¬');
             for (int i = 0; i < bin.Length; i++)
             {
@@ -164,7 +158,7 @@ namespace RKVCRYPT
         public static string Num(string format, string chaine)
         {
             ConvTable(format, out string[] tab, out string[] tab2);
-            string ch = Cryptage.espacement(chaine);
+            string ch = Cryptage.Espacement(chaine);
             string[] numC = ch.Split('¬');
             for (int j = 0; j < numC.Length; j++)
             {
@@ -188,13 +182,13 @@ namespace RKVCRYPT
         {
             //Tab = Table Lettre tab2 = Table chiffre
             ConvTable(format, out string[] tab, out string[] tab2);
-            if (Cryptage.contain('a', Cryptage.cutter('¬', format)) && Cryptage.contain('A', Cryptage.cutter('¬', format)))
+            if (Cryptage.Contain('a', Cryptage.cutter('¬', format)) && Cryptage.Contain('A', Cryptage.cutter('¬', format)))
             {
-                chaine = Cryptage.substring(3, chaine);
+                chaine = Cryptage.Substring(3, chaine);
             }
             else
             {
-                chaine = Cryptage.substring(2, chaine);
+                chaine = Cryptage.Substring(2, chaine);
             }
             //Module de lettrage
             string[] numC = chaine.Split('¬');
@@ -216,14 +210,14 @@ namespace RKVCRYPT
             }
             return output;
         }
-        public static string key(string format, string chaine, int nb)
+        public static string Key(string format, string chaine, int nb)
         {
             string messagekeyinput = Config.Search("MESSAGE-KEY-INPUT=");
             string[] Y = messagekeyinput.Split('|');
             messagekeyinput = Y[0] + nb + Y[2];
             Console.WriteLine(messagekeyinput);
-            string key = binarosk(Num(format, Console.ReadLine()));
-            chaine = binarosk(Num(format, chaine));
+            string key = Binarosk(Num(format, Console.ReadLine()));
+            chaine = Binarosk(Num(format, chaine));
             if (key.Length < chaine.Length)
             {
                 while (key.Length < chaine.Length)
@@ -234,8 +228,8 @@ namespace RKVCRYPT
             key = key.Insert(chaine.Length, "¬");
             string[] keyS = key.Split('¬');
             key = keyS[0];
-            string[] k = Cryptage.espacement(key).Split('¬');
-            string[] e = Cryptage.espacement(chaine).Split('¬');
+            string[] k = Cryptage.Espacement(key).Split('¬');
+            string[] e = Cryptage.Espacement(chaine).Split('¬');
             for (int i = 0; i < chaine.Length; i++)
             {
                 if (e[i] == "0" && k[i] == "0")
@@ -265,15 +259,11 @@ namespace RKVCRYPT
             Console.ReadLine();
             return output;
         }
-        public static string gestionMK(string format, string message)
+        public static string GestionMK(string format, string message)
         {
-            affichage();
             int keynb = 0;
-            string invmessageMK = Config.Search("MESSAGE-MK-FORMAT-INVALIDE=");
-            Console.WriteLine(Config.Search("MESSAGE-MK-INPUT="));
-            Console.Write(Config.Search("MESSAGE-MK-FORMAT="));
             string pattern = @"^[RBLNPKCH](-[RBLNPKCH])*$";
-            string input = Console.ReadLine();
+            string input = Config.Search("MK-DEFAULT=");
             Match mk = Regex.Match(input, pattern, RegexOptions.IgnoreCase);
             if (mk.Success)
             {
@@ -283,18 +273,13 @@ namespace RKVCRYPT
                 {
                     switch (mkformat[i])
                     {
-                        //case "R": message = binarosk(message); break;
-                        //case "N": message = Num(format, message); break;
-                        //case "H": message = hex(message); break;
-                        //case "K": keynb++; message = key(format, message, keynb); break;
+                        case "R": message = Binarosk(message); break;
+                        case "H": message = Hex(message); break;
+                        case "K": keynb++; message = Key(format, message, keynb); break;
                         case "N": message = Lettre(format, message); break;
-                        //case "L": message = Lecture(message); break;
+                        case "L": message = Lecture(message); break;
                     }
                 }
-            }
-            else
-            {
-                Console.WriteLine(invmessageMK);
             }
             return message;
         }
@@ -305,7 +290,7 @@ namespace RKVCRYPT
             string message = Console.ReadLine();
             if (message.Length >= 0)
             {
-                if (Cryptage.contain('a', Cryptage.cutter('¬', format)) && Cryptage.contain('A', Cryptage.cutter('¬', format)))
+                if (Cryptage.Contain('a', Cryptage.cutter('¬', format)) && Cryptage.Contain('A', Cryptage.cutter('¬', format)))
                 {
                     return message;
                 }
@@ -336,9 +321,9 @@ namespace RKVCRYPT
         }
         public static void main()
         {
-            string num = format();
+            string num = Format();
             string input = Message(num);
-            string chaine = gestionMK(num, input);
+            string chaine = GestionMK(num, input);
             affichageOutput(input, chaine);
         }
     }

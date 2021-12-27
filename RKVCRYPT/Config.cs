@@ -1,13 +1,14 @@
 ﻿using System.Text;
 
+
 namespace RKVCRYPT
 {
-    class Config
+    internal class Config
     {
         //Permet de récupéré le fichier de configuration des tables de chiffrements
         public static string table(string op)
         {
-            string path = Path.Combine(Environment.CurrentDirectory, @"ref\table.txt");
+            string path = Path.Combine(Environment.CurrentDirectory, @"table.txt");
             string[] config = System.IO.File.ReadAllLines(path);
             for (int i = 0; i < config.Length; i++)
             {
@@ -18,11 +19,27 @@ namespace RKVCRYPT
             }
             return op;
         }
-        //Permet de vérifier la présence d'une ligne dans le fichier config.txt
-        public static string verification(string op)
+        public static void ConfigCreate()
         {
+            StreamWriter log;
+            if (File.Exists(@"config.txt"))
+            {
+            }
+            else
+            {
+                string path = @"config.txt";
+                using FileStream fs = File.Create(@"config.txt");
+                log = File.AppendText(@"config.txt");
+                string configuration = "RKV-CRYPT";
+                log.Write(configuration);
+            }
+        }
+        //Permet de vérifier la présence d'une ligne dans le fichier config.txt
+        public static string Verification(string op)
+        {
+            //ConfigCreate();
             bool enable = false;
-            string path = Path.Combine(Environment.CurrentDirectory, @"ref\config.txt");
+            string path = Path.Combine(Environment.CurrentDirectory, @"config.txt");
             string[] config = System.IO.File.ReadAllLines(path);
             for (int i = 0; i < config.Length; i++)
             {
@@ -62,21 +79,20 @@ namespace RKVCRYPT
         //Recherche et renvoie le contenu d'un paramètre présent dans le fichier de configuration.
         public static string Search(string chaine)
         {
-            chaine = verification(chaine);
+            chaine = Verification(chaine);
             string[] LV = chaine.Split('=');
             chaine = LV[1];
             return chaine;
         }
         //Configure les paramètres par défault de la Console
-        public static void console()
+        public static void Console()
         {
-            Console.BackgroundColor = ConsoleColor.Black;
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.CursorVisible = true;
-            Console.Title = Config.Search("PROGRAM-CONSOLE-TITLE=") + " " + Config.Search("PROGRAM-VERSION=");
-            Console.SetWindowSize(75, 25);
-            Console.SetBufferSize(10000, 250);
-            Console.OutputEncoding = Encoding.UTF8;
+            System.Console.BackgroundColor = ConsoleColor.Black;
+            System.Console.ForegroundColor = ConsoleColor.White;
+            System.Console.CursorVisible = true;
+            System.Console.Title = Config.Search("PROGRAM-CONSOLE-TITLE=") + " " + Config.Search("PROGRAM-VERSION=");
+
+            System.Console.OutputEncoding = Encoding.UTF8;
         }
     }
 }
