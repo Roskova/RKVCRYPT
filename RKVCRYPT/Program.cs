@@ -5,7 +5,7 @@
 
         static void Main(string[] args)
         {
-            Config.console();
+            Config.Console();
             Interface.main();
         }
     }
