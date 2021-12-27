@@ -6,7 +6,7 @@ namespace RKVCRYPT
     internal class Config
     {
         //Permet de récupéré le fichier de configuration des tables de chiffrements
-        public static string table(string op)
+        public static string Table(string op)
         {
             if (File.Exists(@"table.txt"))
             {
@@ -22,14 +22,7 @@ namespace RKVCRYPT
             }
             else
             {
-                string[] p = { "nu1¬ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ,.'",
-                    "nu2¬ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ,.';:()«»+-/#*[]=<>?!$¢@%²³~{}_±|ÉÈÊÇÙÛÀÂÎÔ`^¸€‚©°¶÷",
-                    "nu3¬abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ,.';:()«»+-/#*[]=<>?!$¢@%²³~{}_±|ÉÈÊÇÙÛÀÂÎéèêçûùàâîôÔ`^¸€‚ƒ„…†‡ˆ‰Š‹Œ Ž  ‘’“”•–—˜™š›œžŸ¡£¤¥¦§¨©ª®¯°´µ¶·¸¹º¼½¾¿ÅÆÐ×ØÞå÷",
-                    "nu4¬abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ,.';:()«»+-/#*[]=<>?!$¢@%²³~{}_±|ôÔÉÈÊÇÙÛÀÂÎéèêçûùàâî`^¸€‚ƒ„…†‡ˆ‰Š‹Œ Ž  ‘’“”•–—˜™š›œžŸ¡£¤¥¦§¨©ª®¯°´µ¶·¸¹º¼½¾¿ÅÆÐ×ØÞå÷АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя
-",
-                    "NUM-FORMAT=nu3",
-                    "LOGO-ENABLE=true",
-                    "LOGO-CUSTOM=true", "L1=           ", "L2=@....@     ", "L3=(------)   ", "L4=(> ___ <)  ", "L5=^^ ~~~ ^^  ", "L6=RKV-CRYPT  ", "MESSAGE-SELECTEUR-INVALIDE=Veuillez sélectionnée une option valide", "MESSAGE-SELECTEUR-OPTION=1: Crypter 2: Décrypter 3: Information du logiciel Q: Quitter", "MESSAGE-DECRYPT-FORMAT=Veuillez entrer le nom de la table de chiffrement", "MESSAGE-DECRYPT=Veuillez entrer votre message à décrypter", "MESSAGE-MK-INPUT=Veuillez entrer le format de MK", "MESSAGE-MK-FORMAT-INVALIDE=Méthode de chiffrement invalide", "MESSAGE-MK-FORMAT=", "MESSAGE-KEY-INPUT=Veuillez entrer la |NOMBRE|e clé de chiffrement:", "MESSAGE-CRYPT=Veuillez entrer votre message à crypter", "MESSAGE-AFFICHAGE-QUITTER=Appuyez sur Q pour quitter", "MESSAGE-AFFICHAGE-INPUT=Message d'origine: ", "MESSAGE-AFFICHAGE-RESULTAT=Résultat: ", "MESSAGE-OPTION-INVALIDE=L'option que vous avez sélectionnée n'existe pas" };
+                string[] p = { "nu1¬ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ,.'", "nu2¬ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ,.';:()«»+-/#*[]=<>?!$¢@%²³~{}_±|ÉÈÊÇÙÛÀÂÎÔ`^¸€‚©°¶÷", "nu3¬abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ,.';:()«»+-/#*[]=<>?!$¢@%²³~{}_±|ÉÈÊÇÙÛÀÂÎéèêçûùàâîôÔ`^¸€‚ƒ„…†‡ˆ‰Š‹Œ Ž  ‘’“”•–—˜™š›œžŸ¡£¤¥¦§¨©ª®¯°´µ¶·¸¹º¼½¾¿ÅÆÐ×ØÞå÷", "nu4¬abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ,.';:()«»+-/#*[]=<>?!$¢@%²³~{}_±|ôÔÉÈÊÇÙÛÀÂÎéèêçûùàâî`^¸€‚ƒ„…†‡ˆ‰Š‹Œ Ž  ‘’“”•–—˜™š›œžŸ¡£¤¥¦§¨©ª®¯°´µ¶·¸¹º¼½¾¿ÅÆÐ×ØÞå÷АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя", "bin=1000-0100-0010-0001-1100-0011-1011-1101-1001-0110", "hex=0000-0001-0010-0011-0100-0101-0110-0111-1000-1001-1010-1011-1100-1101-1110-1111", "hev=0-1-2-3-4-5-6-7-8-9-A-B-C-D-E-F" };
                 string[] config = p;
                 for (int i = 0; i < config.Length; i++)
                 {
@@ -101,7 +94,7 @@ namespace RKVCRYPT
             }
             else
             {
-                string[] p = {"PROGRAM-CONFIG-ENABLE=true","PROGRAM-VERSION=Release 1.0.2  ","PROGRAM-CONSOLE-TITLE=RKV-CRYPT","MK-DEFAULT=N","NUM-FORMAT=nu3","LOGO-ENABLE=true","LOGO-CUSTOM=true","L1=           ","L2=@....@     ","L3=(------)   ","L4=(> ___ <)  ","L5=^^ ~~~ ^^  ", "L6=RKV-CRYPT  ", "MESSAGE-SELECTEUR-INVALIDE=Veuillez sélectionnée une option valide","MESSAGE-SELECTEUR-OPTION=1: Crypter 2: Décrypter 3: Information du logiciel Q: Quitter","MESSAGE-DECRYPT-FORMAT=Veuillez entrer le nom de la table de chiffrement","MESSAGE-DECRYPT=Veuillez entrer votre message à décrypter","MESSAGE-MK-INPUT=Veuillez entrer le format de MK","MESSAGE-MK-FORMAT-INVALIDE=Méthode de chiffrement invalide","MESSAGE-MK-FORMAT=","MESSAGE-KEY-INPUT=Veuillez entrer la |NOMBRE|e clé de chiffrement:",                "MESSAGE-CRYPT=Veuillez entrer votre message à crypter","MESSAGE-AFFICHAGE-QUITTER=Appuyez sur Q pour quitter","MESSAGE-AFFICHAGE-INPUT=Message d'origine: ","MESSAGE-AFFICHAGE-RESULTAT=Résultat: ","MESSAGE-OPTION-INVALIDE=L'option que vous avez sélectionnée n'existe pas" };
+                string[] p = { "PROGRAM-CONFIG-ENABLE=true", "PROGRAM-VERSION=Release 1.0.2  ", "PROGRAM-CONSOLE-TITLE=RKV-CRYPT", "MK-DEFAULT=N", "NUM-FORMAT=nu3", "LOGO-ENABLE=true", "LOGO-CUSTOM=true", "L1=           ", "L2=@....@     ", "L3=(------)   ", "L4=(> ___ <)  ", "L5=^^ ~~~ ^^  ", "L6=RKV-CRYPT  ", "MESSAGE-SELECTEUR-INVALIDE=Veuillez sélectionnée une option valide", "MESSAGE-SELECTEUR-OPTION=1: Crypter 2: Décrypter 3: Information du logiciel Q: Quitter", "MESSAGE-DECRYPT-FORMAT=Veuillez entrer le nom de la table de chiffrement", "MESSAGE-DECRYPT=Veuillez entrer votre message à décrypter", "MESSAGE-MK-INPUT=Veuillez entrer le format de MK", "MESSAGE-MK-FORMAT-INVALIDE=Méthode de chiffrement invalide", "MESSAGE-MK-FORMAT=", "MESSAGE-KEY-INPUT=Veuillez entrer la |NOMBRE|e clé de chiffrement:", "MESSAGE-CRYPT=Veuillez entrer votre message à crypter", "MESSAGE-AFFICHAGE-QUITTER=Appuyez sur Q pour quitter", "MESSAGE-AFFICHAGE-INPUT=Message d'origine: ", "MESSAGE-AFFICHAGE-RESULTAT=Résultat: ", "MESSAGE-OPTION-INVALIDE=L'option que vous avez sélectionnée n'existe pas" };
                 string[] config = p;
                 for (int i = 0; i < config.Length; i++)
                 {

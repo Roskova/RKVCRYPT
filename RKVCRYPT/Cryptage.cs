@@ -40,7 +40,7 @@ namespace RKVCRYPT
         // Permet de récupéré la table de chiffrement
         public static string cutter(char sym, string op)
         {
-            string nu = Config.table(op);
+            string nu = Config.Table(op);
             string[] LV = nu.Split(sym);
             nu = LV[1];
             return nu;
