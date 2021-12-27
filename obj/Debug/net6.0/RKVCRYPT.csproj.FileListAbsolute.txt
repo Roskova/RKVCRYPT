@@ -1,0 +1,13 @@
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\bin\Debug\net6.0\RKV-CRYPT.exe
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\bin\Debug\net6.0\RKV-CRYPT.deps.json
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\bin\Debug\net6.0\RKV-CRYPT.runtimeconfig.json
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\bin\Debug\net6.0\RKV-CRYPT.dll
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\bin\Debug\net6.0\ref\RKV-CRYPT.dll
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\obj\Debug\net6.0\RKVCRYPT.csproj.AssemblyReference.cache
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\obj\Debug\net6.0\RKVCRYPT.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\obj\Debug\net6.0\RKVCRYPT.AssemblyInfoInputs.cache
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\obj\Debug\net6.0\RKVCRYPT.AssemblyInfo.cs
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\obj\Debug\net6.0\RKVCRYPT.csproj.CoreCompileInputs.cache
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\obj\Debug\net6.0\RKV-CRYPT.dll
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\obj\Debug\net6.0\ref\RKV-CRYPT.dll
+C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\obj\Debug\net6.0\RKVCRYPT.genruntimeconfig.cache
