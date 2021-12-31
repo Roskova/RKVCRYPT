@@ -344,7 +344,7 @@ namespace RKVCRYPT
             Console.WriteLine(Config.Search("MESSAGE-AFFICHAGE-QUITTER="));
             if (Console.ReadKey().Key == ConsoleKey.Q)
             {
-                Interface.InterfaceDaccueil();
+                Interface.InterfaceAccueil();
             }
             else
             {
@@ -354,7 +354,7 @@ namespace RKVCRYPT
         public static void affichage()
         {
             Console.Clear();
-            Interface.cryptage();
+            Interface.Cryptage();
         }
         public static void main()
         {

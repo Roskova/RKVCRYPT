@@ -2,7 +2,7 @@
 
 namespace RKVCRYPT
 {
-    internal class Decryptage
+    class Decryptage
     {
         //Permet de récupéré le nom de la table de chiffrement à utilisé dans le config.txt
         public static string Format()
@@ -305,19 +305,19 @@ namespace RKVCRYPT
             Console.WriteLine(Config.Search("MESSAGE-AFFICHAGE-INPUT=") + input + "\n" + Config.Search("MESSAGE-AFFICHAGE-RESULTAT=") + chaine + "\n" + Config.Search("MESSAGE-AFFICHAGE-QUITTER="));
             if (Console.ReadKey().Key == ConsoleKey.Q)
             {
-                Interface.InterfaceDaccueil();
+                Interface.InterfaceAccueil();
             }
             else
             {
-                main();
+                Main();
             }
         }
         public static void affichage()
         {
             Console.Clear();
-            Interface.decryptage();
+            Interface.InterfaceDecryptage();
         }
-        public static void main()
+        public static void Main()
         {
             string num = Format();
             string input = Message(num);

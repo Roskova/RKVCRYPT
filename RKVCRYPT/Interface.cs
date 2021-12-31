@@ -1,6 +1,6 @@
 ﻿namespace RKVCRYPT
 {
-    internal class Interface
+    class Interface
     {
         private readonly string v = Config.Search("PROGRAM-VERSION=");
         public struct logo
@@ -29,20 +29,20 @@
                 L1 = "           "; L2 = L1; L3 = L1; L4 = L1; L5 = L1; L6 = L1;
             }
         }
-        public struct affichage
+        public struct Affichage
         {
             public string ligne0; public string ligne1; public string ligne2; public string ligne3; public string ligne4; public string ligne5; public string ligne6; public string ligne7; public string ligne8;
         }
-        public static string print(affichage chaine)
+        public static string print(Affichage chaine)
         {
             return chaine.ligne0 + "\n" + chaine.ligne1 + "\n" + chaine.ligne2 + "\n" + chaine.ligne3 + "\n" + chaine.ligne4 + "\n" + chaine.ligne5 + "\n" + chaine.ligne6 + "\n" + chaine.ligne7 + "\n" + chaine.ligne8;
         }
-        public static void accueil()
+        public static void Accueil()
         {
             string v = Config.Search("PROGRAM-VERSION=");
             Console.Clear();
             Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
-            affichage accueil = new affichage
+            Affichage accueil = new Affichage
             {
                 ligne0 = "########################################################################",
                 ligne1 = "# " + L1 + "                                                          #",
@@ -56,12 +56,12 @@
             };
             Console.WriteLine(print(accueil));
         }
-        public static void information()
+        public static void Information()
         {
             string v = Config.Search("PROGRAM-VERSION=");
             Console.Clear();
             Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
-            affichage info = new affichage
+            Affichage info = new Affichage
             {
                 ligne0 = "##########################################################################",
                 ligne1 = "# " + L1 + " Interface d'information de RKV-CRYPT                       #",
@@ -75,12 +75,12 @@
             };
             Console.WriteLine(print(info));
         }
-        public static void cryptage()
+        public static void InterfaceCryptage()
         {
             string v = Config.Search("PROGRAM-VERSION=");
             Console.Clear();
             Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
-            affichage cryptage = new affichage
+            Affichage cryptage = new Affichage
             {
                 ligne0 = "##########################################################################",
                 ligne1 = "# " + L1 + " Interface du module de cryptage                            #",
@@ -94,12 +94,12 @@
             };
             Console.WriteLine(print(cryptage));
         }
-        public static void decryptage()
+        public static void InterfaceDecryptage()
         {
             string v = Config.Search("PROGRAM-VERSION=");
             Console.Clear();
             Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
-            affichage cryptage = new affichage
+            Affichage cryptage = new Affichage
             {
                 ligne0 = "##########################################################################",
                 ligne1 = "# " + L1 + " Interface du module de décryptage                          #",
@@ -113,11 +113,11 @@
             };
             Console.WriteLine(print(cryptage));
         }
-        public static void InterfaceDaccueil()
+        public static void InterfaceAccueil()
         {
             bool k = false;
             Console.Clear();
-            accueil();
+            Accueil();
             Console.WriteLine(Config.Search("MESSAGE-SELECTEUR-OPTION="));
             while (!k)
             {
@@ -128,11 +128,11 @@
                 }
                 else if (key == ConsoleKey.D2)
                 {
-                    Decryptage.main();
+                    RKVCRYPT.Decryptage.Main();
                 }
                 else if (key == ConsoleKey.D3)
                 {
-                    information();
+                    Information();
                 }
                 else if (key == ConsoleKey.Q)
                 {
@@ -141,14 +141,14 @@
                 else
                 {
                     Console.Clear();
-                    accueil();
+                    Accueil();
                     Console.WriteLine(Config.Search("MESSAGE-SELECTEUR-INVALIDE=") + "\n" + Config.Search("MESSAGE-SELECTEUR-OPTION="));
                 }
             }
         }
         public static void main()
         {
-            InterfaceDaccueil();
+            InterfaceAccueil();
         }
     }
 }
