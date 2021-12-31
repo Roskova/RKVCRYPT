@@ -3,7 +3,7 @@
 ### Logiciel de cryptage modulaire par ROSKOVA
 ### Liste des fonctionnalités implantée:
 * Numérisation du message	
-### Liste des fonctionnalités partiellement implantée:			
+### ** Liste des fonctionnalités partiellement implantée: **			
 * Binarisation              		
 * Binarosk "Binaire personnalisable"
  ### Liste des fonctionnalités non implantée:
