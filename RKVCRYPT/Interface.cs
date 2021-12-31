@@ -98,7 +98,7 @@
             string v = Config.Search("PROGRAM-VERSION=");
             Console.Clear();
             InterfaceLogo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
-            Affichage cryptage = new Affichage
+            Affichage cryptage = new()
             {
                 ligne0 = "##########################################################################",
                 ligne1 = "# " + L1 + " Interface du module de décryptage                          #",
@@ -123,7 +123,7 @@
                 ConsoleKey key = Console.ReadKey().Key;
                 if (key == ConsoleKey.D1)
                 {
-                    Cryptage.Fonction();
+                    RKVCRYPT.Cryptage.Fonction();
                 }
                 else if (key == ConsoleKey.D2)
                 {

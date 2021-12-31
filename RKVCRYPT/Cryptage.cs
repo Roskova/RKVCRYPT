@@ -299,6 +299,7 @@ namespace RKVCRYPT
         }
         public static string GestionMK(string message)
         {
+            int keyNb = 0;
             string pattern = @"^[RBLNPKCH](-[RBLNPKCH])*$";
             string input = Config.Search("MK-DEFAULT=");
             Match mk = Regex.Match(input, pattern, RegexOptions.IgnoreCase);
@@ -309,12 +310,12 @@ namespace RKVCRYPT
                 {
                     switch (mkformat[i])
                     {
-                        //case "R": message = binarosk(message); break;
+                        case "R": message = Binarosk(message); break;
                         case "N": message = Num(message); break;
-                            // case "H": message = hex(message); break;
-                            //case "K": keynb++; message = key(message, keynb); break;
-                            //case "P": message = Lettre(message); break;
-                            //case "L": message = Lecture(message); break;
+                        case "H": message = Hex(message); break;
+                        case "K": keyNb++; message = Key(message, keyNb); break;
+                        case "P": message = Lettre(message); break;
+                        case "L": message = Lecture(message); break;
                     }
                 }
             }
@@ -349,7 +350,7 @@ namespace RKVCRYPT
             }
             else
             {
-                Cryptage.Fonction();
+                Fonction();
             }
         }
         public static void Affichage()
