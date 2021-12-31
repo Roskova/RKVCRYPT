@@ -2,14 +2,13 @@
 {
     class Interface
     {
-        private readonly string v = Config.Search("PROGRAM-VERSION=");
-        public struct logo
+        public struct Logo
         {
             public string L1; public string L2; public string L3; public string L4; public string L5; public string L6;
         }
-        public static void Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6)
+        public static void InterfaceLogo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6)
         {
-            logo log = new logo();
+            Logo log = new();
             string custom = Config.Search("LOGO-CUSTOM=");
             string logo = Config.Search("LOGO-ENABLE=");
             if (logo == "true")
@@ -33,7 +32,7 @@
         {
             public string ligne0; public string ligne1; public string ligne2; public string ligne3; public string ligne4; public string ligne5; public string ligne6; public string ligne7; public string ligne8;
         }
-        public static string print(Affichage chaine)
+        public static string Print(Affichage chaine)
         {
             return chaine.ligne0 + "\n" + chaine.ligne1 + "\n" + chaine.ligne2 + "\n" + chaine.ligne3 + "\n" + chaine.ligne4 + "\n" + chaine.ligne5 + "\n" + chaine.ligne6 + "\n" + chaine.ligne7 + "\n" + chaine.ligne8;
         }
@@ -41,8 +40,8 @@
         {
             string v = Config.Search("PROGRAM-VERSION=");
             Console.Clear();
-            Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
-            Affichage accueil = new Affichage
+            InterfaceLogo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
+            Affichage accueil = new()
             {
                 ligne0 = "########################################################################",
                 ligne1 = "# " + L1 + "                                                          #",
@@ -54,14 +53,14 @@
                 ligne7 = "# " + L1 + " " + v + "                          Роскова © 2021  #",
                 ligne8 = "########################################################################"
             };
-            Console.WriteLine(print(accueil));
+            Console.WriteLine(Print(accueil));
         }
         public static void Information()
         {
             string v = Config.Search("PROGRAM-VERSION=");
             Console.Clear();
-            Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
-            Affichage info = new Affichage
+            InterfaceLogo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
+            Affichage info = new()
             {
                 ligne0 = "##########################################################################",
                 ligne1 = "# " + L1 + " Interface d'information de RKV-CRYPT                       #",
@@ -73,14 +72,14 @@
                 ligne7 = "# " + L1 + " Email: roskova@protonmail.com              Роскова © 2021  #",
                 ligne8 = "##########################################################################"
             };
-            Console.WriteLine(print(info));
+            Console.WriteLine(Print(info));
         }
         public static void InterfaceCryptage()
         {
             string v = Config.Search("PROGRAM-VERSION=");
             Console.Clear();
-            Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
-            Affichage cryptage = new Affichage
+            InterfaceLogo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
+            Affichage cryptage = new()
             {
                 ligne0 = "##########################################################################",
                 ligne1 = "# " + L1 + " Interface du module de cryptage                            #",
@@ -92,13 +91,13 @@
                 ligne7 = "# " + L1 + " " + v + "                            Роскова © 2021  #",
                 ligne8 = "##########################################################################"
             };
-            Console.WriteLine(print(cryptage));
+            Console.WriteLine(Print(cryptage));
         }
         public static void InterfaceDecryptage()
         {
             string v = Config.Search("PROGRAM-VERSION=");
             Console.Clear();
-            Logo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
+            InterfaceLogo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
             Affichage cryptage = new Affichage
             {
                 ligne0 = "##########################################################################",
@@ -111,7 +110,7 @@
                 ligne7 = "# " + L1 + " " + v + "                            Роскова © 2021  #",
                 ligne8 = "##########################################################################"
             };
-            Console.WriteLine(print(cryptage));
+            Console.WriteLine(Print(cryptage));
         }
         public static void InterfaceAccueil()
         {
@@ -124,11 +123,11 @@
                 ConsoleKey key = Console.ReadKey().Key;
                 if (key == ConsoleKey.D1)
                 {
-                    Cryptage.main();
+                    Cryptage.Fonction();
                 }
                 else if (key == ConsoleKey.D2)
                 {
-                    RKVCRYPT.Decryptage.Main();
+                    RKVCRYPT.Decryptage.Fonction();
                 }
                 else if (key == ConsoleKey.D3)
                 {
@@ -146,7 +145,7 @@
                 }
             }
         }
-        public static void main()
+        public static void Fonction()
         {
             InterfaceAccueil();
         }

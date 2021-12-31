@@ -10,7 +10,7 @@
         static void Main(string[] args)
         {
             Config.Console();
-            Interface.main();
+            Interface.Fonction();
         }
     }
 }

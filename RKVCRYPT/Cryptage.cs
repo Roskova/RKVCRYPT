@@ -30,6 +30,7 @@ namespace RKVCRYPT
             }
             return chaine;
         }
+        //Lecture du binaire 11100 --> 3120
         public static string Lecture(string chaine)
         {
             chaine = chaine.Replace('0', 'A').Replace('1', 'B');
@@ -38,11 +39,11 @@ namespace RKVCRYPT
             return chaine;
         }
         // Permet de récupéré la table de chiffrement
-        public static string cutter(char sym, string op)
+        public static string Cutter(char sym, string op)
         {
             string nu = Config.Table(op);
-            string[] LV = nu.Split(sym);
-            nu = LV[1];
+            string[] lv = nu.Split(sym);
+            nu = lv[1];
             return nu;
         }
         //Vérifie si la table contient un caractère spécifier
@@ -58,12 +59,11 @@ namespace RKVCRYPT
             }
             return rep;
         }
-
         //Converti la table de chiffrement en tableau de string[]
         public static void ConvTable(out string[] tab, out string[] tab2)
         {
             string nu = Format();
-            string table = cutter('¬', nu);
+            string table = Cutter('¬', nu);
             string tabC = Espacement(table);
             tab = tabC.Split('¬');
             tab2 = new string[tabC.Length];
@@ -129,10 +129,11 @@ namespace RKVCRYPT
                 }
             }
         }
+        //Convertie un chaine binaraire en Hexadécimal
         public static string Hex(string chaine)
         {
             chaine = Substring(4, chaine);
-            string tabRef = cutter('=', "hev=");
+            string tabRef = Cutter('=', "hev=");
             string[] tab = tabRef.Split('-');
             string[] bin = chaine.Split('¬');
             for (int i = 0; i < bin.Length; i++)
@@ -166,7 +167,7 @@ namespace RKVCRYPT
         }
         public static string Binarosk(string chaine)
         {
-            string tabRef = cutter('=', "bin=");
+            string tabRef = Cutter('=', "bin=");
             string[] tab = tabRef.Split('-');
             chaine = Espacement(chaine);
             string[] bin = chaine.Split('¬');
@@ -220,7 +221,7 @@ namespace RKVCRYPT
         {
             //Tab = Table Lettre tab2 = Table chiffre
             ConvTable(out string[] tab, out string[] tab2);
-            if (Contain('a', cutter('¬', Format())) && Contain('A', cutter('¬', Format())))
+            if (Contain('a', Cutter('¬', Format())) && Contain('A', Cutter('¬', Format())))
             {
                 chaine = Substring(3, chaine);
             }
@@ -250,11 +251,11 @@ namespace RKVCRYPT
         }
         public static string Key(string chaine, int nb)
         {
-            affichage();
-            string messagekeyinput = Config.Search("MESSAGE-KEY-INPUT=");
-            string[] Y = messagekeyinput.Split('|');
-            messagekeyinput = Y[0] + nb + Y[2];
-            Console.WriteLine(messagekeyinput);
+            Affichage();
+            string messageKeyInput = Config.Search("MESSAGE-KEY-INPUT=");
+            string[] y = messageKeyInput.Split('|');
+            messageKeyInput = y[0] + nb + y[2];
+            Console.WriteLine(messageKeyInput);
             string key = Binarosk(Num(Console.ReadLine()));
             chaine = Binarosk(Num(chaine));
             if (key.Length < chaine.Length)
@@ -321,12 +322,12 @@ namespace RKVCRYPT
         }
         public static string Message()
         {
-            affichage();
+            Affichage();
             Console.WriteLine(Config.Search("MESSAGE-CRYPT="));
             string message = Console.ReadLine();
             if (message.Length >= 0)
             {
-                if (Contain('a', cutter('¬', Format())) && Contain('A', cutter('¬', Format())))
+                if (Contain('a', Cutter('¬', Format())) && Contain('A', Cutter('¬', Format())))
                 {
                     return message;
                 }
@@ -339,7 +340,7 @@ namespace RKVCRYPT
         }
         public static void AffichageOutput(string input, string chaine)
         {
-            affichage();
+            Affichage();
             Console.WriteLine(Config.Search("MESSAGE-AFFICHAGE-INPUT=") + input + "\n" + Config.Search("MESSAGE-AFFICHAGE-RESULTAT=") + chaine);
             Console.WriteLine(Config.Search("MESSAGE-AFFICHAGE-QUITTER="));
             if (Console.ReadKey().Key == ConsoleKey.Q)
@@ -348,15 +349,15 @@ namespace RKVCRYPT
             }
             else
             {
-                main();
+                Cryptage.Fonction();
             }
         }
-        public static void affichage()
+        public static void Affichage()
         {
             Console.Clear();
-            Interface.Cryptage();
+            Interface.InterfaceCryptage();
         }
-        public static void main()
+        public static void Fonction()
         {
             string input = Message();
             string chaine = GestionMK(input);
