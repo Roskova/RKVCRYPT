@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "/ZzflAiHR5P08dU60uwOmz03DK35H3ec5KbEEYLyNhhdMn+5coCbOrMEKlJEym6mAiR1tp6jMd+qn7Rq8PKFrQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Utilisateur\\Documents\\Github (Hors-ligne)\\RKVCRYPT\\RKVCRYPT.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Utilisateur\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\6.0.0\\microsoft.netcore.app.host.linux-x64.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -50,7 +50,7 @@
                 ligne4 = "# " + L4 + "                                                          #",
                 ligne5 = "# " + L5 + "                                                          #",
                 ligne6 = "# " + L6 + "                                                          #",
-                ligne7 = "# " + L1 + " " + v + "                          Роскова © 2021  #",
+                ligne7 = "# " + L1 + " " + v + "                          Роскова © 2022  #",
                 ligne8 = "########################################################################"
             };
             Console.WriteLine(Print(accueil));
@@ -66,10 +66,10 @@
                 ligne1 = "# " + L1 + " Interface d'information de RKV-CRYPT                       #",
                 ligne2 = "# " + L2 + " RKV-CRYPT: Cryptage Modulaire par Roskova                  #",
                 ligne3 = "# " + L3 + " Début du projet: 06-12-2021 16h40                          #",
-                ligne4 = "# " + L4 + " Dernière version publié: 28-12-2021 04h09                  #",
+                ligne4 = "# " + L4 + " Dernière version publié: 01-01-2022 01h49                  #",
                 ligne5 = "# " + L5 + " Version du logiciel: " + v + "                       #",
                 ligne6 = "# " + L6 + " Github: http://github.com/Roskova/RKV-CRYPT/               #",
-                ligne7 = "# " + L1 + " Email: roskova@protonmail.com              Роскова © 2021  #",
+                ligne7 = "# " + L1 + " Email: roskova@protonmail.com              Роскова © 2022  #",
                 ligne8 = "##########################################################################"
             };
             Console.WriteLine(Print(info));
@@ -88,7 +88,7 @@
                 ligne4 = "# " + L4 + "                                                            #",
                 ligne5 = "# " + L5 + "                                                            #",
                 ligne6 = "# " + L6 + "                                                            #",
-                ligne7 = "# " + L1 + " " + v + "                            Роскова © 2021  #",
+                ligne7 = "# " + L1 + " " + v + "                            Роскова © 2022  #",
                 ligne8 = "##########################################################################"
             };
             Console.WriteLine(Print(cryptage));
@@ -107,7 +107,7 @@
                 ligne4 = "# " + L4 + "                                                            #",
                 ligne5 = "# " + L5 + "                                                            #",
                 ligne6 = "# " + L6 + "                                                            #",
-                ligne7 = "# " + L1 + " " + v + "                            Роскова © 2021  #",
+                ligne7 = "# " + L1 + " " + v + "                            Роскова © 2022  #",
                 ligne8 = "##########################################################################"
             };
             Console.WriteLine(Print(cryptage));
