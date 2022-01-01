@@ -7,7 +7,7 @@
     <Nullable>enable</Nullable>
     <Authors>ROSKOVA</Authors>
     <Product>RKV-CRYPT</Product>
-    <Version>1.0.2.1</Version>
+    <Version>1.0.2.2</Version>
     <SignAssembly>False</SignAssembly>
     <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
     <AssemblyName>RKV-CRYPT</AssemblyName>
@@ -20,8 +20,8 @@
     <RepositoryUrl>http://github.com/Roskova/RKV-CRYPT</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <NeutralLanguage>fr-CA</NeutralLanguage>
-    <AssemblyVersion>1.0.2.1</AssemblyVersion>
-    <FileVersion>1.0.2.1</FileVersion>
+    <AssemblyVersion>1.0.2.2</AssemblyVersion>
+    <FileVersion>1.0.2.2</FileVersion>
     <LangVersion>preview</LangVersion>
   </PropertyGroup>
 
