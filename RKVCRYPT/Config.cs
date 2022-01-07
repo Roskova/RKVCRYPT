@@ -1,4 +1,5 @@
 ﻿using System.Text;
+
 namespace RKVCRYPT
 {
     internal class Config
@@ -20,8 +21,7 @@ namespace RKVCRYPT
             }
             else
             {
-                string[] p = { "nu1¬ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ,.'", "nu2¬ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ,.';:()«»+-/#*[]=<>?!$¢@%²³~{}_±|ÉÈÊÇÙÛÀÂÎÔ`^¸€‚©°¶÷", "nu3¬abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ,.';:()«»+-/#*[]=<>?!$¢@%²³~{}_±|ÉÈÊÇÙÛÀÂÎéèêçûùàâîôÔ`^¸€‚ƒ„…†‡ˆ‰Š‹Œ Ž  ‘’“”•–—˜™š›œžŸ¡£¤¥¦§¨©ª®¯°´µ¶·¸¹º¼½¾¿ÅÆÐ×ØÞå÷", "nu4¬abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ,.';:()«»+-/#*[]=<>?!$¢@%²³~{}_±|ôÔÉÈÊÇÙÛÀÂÎéèêçûùàâî`^¸€‚ƒ„…†‡ˆ‰Š‹Œ Ž  ‘’“”•–—˜™š›œžŸ¡£¤¥¦§¨©ª®¯°´µ¶·¸¹º¼½¾¿ÅÆÐ×ØÞå÷АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя", "bin=1000-0100-0010-0001-1100-0011-1011-1101-1001-0110", "hex=0000-0001-0010-0011-0100-0101-0110-0111-1000-1001-1010-1011-1100-1101-1110-1111", "hev=0-1-2-3-4-5-6-7-8-9-A-B-C-D-E-F" };
-                string[] config = p;
+                string[] config = { "nu1¬ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ,.'", "nu2¬ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ,.';:()«»+-/#*[]=<>?!$¢@%²³~{}_±|ÉÈÊÇÙÛÀÂÎÔ`^¸€‚©°¶÷", "nu3¬abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ,.';:()«»+-/#*[]=<>?!$¢@%²³~{}_±|ÉÈÊÇÙÛÀÂÎéèêçûùàâîôÔ`^¸€‚ƒ„…†‡ˆ‰Š‹Œ Ž  ‘’“”•–—˜™š›œžŸ¡£¤¥¦§¨©ª®¯°´µ¶·¸¹º¼½¾¿ÅÆÐ×ØÞå÷", "nu4¬abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ,.';:()«»+-/#*[]=<>?!$¢@%²³~{}_±|ôÔÉÈÊÇÙÛÀÂÎéèêçûùàâî`^¸€‚ƒ„…†‡ˆ‰Š‹Œ Ž  ‘’“”•–—˜™š›œžŸ¡£¤¥¦§¨©ª®¯°´µ¶·¸¹º¼½¾¿ÅÆÐ×ØÞå÷АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя", "bin=1000-0100-0010-0001-1100-0011-1011-1101-1001-0110", "hex=0000-0001-0010-0011-0100-0101-0110-0111-1000-1001-1010-1011-1100-1101-1110-1111", "hev=0-1-2-3-4-5-6-7-8-9-A-B-C-D-E-F" };
                 for (int i = 0; i < config.Length; i++)
                 {
                     if (config[i].StartsWith(op))
@@ -32,39 +32,20 @@ namespace RKVCRYPT
             }
             return op;
         }
-        public static void ConfigCreate()
-        {
-            StreamWriter log;
-            if (File.Exists(@"config.txt"))
-            {
-            }
-            else
-            {
-                string path = @"config.txt";
-                using FileStream fs = File.Create(@"config.txt");
-                log = File.AppendText(@"config.txt");
-                string configuration = "RKV-CRYPT";
-                log.Write(configuration);
-            }
-        }
-        //Permet de vérifier la présence d'une ligne dans le fichier config.txt
+        //Permet de vérifier la présense d'une ligne dans le fichier de configuration et renvoie la ligne
         public static string Verification(string op)
         {
-            //ConfigCreate();
             bool enable = false;
-            string path = Path.Combine(Environment.CurrentDirectory, @"config.txt");
+            string path = Path.Combine(Environment.CurrentDirectory, @"C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\RKVCRYPT\config.txt");
             if (File.Exists(path))
             {
                 string[] config = System.IO.File.ReadAllLines(path);
                 for (int i = 0; i < config.Length; i++)
                 {
-                    if (config[i].StartsWith("PROGRAM-CONFIG-ENABLE="))
+                    if (config[i].StartsWith("PROGRAM-CONFIG-ENABLE=") && config[i].EndsWith("true"))
                     {
-                        if (config[i].EndsWith("true"))
-                        {
-                            enable = true;
-                            i = config.Length;
-                        }
+                        enable = true;
+                        i = config.Length;
                     }
                 }
                 if (enable)
@@ -102,8 +83,23 @@ namespace RKVCRYPT
                     }
                 }
             }
-
             return op;
+        }
+        public static void CreateConfig()
+        {
+            StreamWriter log;
+            if (File.Exists(@"config.txt"))
+            {
+
+            }
+            else
+            {
+                string path = @"config.txt";
+                using FileStream fs = File.Create(@"config.txt");
+                log = File.AppendText(@"config.txt");
+                string configuration = "RKV-CRYPT";
+                log.Write(configuration);
+            }
         }
         //Recherche et renvoie le contenu d'un paramètre présent dans le fichier de configuration.
         public static string Search(string chaine)
@@ -113,14 +109,13 @@ namespace RKVCRYPT
             chaine = LV[1];
             return chaine;
         }
-        //Configure les paramètres par défault de la Console
+        //Configure les paramètres par défault de la console
         public static void Console()
         {
             System.Console.BackgroundColor = ConsoleColor.Black;
             System.Console.ForegroundColor = ConsoleColor.White;
             System.Console.CursorVisible = true;
             System.Console.Title = Config.Search("PROGRAM-CONSOLE-TITLE=") + " " + Config.Search("PROGRAM-VERSION=");
-
             System.Console.OutputEncoding = Encoding.UTF8;
         }
     }

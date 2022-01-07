@@ -1,5 +1,5 @@
 ##########################################################################
-# FICHIER DE CONFIGURATION DE RKV-CRYPT PAR ROSKOVA         2022-01-01   #
+# FICHIER DE CONFIGURATION DE RKV-CRYPT PAR ROSKOVA 1.0.2.3 2022-01-05   #
 # Ce fichier permet de configurer les différents composants de RKV-CRYPT #
 # This file is used to configure the different components of RKV-CRYPT   #
 ##########################################################################
@@ -8,7 +8,7 @@
 # Lorsque désactivées, les configurations par défaut seront utilisées    #
 ##########################################################################
 PROGRAM-CONFIG-ENABLE=true
-PROGRAM-VERSION=Release 1.0.2.2
+PROGRAM-VERSION=EnDéveloppement
 PROGRAM-CONSOLE-TITLE=RKV-CRYPT
 ##########################################################################
 # Active la prise en charge du cryptage par décalage CESAR3              #
@@ -39,7 +39,7 @@ L2=@....@
 L3=(------)   
 L4=(> ___ <)  
 L5=^^ ~~~ ^^  
-L6=RKV-CRYPT  
+L6=RKV-CRYPT 
 ##########################################################################
 # MESSAGE D'ERREUR ET MESSAGE GÉNÉRAL                                    #
 ##########################################################################

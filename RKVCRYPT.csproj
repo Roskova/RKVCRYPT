@@ -12,7 +12,6 @@
     <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
     <AssemblyName>RKV-CRYPT</AssemblyName>
     <RootNamespace>RKV-CRYPT</RootNamespace>
-    <ApplicationIcon>Logo1.ico</ApplicationIcon>
     <DebugType>embedded</DebugType>
     <Description>RKV-CRYPT: Logiciel de cryptage modulaire </Description>
     <Copyright>ROSKOVA</Copyright>
@@ -23,14 +22,21 @@
     <AssemblyVersion>1.0.2.2</AssemblyVersion>
     <FileVersion>1.0.2.2</FileVersion>
     <LangVersion>preview</LangVersion>
+    <AssemblyOriginatorKeyFile>C:\Users\Utilisateur\Downloads\privatekey.Roskova@protonmail.com-e0a8f94a3750baabb1892bfd04fab0bd24294ece.asc</AssemblyOriginatorKeyFile>
+    <ErrorReport>none</ErrorReport>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <PackageProjectUrl>http://github.com/Roskova/RKV-CRYPT</PackageProjectUrl>
+    <StartupObject>RKVCRYPT.Program</StartupObject>
+    <ApplicationIcon>Logo1.ico</ApplicationIcon>
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <WarningLevel>1</WarningLevel>
+    <WarningLevel>0</WarningLevel>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <WarningLevel>1</WarningLevel>
+    <WarningLevel>0</WarningLevel>
   </PropertyGroup>
 
   <ItemGroup>

@@ -21,7 +21,7 @@ namespace RKVCRYPT
         public static void ConvTable(string format, out string[] tab, out string[] tab2)
         {
             string nu = format;
-            string tabC = Cryptage.Espacement(Cryptage.Cutter('¬', nu));
+            string tabC = Utils.Espacement(Utils.Cutter('¬', nu));
             tab = tabC.Split('¬');
             tab2 = new string[tabC.Length];
             if (tab.Length >= 100 && tab.Length < 1000)
@@ -91,7 +91,7 @@ namespace RKVCRYPT
         public static string Hex(string chaine)
         {
             chaine = Cryptage.Substring(4, chaine);
-            string tabRef = Cryptage.Cutter('=', "hev=");
+            string tabRef = Utils.Cutter('=', "hev=");
             string[] tab = tabRef.Split('-');
             string[] bin = chaine.Split('¬');
             for (int i = 0; i < bin.Length; i++)
@@ -126,9 +126,9 @@ namespace RKVCRYPT
         }
         public static string Binarosk(string chaine)
         {
-            string tabRef = Cryptage.Cutter('¬', "bin=");
+            string tabRef = Utils.Cutter('¬', "bin=");
             string[] tab = tabRef.Split('-');
-            chaine = Cryptage.Espacement(chaine);
+            chaine = Utils.Espacement(chaine);
             string[] bin = chaine.Split('¬');
             for (int i = 0; i < bin.Length; i++)
             {
@@ -156,7 +156,7 @@ namespace RKVCRYPT
         public static string Num(string format, string chaine)
         {
             ConvTable(format, out string[] tab, out string[] tab2);
-            string ch = Cryptage.Espacement(chaine);
+            string ch = Utils.Espacement(chaine);
             string[] numC = ch.Split('¬');
             for (int j = 0; j < numC.Length; j++)
             {
@@ -180,7 +180,7 @@ namespace RKVCRYPT
         {
             //Tab = Table Lettre tab2 = Table chiffre
             ConvTable(format, out string[] tab, out string[] tab2);
-            if (Cryptage.Contain('a', Cryptage.Cutter('¬', format)) && Cryptage.Contain('A', Cryptage.Cutter('¬', format)))
+            if (Utils.Contain('a', Utils.Cutter('¬', format)) && Utils.Contain('A', Utils.Cutter('¬', format)))
             {
                 chaine = Cryptage.Substring(3, chaine);
             }
@@ -226,8 +226,8 @@ namespace RKVCRYPT
             key = key.Insert(chaine.Length, "¬");
             string[] keyS = key.Split('¬');
             key = keyS[0];
-            string[] k = Cryptage.Espacement(key).Split('¬');
-            string[] e = Cryptage.Espacement(chaine).Split('¬');
+            string[] k = Utils.Espacement(key).Split('¬');
+            string[] e = Utils.Espacement(chaine).Split('¬');
             for (int i = 0; i < chaine.Length; i++)
             {
                 if (e[i] == "0" && k[i] == "0")
@@ -283,12 +283,12 @@ namespace RKVCRYPT
         }
         public static string Message(string format)
         {
-            Affichage();
+            Interface.InterfaceDecryptage();
             Console.WriteLine(Config.Search("MESSAGE-DECRYPT="));
             string message = Console.ReadLine();
             if (message.Length >= 0)
             {
-                if (Cryptage.Contain('a', Cryptage.Cutter('¬', format)) && Cryptage.Contain('A', Cryptage.Cutter('¬', format)))
+                if (Utils.Contain('a', Utils.Cutter('¬', format)) && Utils.Contain('A', Utils.Cutter('¬', format)))
                 {
                     return message;
                 }
@@ -299,30 +299,13 @@ namespace RKVCRYPT
             }
             return "";
         }
-        public static void AffichageOutput(string input, string chaine)
-        {
-            Affichage();
-            Console.WriteLine(Config.Search("MESSAGE-AFFICHAGE-INPUT=") + input + "\n" + Config.Search("MESSAGE-AFFICHAGE-RESULTAT=") + chaine + "\n" + Config.Search("MESSAGE-AFFICHAGE-QUITTER="));
-            if (Console.ReadKey().Key == ConsoleKey.Q)
-            {
-                Interface.InterfaceAccueil();
-            }
-            else
-            {
-                Fonction();
-            }
-        }
-        public static void Affichage()
-        {
-            Console.Clear();
-            Interface.InterfaceDecryptage();
-        }
         public static void Fonction()
         {
             string num = Format();
             string input = Message(num);
             string chaine = GestionMK(num, input);
-            AffichageOutput(input, chaine);
+            Interface.InterfaceDecryptage();
+            Utils.AffichageOutput(input, chaine, 1);
         }
     }
 }

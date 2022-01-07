@@ -123,10 +123,12 @@
                 ConsoleKey key = Console.ReadKey().Key;
                 if (key == ConsoleKey.D1)
                 {
+                    k = true;
                     RKVCRYPT.Cryptage.Fonction();
                 }
                 else if (key == ConsoleKey.D2)
                 {
+                    k = true;
                     RKVCRYPT.Decryptage.Fonction();
                 }
                 else if (key == ConsoleKey.D3)
@@ -135,11 +137,10 @@
                 }
                 else if (key == ConsoleKey.Q)
                 {
-                    int exit = Convert.ToInt32("");
+                    k = true;
                 }
                 else
                 {
-                    Console.Clear();
                     Accueil();
                     Console.WriteLine(Config.Search("MESSAGE-SELECTEUR-INVALIDE=") + "\n" + Config.Search("MESSAGE-SELECTEUR-OPTION="));
                 }
