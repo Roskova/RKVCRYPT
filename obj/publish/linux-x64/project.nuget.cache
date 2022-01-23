@@ -1,10 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "/ZzflAiHR5P08dU60uwOmz03DK35H3ec5KbEEYLyNhhdMn+5coCbOrMEKlJEym6mAiR1tp6jMd+qn7Rq8PKFrQ==",
+  "dgSpecHash": "elXV3gLOA4AzkTrzVXN2gLdvrXP7xTJTxbui12P7EBj2A5PbwmxE9OBM6WwZxA1a99f/EM4r0xMy9UkErXeo5g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Utilisateur\\Documents\\Github (Hors-ligne)\\RKVCRYPT\\RKVCRYPT.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Utilisateur\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\6.0.0\\microsoft.netcore.app.host.linux-x64.6.0.0.nupkg.sha512"
+    "C:\\Users\\Utilisateur\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\Utilisateur\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\Utilisateur\\.nuget\\packages\\microsoft.netcore.app.runtime.linux-x64\\3.1.21\\microsoft.netcore.app.runtime.linux-x64.3.1.21.nupkg.sha512",
+    "C:\\Users\\Utilisateur\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-x64\\3.1.21\\microsoft.aspnetcore.app.runtime.linux-x64.3.1.21.nupkg.sha512",
+    "C:\\Users\\Utilisateur\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\3.1.21\\microsoft.netcore.app.host.linux-x64.3.1.21.nupkg.sha512",
+    "C:\\Users\\Utilisateur\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
   ],
   "logs": []
 }
