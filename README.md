@@ -25,5 +25,5 @@ RKV-CRYPT est un logiciel de cryptage modulaire développé par ROSKOVA qui a po
 - [ ] Arch
 - [ ] MacOS
 
-### Fonctionnement de RKV-CRYPT (1.0.2.3)
+### Fonctionnement de RKV-CRYPT (1.0.2.4)
 Actuellement RKV-CRYPT prends uniquement la numérisation du message en charge. Les Pre-Release 1.0.1.1 à 1.0.1.8 inclue les autres méthodes de chiffrement à titre expérimentale (La plupart étant non fonctionnel ou causant des erreurs de chiffrement)
