@@ -10,6 +10,7 @@
 PROGRAM-CONFIG-ENABLE=true
 PROGRAM-VERSION=EnDéveloppement
 PROGRAM-CONSOLE-TITLE=RKV-CRYPT
+PROGRAM-LOCK-MESSAGE=Programme verrouiller, Veuillez entrez le mot de passes:
 ##########################################################################
 # Active la prise en charge du cryptage par décalage CESAR3              #
 # rendant le code plus difficile à lire https://roskova.ca/CESAR3        #

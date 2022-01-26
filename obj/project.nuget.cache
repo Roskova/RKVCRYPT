@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RVRCgrKo9/t10RJGy/Fo3/makuS8ZIeSBSvDeDmvFBf+Kv2uaxrFROqxpJF+if/IRKxqPl5TrHQJkyNG7xi86g==",
+  "dgSpecHash": "WgFsIfMvFwL/cBrT5zq3hLChtfhvgXLj+axGC3HApuJ4I7uVcAmc4T6M/lDJhYWl7fAwQ1XXWtbnhXIyQh7jFA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Utilisateur\\Documents\\Github (Hors-ligne)\\RKVCRYPT\\RKVCRYPT.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Utilisateur\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512",
-    "C:\\Users\\Utilisateur\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "C:\\Users\\Utilisateur\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\Utilisateur\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

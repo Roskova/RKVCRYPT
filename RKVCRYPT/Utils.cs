@@ -43,7 +43,7 @@
             }
             else
             {
-                if(redirection == 0)
+                if (redirection == 0)
                 {
                     Cryptage.Fonction();
                 }

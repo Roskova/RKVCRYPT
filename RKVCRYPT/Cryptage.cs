@@ -20,7 +20,7 @@ namespace RKVCRYPT
             }
             return chaine;
         }
-        
+
         //Lecture du binaire 11100 --> 3120
         public static string Lecture(string chaine)
         {
