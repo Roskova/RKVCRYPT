@@ -84,25 +84,36 @@ namespace RKVCRYPT
             }
             return op;
         }
-        public static void CreateConfig()
+
+        public static void CreateConfigFile()
         {
-            StreamWriter log;
-            if (File.Exists(@"\RKV-CRYPT\config.txt"))
+            string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            string path = Path.Combine(docPath, @".\RKVCRYPT\Config\config.txt");
+            if (File.Exists(path))
             {
-                System.Console.WriteLine("Fichier config existant");
-                System.Console.ReadKey();
+                if (Interface_Utils.VerificationMiseAJour())
+                {
+                    Console.WriteLine("Fichier config.txt déjà créer.\nFichier Interface.txt à jour");
+                    Console.Clear();
+                }
+                else
+                {
+                /*    Console.WriteLine("Fichier config.txt déjà créer. \nFichier Corrumpu\nVeuillez corriger le fichier et/ou Mettre à jour celui-ci.\nAppuyez sur n'importe quelle touche pour continuer");
+                    Console.ReadKey();*/
+                    Console.Clear();
+                }
             }
             else
             {
                 string[] lines = { "##########################################################################", "# FICHIER DE CONFIGURATION DE RKV-CRYPT PAR ROSKOVA 1.0.2.3 2022-01-05   #", "# Ce fichier permet de configurer les différents composants de RKV-CRYPT #", "# This file is used to configure the different components of RKV-CRYPT   #", "##########################################################################", "# Configuration lier aux informations logicielles de RKV-CRYPT           #", "# Active la prise en charge du fichier de configuration                  #", "# Lorsque désactivées, les configurations par défaut seront utilisées    #", "##########################################################################", "PROGRAM-CONFIG-ENABLE=true", "PROGRAM-VERSION=EnDéveloppement", "PROGRAM-CONSOLE-TITLE=RKV-CRYPT", "PROGRAM-LOCK-MESSAGE=Programme verrouiller, Veuillez entrez le mot de passes:", "##########################################################################", "# Active la prise en charge du cryptage par décalage CESAR3              #", "# rendant le code plus difficile à lire https://roskova.ca/CESAR3        #", "# LORSQU’ACTIVÉ, LE LOGICIEL RKV-CRYPT DISTANT DOIT AVOIR LA MÊME CLÉ    #", "##########################################################################", "CESAR3-ENABLE=false", "CESAR3-KEY=CFL", "##########################################################################", "# Configuration du système de gestion de chiffrement MK (MasterKey)      #", "# REGEX CORRESPONDANT: /^[RBLNPKCH](-[RBLNPKCH])*$/                      #", "# FORMAT DE NUMÉRISATION, CHAQUE NIVEAU INCLUT LE PRÉCÉDENT              #", "# L'utilisation de nu1 prend uniquement en charge lettres et chiffre.    #", "# L'utilisation de nu2 permet la prise en charge des spéciaux et accent. #", "# L'utilisation de nu3 permet la prise en charge des majuscules.         #", "# L'utilisation de nu4 permet la prise en charge du cyrillique.          #", "##########################################################################", "MK-CONFIG-OVERPASS=false", "MK-DEFAULT=N", "NUM-FORMAT=nu3", "##########################################################################", "# Personnalisation du logo RKV-CRYPT 6x11                                #", "##########################################################################", "LOGO-ENABLE=true", "LOGO-CUSTOM=true", "L1=", "L2=@....@", "L3=(------)", "L4=(> ___ <)", "L5=^^ ~~~ ^^", "L6=RKV-CRYPT", "##########################################################################", "# MESSAGE D'ERREUR ET MESSAGE GÉNÉRAL                                    #", "##########################################################################", "MESSAGE-SELECTEUR-INVALIDE=Veuillez sélectionnée une option valide", "MESSAGE-SELECTEUR-OPTION=1: Crypter 2: Décrypter 3: Information du logiciel Q: Quitter", "MESSAGE-DECRYPT-FORMAT=Veuillez entrer le nom de la table de chiffrement", "MESSAGE-DECRYPT=Veuillez entrer votre message à décrypter", "MESSAGE-MK-INPUT=Veuillez entrer le format de MK", "MESSAGE-MK-FORMAT-INVALIDE=Méthode de chiffrement invalide", "MESSAGE-MK-FORMAT=", "MESSAGE-KEY-INPUT=Veuillez entrer la |NOMBRE|e clé de chiffrement:", "MESSAGE-CRYPT=Veuillez entrer votre message à crypter", "MESSAGE-AFFICHAGE-QUITTER=Appuyez sur Q pour quitter", "MESSAGE-AFFICHAGE-INPUT=Message d'origine: ", "MESSAGE-AFFICHAGE-RESULTAT=Résultat: ", "MESSAGE-OPTION-INVALIDE=L'option que vous avez sélectionnée n'existe pas", };
-
-                string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, @"\RKV-CRYPT\config.txt")))
+                using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, @".\RKVCRYPT\Config\config.txt")))
                 {
                     foreach (string line in lines)
                         outputFile.WriteLine(line);
                 }
+                Console.WriteLine("Fichier config.txt créer et à jour");
             }
+
         }
         //Recherche et renvoie le contenu d'un paramètre présent dans le fichier de configuration.
         public static string Search(string chaine)
@@ -113,7 +124,7 @@ namespace RKVCRYPT
             return chaine;
         }
         //Configure les paramètres par défault de la console
-        public static void Console()
+        public static void ParamConsole()
         {
             System.Console.BackgroundColor = ConsoleColor.Black;
             System.Console.ForegroundColor = ConsoleColor.White;

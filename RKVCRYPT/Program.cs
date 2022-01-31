@@ -9,8 +9,9 @@
         //Appelle le fichier de Configuration et l'interface de démarrage
         static void Main(string[] args)
         {
-            Verrouillage();
-            Config.Console();
+            Config.CreateConfigFile();
+            Interface.CreateInterfaceFile();
+            Config.ParamConsole();
             Interface.Fonction();
         }
     }

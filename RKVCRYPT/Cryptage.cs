@@ -220,7 +220,7 @@ namespace RKVCRYPT
         }
         public static string Key(string chaine, int nb)
         {
-            Interface.InterfaceCryptage();
+            Interface.SelecteurInterface(1);
             string messageKeyInput = Config.Search("MESSAGE-KEY-INPUT=");
             string[] y = messageKeyInput.Split('|');
             messageKeyInput = y[0] + nb + y[2];
@@ -292,7 +292,7 @@ namespace RKVCRYPT
         }
         public static string Message()
         {
-            Interface.InterfaceCryptage();
+            Interface.SelecteurInterface(1);
             Console.WriteLine(Config.Search("MESSAGE-CRYPT="));
             string message = Console.ReadLine();
             if (message.Length >= 0)
@@ -312,7 +312,7 @@ namespace RKVCRYPT
         {
             string input = Message();
             string chaine = GestionMK(input);
-            Interface.InterfaceCryptage();
+            Interface.SelecteurInterface(1);
             Utils.AffichageOutput(input, chaine, 0);
         }
     }

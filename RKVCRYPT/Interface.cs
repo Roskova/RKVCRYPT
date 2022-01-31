@@ -2,121 +2,62 @@
 {
     class Interface
     {
-        public struct Logo
+        public static void InterfaceRegister(out string[] InList, out int[] InListLength)
         {
-            public string L1; public string L2; public string L3; public string L4; public string L5; public string L6;
-        }
-        public static void InterfaceLogo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6)
-        {
-            Logo log = new();
-            string custom = Config.Search("LOGO-CUSTOM=");
-            string logo = Config.Search("LOGO-ENABLE=");
-            if (logo == "true")
+
+            string[] config = System.IO.File.ReadAllLines(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), @"RKVCRYPT\Config\interface.txt"));
+            string list = Interface_Utils.Search("INTERFACE-LIST=");
+            InList = list.Split(",");
+            InListLength = new int[InList.Length];
+            int t = 1;
+
+            for (int i = 0; i < InList.Length; i++)
             {
-                if (custom == "true")
+                t = 1;
+                int count = 0;
+                for (int j = 0; j < config.Length; j++)
                 {
-                    log.L1 = Config.Search("L1="); log.L2 = Config.Search("L2="); log.L3 = Config.Search("L3="); log.L4 = Config.Search("L4="); log.L5 = Config.Search("L5="); log.L6 = Config.Search("L6=");
+                    list = InList[i] + t + "=";
+                    if (Interface_Utils.VerificationPresence(list) == true)
+                    {
+                        count++;
+                    }
+                    t++;
                 }
-                else
+                InListLength[i] = count;
+            }
+            //Console.WriteLine($"Interface{InList[0]}:{InListLength[0]}\nInterface{InList[1]}:{InListLength[1]}\nInterface{InList[2]}:{InListLength[2]}\n");
+        }
+
+        public static string EnTete(string chaine, int number, string[] marge)
+        {
+            string[] logo = { "           ", "@....@     ", "(------)   ", "(> ___ <)  ", "^^ ~~~ ^^  ", "RKV-CRYPT  ", "           ", "           ", "           " };
+            string op = "";
+            string alignement = Interface_Utils.Search($"{chaine}-ALIGNEMENT=");
+            Console.WriteLine(marge[0]);
+            for (int i = 1; i < number + 1; i++)
+            {
+
+                if (alignement.Length == number)
                 {
-                    log.L1 = "          #"; log.L2 = "@....@    #"; log.L3 = "(------)  #"; log.L4 = "(> ___ <) #"; log.L5 = "^^ ~~~ ^^ #"; log.L6 = "RKV-CRYPT #";
+                    switch (alignement[i - 1])
+                    {
+                        case 'D': op += marge[1] + logo[i - 1] + Interface_Utils.AlignementDroite(Interface_Utils.CodeAssembler(Interface_Utils.Search($"{chaine}{i}="))) + marge[2] + "\n"; break;
+                        case 'C': op += marge[1] + logo[i - 1] + Interface_Utils.AlignementCentrage(Interface_Utils.CodeAssembler(Interface_Utils.Search($"{chaine}{i}="))) + marge[2] + "\n"; break;
+                        case 'G': op += marge[1] + logo[i - 1] + Interface_Utils.AlignementGauche(Interface_Utils.CodeAssembler(Interface_Utils.Search($"{chaine}{i}="))) + marge[2] + "\n"; break;
+                        case 'S': op += marge[1] + logo[i - 1] + Interface_Utils.AlignementGaucheDroite(Interface_Utils.CodeAssembler(Interface_Utils.Search($"{chaine}{i}=")), "") + marge[2] + "\n"; break;
+                    }
+                    Interface_Utils.CodeAssembler(Interface_Utils.Search($"{chaine}{i}="));
                 }
-                L1 = log.L1; L2 = log.L2; L3 = log.L3; L4 = log.L4; L5 = log.L5; L6 = log.L6;
             }
-            else
-            {
-                L1 = "           "; L2 = L1; L3 = L1; L4 = L1; L5 = L1; L6 = L1;
-            }
-        }
-        public struct Affichage
-        {
-            public string ligne0; public string ligne1; public string ligne2; public string ligne3; public string ligne4; public string ligne5; public string ligne6; public string ligne7; public string ligne8;
-        }
-        public static string Print(Affichage chaine)
-        {
-            return chaine.ligne0 + "\n" + chaine.ligne1 + "\n" + chaine.ligne2 + "\n" + chaine.ligne3 + "\n" + chaine.ligne4 + "\n" + chaine.ligne5 + "\n" + chaine.ligne6 + "\n" + chaine.ligne7 + "\n" + chaine.ligne8;
-        }
-        public static void Accueil()
-        {
-            string v = Config.Search("PROGRAM-VERSION=");
-            Console.Clear();
-            InterfaceLogo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
-            Affichage accueil = new()
-            {
-                ligne0 = "########################################################################",
-                ligne1 = "# " + L1 + "                                                          #",
-                ligne2 = "# " + L2 + "                     RKV-CRYPT                            #",
-                ligne3 = "# " + L3 + "            Cryptage Modulaire par Roskova                #",
-                ligne4 = "# " + L4 + "                                                          #",
-                ligne5 = "# " + L5 + "                                                          #",
-                ligne6 = "# " + L6 + "                                                          #",
-                ligne7 = "# " + L1 + " " + v + "                          Роскова © 2022  #",
-                ligne8 = "########################################################################"
-            };
-            Console.WriteLine(Print(accueil));
-        }
-        public static void Information()
-        {
-            string v = Config.Search("PROGRAM-VERSION=");
-            Console.Clear();
-            InterfaceLogo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
-            Affichage info = new()
-            {
-                ligne0 = "##########################################################################",
-                ligne1 = "# " + L1 + " Interface d'information de RKV-CRYPT                       #",
-                ligne2 = "# " + L2 + " RKV-CRYPT: Cryptage Modulaire par Roskova                  #",
-                ligne3 = "# " + L3 + " Début du projet: 06-12-2021 16h40                          #",
-                ligne4 = "# " + L4 + " Dernière version publié: 01-01-2022 01h49                  #",
-                ligne5 = "# " + L5 + " Version du logiciel: " + v + "                       #",
-                ligne6 = "# " + L6 + " Github: http://github.com/Roskova/RKV-CRYPT/               #",
-                ligne7 = "# " + L1 + " Email: roskova@protonmail.com              Роскова © 2022  #",
-                ligne8 = "##########################################################################"
-            };
-            Console.WriteLine(Print(info));
-        }
-        public static void InterfaceCryptage()
-        {
-            string v = Config.Search("PROGRAM-VERSION=");
-            Console.Clear();
-            InterfaceLogo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
-            Affichage cryptage = new()
-            {
-                ligne0 = "##########################################################################",
-                ligne1 = "# " + L1 + " Interface du module de cryptage                            #",
-                ligne2 = "# " + L2 + " RKV-CRYPT: Cryptage Modulaire par Roskova                  #",
-                ligne3 = "# " + L3 + "                                                            #",
-                ligne4 = "# " + L4 + "                                                            #",
-                ligne5 = "# " + L5 + "                                                            #",
-                ligne6 = "# " + L6 + "                                                            #",
-                ligne7 = "# " + L1 + " " + v + "                            Роскова © 2022  #",
-                ligne8 = "##########################################################################"
-            };
-            Console.WriteLine(Print(cryptage));
-        }
-        public static void InterfaceDecryptage()
-        {
-            string v = Config.Search("PROGRAM-VERSION=");
-            Console.Clear();
-            InterfaceLogo(out string L1, out string L2, out string L3, out string L4, out string L5, out string L6);
-            Affichage cryptage = new()
-            {
-                ligne0 = "##########################################################################",
-                ligne1 = "# " + L1 + " Interface du module de décryptage                          #",
-                ligne2 = "# " + L2 + " RKV-CRYPT: Cryptage Modulaire par Roskova                  #",
-                ligne3 = "# " + L3 + "                                                            #",
-                ligne4 = "# " + L4 + "                                                            #",
-                ligne5 = "# " + L5 + "                                                            #",
-                ligne6 = "# " + L6 + "                                                            #",
-                ligne7 = "# " + L1 + " " + v + "                            Роскова © 2022  #",
-                ligne8 = "##########################################################################"
-            };
-            Console.WriteLine(Print(cryptage));
+
+            return op + marge[0];
         }
         public static void InterfaceAccueil()
         {
             bool k = false;
             Console.Clear();
-            Accueil();
+            Interface.SelecteurInterface(0);
             Console.WriteLine(Config.Search("MESSAGE-SELECTEUR-OPTION="));
             while (!k)
             {
@@ -133,7 +74,7 @@
                 }
                 else if (key == ConsoleKey.D3)
                 {
-                    Information();
+                    Interface.SelecteurInterface(2);
                 }
                 else if (key == ConsoleKey.Q)
                 {
@@ -141,10 +82,48 @@
                 }
                 else
                 {
-                    Accueil();
+                    Interface.SelecteurInterface(0);
                     Console.WriteLine(Config.Search("MESSAGE-SELECTEUR-INVALIDE=") + "\n" + Config.Search("MESSAGE-SELECTEUR-OPTION="));
                 }
             }
+        }
+        public static void CreateInterfaceFile()
+        {
+            string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            string path = Path.Combine(docPath, @".\RKVCRYPT\Config\interface.txt");
+            if (File.Exists(path))
+            {
+                if (Interface_Utils.VerificationMiseAJour())
+                {
+                    Console.WriteLine("Fichier Interface.txt déjà créer.\nFichier Interface.txt à jour");
+                    Console.Clear();
+                }
+                else
+                {
+                   /* Console.WriteLine("Fichier Interface.txt déjà créer. \nFichier Corrumpu\nVeuillez corriger le fichier et/ou Mettre à jour celui-ci.\nAppuyez sur n'importe quelle touche pour continuer");
+                    Console.ReadKey();*/
+                    Console.Clear();
+                }
+            }
+            else
+            {
+                string[] lines = { "##########################################################################", "# FICHIER DE CONFIGURATION DES INTERFACES DE RKV-CRYPT	     Version 1.1 #", "# Ce fichier permet de configurer les différents interfaces de RKV-CRYPT #", "##########################################################################", "INTERFACE-CONFIG-ENABLE=true", "##########################################################################", "# Personnalisation des interfaces de RKV-CRYPT                           #", "# CODE COULEUR: 0=Noire 1=Blanc 2=Bleu 3=Green 4=Rouge 5=Jaune           #", "# FORMAT: 01 (0 Backgroundcolor, 1 foregroundcolor)			 #", "##########################################################################", "INTERFACE-BACKGROUND-COLOR=", "INTERFACE-LINE-SYMBOL=", "INTERFACE-ROSKOVA-CYRILIC=true", "##########################################################################", "# Configuration du menu d'accueil de RKV-CRYPT                           #", "##########################################################################", "INTERFACE-ALIGNEMENT=CENTRE", "INTERFACE-NAME=ACCUEIL", "ACCUEIL-L1=", "ACCUEIL-L2=RKV-CRYPT", "ACCUEIL-L3=Cryptage Modulaire par Roskova", "ACCUEIL-L4=", "ACCUEIL-L5=", "ACCUEIL-L6=", "ACCUEIL-L7=|v|", "##########################################################################", "# Configuration du menu de cryptage de RKV-CRYPT                         #", "##########################################################################", "INTERFACE-ALIGNEMENT=DROITE", "INTERFACE-NAME=CRYPTAGE", "CRYPTAGE-L1=Interface du module de cryptage", "CRYPTAGE-L2=RKV-CRYPT: Cryptage Modulaire par Roskova", "CRYPTAGE-L3=", "CRYPTAGE-L4=", "CRYPTAGE-L5=", "CRYPTAGE-L6=", "CRYPTAGE-L7=|v|", "##########################################################################", "# Configuration du menu de cryptage de RKV-CRYPT                         #", "##########################################################################", "INTERFACE-ALIGNEMENT=DROITE", "INTERFACE-NAME=CRYPTAGE", "DECRYPTAGE-L1=Interface du module de Décryptage", "DECRYPTAGE-L2=RKV-CRYPT: Cryptage Modulaire par Roskova", "DECRYPTAGE-L3=", "DECRYPTAGE-L4=", "DECRYPTAGE-L5=", "DECRYPTAGE-L6=", "DECRYPTAGE-L7=|v|", "##########################################################################", "# Configuration du menu d'information de RKV-CRYPT                       #", "##########################################################################", "INTERFACE-ALIGNEMENT=DROITE", "INTERFACE-NAME=CRYPTAGE", "DECRYPTAGE-L1=Interface d'information de RKV-CRYPT", "DECRYPTAGE-L2=RKV-CRYPT: Cryptage Modulaire par Roskova", "DECRYPTAGE-L3=Début du projet: 06-12-2021 16h40", "DECRYPTAGE-L4=Dernière version publié: 01-01-2022 01h49", "DECRYPTAGE-L5=Version du logiciel: |v|", "DECRYPTAGE-L6=Github: http://github.com/Roskova/RKV-CRYPT/", "DECRYPTAGE-L7=|v|" };
+                using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, @".\RKVCRYPT\Config\interface.txt")))
+                {
+                    foreach (string line in lines)
+                        outputFile.WriteLine(line);
+                }
+                Console.WriteLine("Fichier interface.txt créer et à jour");
+            }
+
+        }
+        public static void SelecteurInterface(int nombre)
+        {
+            Console.Clear();
+           
+                string[] marge = { Interface_Utils.LineGenerator(), Interface_Utils.Marge(false), Interface_Utils.Marge(true) };
+                InterfaceRegister(out string[] InList, out int[] InListLength);
+                Console.WriteLine(EnTete(InList[nombre], InListLength[nombre], marge));
         }
         public static void Fonction()
         {

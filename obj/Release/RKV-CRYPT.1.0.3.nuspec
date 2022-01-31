@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>RKV-CRYPT</id>
+    <version>1.0.3</version>
+    <authors>ROSKOVA</authors>
+    <icon>logo.png</icon>
+    <projectUrl>http://github.com/Roskova/RKV-CRYPT</projectUrl>
+    <description>RKV-CRYPT: Logiciel de cryptage modulaire</description>
+    <copyright>ROSKOVA</copyright>
+    <repository type="git" url="http://github.com/Roskova/RKV-CRYPT" />
+    <dependencies>
+      <group targetFramework="net6.0" />
+    </dependencies>
+    <contentFiles>
+      <files include="any/net6.0/Logo1.ico" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\bin\Release\net6.0\RKV-CRYPT.runtimeconfig.json" target="lib\net6.0\RKV-CRYPT.runtimeconfig.json" />
+    <file src="C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\bin\Release\net6.0\RKV-CRYPT.dll" target="lib\net6.0\RKV-CRYPT.dll" />
+    <file src="C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\Logo1.ico" target="content\Logo1.ico" />
+    <file src="C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\Logo1.ico" target="contentFiles\any\net6.0\Logo1.ico" />
+    <file src="C:\Users\Utilisateur\Pictures\logo.png" target="\logo.png" />
+  </files>
+</package>

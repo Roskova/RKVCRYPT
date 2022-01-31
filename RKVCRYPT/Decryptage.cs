@@ -283,7 +283,7 @@ namespace RKVCRYPT
         }
         public static string Message(string format)
         {
-            Interface.InterfaceDecryptage();
+            Interface.SelecteurInterface(1);
             Console.WriteLine(Config.Search("MESSAGE-DECRYPT="));
             string message = Console.ReadLine();
             if (message.Length >= 0)
@@ -304,7 +304,7 @@ namespace RKVCRYPT
             string num = Format();
             string input = Message(num);
             string chaine = GestionMK(num, input);
-            Interface.InterfaceDecryptage();
+            Interface.SelecteurInterface(1);
             Utils.AffichageOutput(input, chaine, 1);
         }
     }

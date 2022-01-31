@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "RKV-CRYPT/1.0.2.2": {
+      "RKV-CRYPT/1.0.3.0": {
         "runtime": {
           "RKV-CRYPT.dll": {}
         }
@@ -14,7 +14,7 @@
     }
   },
   "libraries": {
-    "RKV-CRYPT/1.0.2.2": {
+    "RKV-CRYPT/1.0.3.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
