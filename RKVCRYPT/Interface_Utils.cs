@@ -9,7 +9,7 @@
             {
                 switch (tp[1])
                 {
-                    case "v": tp[1] = Search("PROGRAM-VERSION="); break;
+                    case "v": tp[1] = Config.Search("PROGRAM-VERSION="); break;
                 }
                 chaine = tp[0] + tp[1] + tp[2];
             }
@@ -26,7 +26,7 @@
             }
             if (op.Length > LargeurDeLEntete())
             {
-                op.Remove(LargeurDeLEntete());
+               op = op.Remove(LargeurDeLEntete() + Convert.ToInt32(Search("INTERFACE-MARGIN=")) * 2 + 2 + logo.Length);
             }
             return op;
         }
@@ -41,7 +41,6 @@
                 string ip = Interface_Utils.Verification(lines[i]);
                 string[] LO = ip.Split('=');
                 ip = LO[0];
-                //Vérification du fichier interface.txt
                 op = Interface_Utils.Verification(config[i]);
                 string[] LV = op.Split('=');
                 op = LV[0];
@@ -50,10 +49,10 @@
                     nombreLigneValider++;
                     //Console.WriteLine($"({i+1}/{config.Length}) valide");
                 }
-                else
+                /*else
                 {
-                    //Console.WriteLine($"Ligne {i + 1}: {op} Invalide");
-                }
+                    Console.WriteLine($"Ligne {i + 1}: {op} Invalide");
+                }*/
             }
             if (nombreLigneValider == config.Length)
             {
@@ -185,7 +184,8 @@
                     MaxLine = Search(config[i]).Length;
                 }
             }
-            return MaxLine + 16;
+            MaxLine += Convert.ToInt32(Search("INTERFACE-OVER-LENGTH="));
+            return MaxLine;
         }
         public static string Search(string chaine)
         {

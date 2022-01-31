@@ -6,9 +6,11 @@ namespace RKVCRYPT
         //Permet de récupéré le fichier de configuration des tables de chiffrements
         public static string Table(string op)
         {
-            if (File.Exists(@"table.txt"))
+            string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            string path = Path.Combine(docPath, @".\RKVCRYPT\Config\table.txt");
+            if (File.Exists(path))
             {
-                string path = Path.Combine(Environment.CurrentDirectory, @"table.txt");
+                
                 string[] config = System.IO.File.ReadAllLines(path);
                 for (int i = 0; i < config.Length; i++)
                 {
@@ -35,7 +37,8 @@ namespace RKVCRYPT
         public static string Verification(string op)
         {
             bool enable = false;
-            string path = Path.Combine(Environment.CurrentDirectory, @"C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\RKVCRYPT\config.txt");
+            string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            string path = Path.Combine(docPath, @".\RKVCRYPT\Config\config.txt");
             if (File.Exists(path))
             {
                 string[] config = System.IO.File.ReadAllLines(path);
