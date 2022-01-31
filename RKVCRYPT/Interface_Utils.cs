@@ -2,6 +2,7 @@
 {
     internal class Interface_Utils
     {
+        //Prends en charge les balise | | pour l'affichage de fonction.
         public static string CodeAssembler(string chaine)
         {
             string[] tp = chaine.Split("|");
@@ -15,6 +16,7 @@
             }
             return chaine;
         }
+        //Génère les lignes des entêtes.
         public static string LineGenerator()
         {
             string op = "";
@@ -30,6 +32,7 @@
             }
             return op;
         }
+        //Vérifie si le fichier interface.txt correspond à la dernière version publier.
         public static bool VerificationMiseAJour()
         {
             int nombreLigneValider = 0;
@@ -63,6 +66,7 @@
                 return false;
             }
         }
+        //Permet de vérifier la présence d'une ligne dans le fichier Interface.txt
         public static bool VerificationPresence(string chaine)
         {
             bool rep = false;
@@ -76,6 +80,7 @@
             }
             return rep;
         }
+        //Permet de généré la marge avant et arrière de l'entête.
         public static string Marge(bool sens)
         {
             string op = "";
@@ -96,6 +101,7 @@
             return op;
 
         }
+        //Permet d'aligner le texte à gauche
         public static string AlignementGauche(string chaine)
         {
             int total = LargeurDeLEntete();
@@ -112,6 +118,7 @@
             chaine += marge;
             return chaine;
         }
+        //Permet d'aligner le texte à gauche avec le Copyright à droite.
         public static string AlignementGaucheDroite(string chaine1, string chaine2)
         {
             if (Search("INTERFACE-ROSKOVA-CYRILIC=").EndsWith("true"))
@@ -137,6 +144,7 @@
             chaine1 = chaine1 + marge + chaine2;
             return chaine1;
         }
+        //Permet d'aligner le texte à droite
         public static string AlignementDroite(string chaine)
         {
             int total = LargeurDeLEntete();
@@ -153,6 +161,7 @@
             chaine = marge + chaine;
             return chaine;
         }
+        //Permet d'aligner le texte au centre
         public static string AlignementCentrage(string chaine)
         {
             int total = LargeurDeLEntete();
@@ -169,6 +178,7 @@
             chaine = marge + chaine + marge;
             return chaine;
         }
+        //Calcule la largeur de l'interface en fonction du contenu du fichier de interface.txt
         public static int LargeurDeLEntete()
         {
             int MaxLine = 0;
@@ -187,6 +197,7 @@
             MaxLine += Convert.ToInt32(Search("INTERFACE-OVER-LENGTH="));
             return MaxLine;
         }
+        //Permet de rechercher une chaine dans le fichier interface.txt
         public static string Search(string chaine)
         {
             chaine = Verification(chaine);
@@ -201,6 +212,7 @@
             }
             return chaine;
         }
+        //Vérifie et renvoie une ligne donnée
         public static string Verification(string op)
         {
             bool enable = false;
