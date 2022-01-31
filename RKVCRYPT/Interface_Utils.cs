@@ -1,5 +1,10 @@
 ﻿namespace RKVCRYPT
 {
+    /*
+     * Ce fichier contient des fonctions indispensable à l'éxécution du module d'interface.
+     * 
+     * 
+     */
     internal class Interface_Utils
     {
         //Prends en charge les balise | | pour l'affichage de fonction.

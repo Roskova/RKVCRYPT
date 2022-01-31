@@ -9,9 +9,10 @@
         //Appelle le fichier de Configuration et l'interface de démarrage
         static void Main(string[] args)
         {
+            Config.ParamConsole();
             Config.CreateConfigFile();
             Interface.CreateInterfaceFile();
-            Config.ParamConsole();
+            Interface.InterfaceBackgroundColor();
             Interface.Fonction();
         }
     }

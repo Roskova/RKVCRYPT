@@ -10,4 +10,3 @@ C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\obj\Release\net6.0\R
 C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\obj\Release\net6.0\RKV-CRYPT.dll
 C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\obj\Release\net6.0\ref\RKV-CRYPT.dll
 C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\obj\Release\net6.0\RKVCRYPT.genruntimeconfig.cache
-C:\Users\Utilisateur\Documents\Github (Hors-ligne)\RKVCRYPT\obj\Release\net6.0\RKVCRYPT.csproj.AssemblyReference.cache

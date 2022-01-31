@@ -30,37 +30,37 @@ RKV-CRYPT est un logiciel de cryptage modulaire développé par ROSKOVA qui a po
 Actuellement RKV-CRYPT prends uniquement la numérisation du message en charge. Les Pre-Release 1.0.1.1 à 1.0.1.8 inclue les autres méthodes de chiffrement à titre expérimentale (La plupart étant non fonctionnel ou causant des erreurs de chiffrement)
 
 ### Arborescence du dossier de configuration 
-./
-	Config/
-		Interface.txt+
-		Table.txt+
-		Config.txt+
-		Module.txt+
-	Module/
-		Numerisation/
-			Config.txt
-			Table.txt
-			Interface.txt
-		Block4plus/
-			Config.txt
-			Interface.txt
-		Numerisation.dll
-		Block4plus.dll
-	Docs/
-		RKVCRYPT_manual_cafr.pdf+
-		RKVCRYPT_manual_en.pdf*
-RKVCRYPT.exe
-README.txt*
-
-./
-	Module/
-		Exemple/
-			Config.txt
-			Interface.txt
-		Exemple.dll
-	Docs/
-		EXEMPLE_Manual_fr.pdf*
-README.txt*
+> ./
+>	Config/
+>		Interface.txt+
+>		Table.txt+
+>		Config.txt+
+>		Module.txt+
+>	Module/
+>		Numerisation/
+>			Config.txt
+>			Table.txt
+>			Interface.txt
+>		Block4plus/
+>			Config.txt
+>			Interface.txt
+>		Numerisation.dll
+>		Block4plus.dll
+>	Docs/
+>		RKVCRYPT_manual_cafr.pdf+
+>		RKVCRYPT_manual_en.pdf*
+> RKVCRYPT.exe
+> README.txt*
+>
+>./
+>	Module/
+>		Exemple/
+>			Config.txt
+>			Interface.txt
+>		Exemple.dll
+>	Docs/
+>		EXEMPLE_Manual_fr.pdf*
+>README.txt*
 ______________________________________________________________________
 
 Les fichiers marquer * sont optionnel et n’affecte pas la fonctionnalité de RKVCRYPT.
