@@ -165,7 +165,7 @@
         {
             Console.Clear();
            
-                string[] marge = { LineGenerator(), Interface_Utils.Marge(false), Interface_Utils.Marge(true) };
+                string[] marge = { Interface_Utils.LineGenerator(), Interface_Utils.Marge(false), Interface_Utils.Marge(true) };
                 InterfaceRegister(out string[] InList, out int[] InListLength);
                 Console.WriteLine(EnTete(InList[nombre], InListLength[nombre], marge));
         }

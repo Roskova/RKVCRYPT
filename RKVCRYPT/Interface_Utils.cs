@@ -25,26 +25,18 @@
         //Génère les lignes des entêtes.
         public static string LineGenerator()
         {
-            if(line.Length > 0)
+            string op = "";
+            string logo = "           ";
+            string symbol = Search("INTERFACE-LINE-SYMBOL=");
+            for (int i = 0; i < LargeurDeLEntete() + Convert.ToInt32(Search("INTERFACE-MARGIN=")) * 2 + 2 + logo.Length; i++)
             {
-                return line;
+                op += symbol;
             }
-            else
+            if (op.Length > LargeurDeLEntete())
             {
-                string op = "";
-                string logo = "           ";
-                string symbol = Search("INTERFACE-LINE-SYMBOL=");
-                for (int i = 0; i < LargeurDeLEntete() + Convert.ToInt32(Search("INTERFACE-MARGIN=")) * 2 + 2 + logo.Length; i++)
-                {
-                    op += symbol;
-                }
-                if (op.Length > LargeurDeLEntete())
-                {
-                    op = op.Remove(LargeurDeLEntete() + Convert.ToInt32(Search("INTERFACE-MARGIN=")) * 2 + 2 + logo.Length);
-                }
-                line = op;
-                return line;
+                op = op.Remove(LargeurDeLEntete() + Convert.ToInt32(Search("INTERFACE-MARGIN=")) * 2 + 2 + logo.Length);
             }
+            return op;
         }
         //Vérifie si le fichier interface.txt correspond à la dernière version publier.
         public static bool VerificationMiseAJour()
