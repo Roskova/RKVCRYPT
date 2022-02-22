@@ -17,11 +17,11 @@
                 case '7': Console.BackgroundColor = ConsoleColor.Gray; break;
                 case '8': Console.BackgroundColor = ConsoleColor.DarkGray; break;
                 case '9': Console.BackgroundColor = ConsoleColor.Blue; break;
-                case 'c': Console.BackgroundColor = ConsoleColor.Red; break;
-                case 'e': Console.BackgroundColor = ConsoleColor.Yellow; break;
                 case 'a': Console.BackgroundColor = ConsoleColor.Green; break;
                 case 'b': Console.BackgroundColor = ConsoleColor.Cyan; break;
+                case 'c': Console.BackgroundColor = ConsoleColor.Red; break;
                 case 'd': Console.BackgroundColor = ConsoleColor.Magenta; break;
+                case 'e': Console.BackgroundColor = ConsoleColor.Yellow; break;
                 case 'f': Console.BackgroundColor = ConsoleColor.White; break;
                 default: Console.BackgroundColor = ConsoleColor.Black; break;
             }
@@ -37,11 +37,11 @@
                 case '7': Console.ForegroundColor = ConsoleColor.Gray; break;
                 case '8': Console.ForegroundColor = ConsoleColor.DarkGray; break;
                 case '9': Console.ForegroundColor = ConsoleColor.Blue; break;
-                case 'c': Console.ForegroundColor = ConsoleColor.Red; break;
-                case 'e': Console.ForegroundColor = ConsoleColor.Yellow; break;
                 case 'a': Console.ForegroundColor = ConsoleColor.Green; break;
                 case 'b': Console.ForegroundColor = ConsoleColor.Cyan; break;
+                case 'c': Console.ForegroundColor = ConsoleColor.Red; break;
                 case 'd': Console.ForegroundColor = ConsoleColor.Magenta; break;
+                case 'e': Console.ForegroundColor = ConsoleColor.Yellow; break;
                 case 'f': Console.ForegroundColor = ConsoleColor.White; break;
                 default: Console.ForegroundColor = ConsoleColor.White; break;
             }
@@ -165,10 +165,11 @@
         {
             Console.Clear();
            
-                string[] marge = { Interface_Utils.LineGenerator(), Interface_Utils.Marge(false), Interface_Utils.Marge(true) };
+                string[] marge = { LineGenerator(), Interface_Utils.Marge(false), Interface_Utils.Marge(true) };
                 InterfaceRegister(out string[] InList, out int[] InListLength);
                 Console.WriteLine(EnTete(InList[nombre], InListLength[nombre], marge));
         }
+
         public static void Fonction()
         {
             InterfaceAccueil();
