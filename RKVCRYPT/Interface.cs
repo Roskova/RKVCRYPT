@@ -2,7 +2,7 @@
 {
     class Interface
     {
-        public static void InterfaceBackgroundColor()
+        public void InterfaceBackgroundColor()
         {
             string param = Interface_Utils.Search("INTERFACE-BACKGROUND-COLOR=");
             switch (param[0])
@@ -46,7 +46,7 @@
                 default: Console.ForegroundColor = ConsoleColor.White; break;
             }
         }
-        public static void InterfaceRegister(out string[] InList, out int[] InListLength)
+        public void InterfaceRegister(out string[] InList, out int[] InListLength)
         {
 
             string[] config = System.IO.File.ReadAllLines(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), @"RKVCRYPT\Config\interface.txt"));
@@ -73,7 +73,7 @@
             //Console.WriteLine($"Interface{InList[0]}:{InListLength[0]}\nInterface{InList[1]}:{InListLength[1]}\nInterface{InList[2]}:{InListLength[2]}\n");
         }
 
-        public static string EnTete(string chaine, int number, string[] marge)
+        public string EnTete(string chaine, int number, string[] marge)
         {
             string[] logo = { "           ", "@....@     ", "(------)   ", "(> ___ <)  ", "^^ ~~~ ^^  ", "RKV-CRYPT  ", "           ", "           ", "           " };
             string op = "";
@@ -97,7 +97,7 @@
 
             return op + marge[0];
         }
-        public static void InterfaceAccueil()
+        public void InterfaceAccueil()
         {
             bool k = false;
             Console.Clear();
@@ -131,7 +131,7 @@
                 }
             }
         }
-        public static void CreateInterfaceFile()
+        public void CreateInterfaceFile()
         {
             string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             string path = Path.Combine(docPath, @".\RKVCRYPT\Config\interface.txt");
@@ -161,7 +161,7 @@
             }
 
         }
-        public static void SelecteurInterface(int nombre)
+        public void SelecteurInterface(int nombre)
         {
             Console.Clear();
            

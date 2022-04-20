@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.3",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Utilisateur\\Documents\\Github (Hors-ligne)\\RKVCRYPT\\RKVCRYPT.csproj",
+      "projectUniqueName": "C:\\Users\\Utilisateur\\Documents\\Github\\RKVCRYPT\\RKVCRYPT.csproj",
       "projectName": "RKV-CRYPT",
-      "projectPath": "C:\\Users\\Utilisateur\\Documents\\Github (Hors-ligne)\\RKVCRYPT\\RKVCRYPT.csproj",
+      "projectPath": "C:\\Users\\Utilisateur\\Documents\\Github\\RKVCRYPT\\RKVCRYPT.csproj",
       "packagesPath": "C:\\Users\\Utilisateur\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Utilisateur\\Documents\\Github (Hors-ligne)\\RKVCRYPT\\obj\\",
+      "outputPath": "C:\\Users\\Utilisateur\\Documents\\Github\\RKVCRYPT\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -65,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
