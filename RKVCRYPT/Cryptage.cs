@@ -312,7 +312,7 @@ namespace RKVCRYPT
         {
             string input = Message();
             string chaine = GestionMK(input);
-            Interface.SelecteurInterface(1);
+            Affichage crypt = new("CRYPTAGE");
             Utils.AffichageOutput(input, chaine, 0);
         }
     }
