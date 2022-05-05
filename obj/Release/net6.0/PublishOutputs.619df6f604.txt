@@ -1,4 +1,0 @@
-C:\Users\Utilisateur\Documents\RKVCRYPT\RKV-CRYPT.exe
-C:\Users\Utilisateur\Documents\RKVCRYPT\RKV-CRYPT.dll
-C:\Users\Utilisateur\Documents\RKVCRYPT\RKV-CRYPT.deps.json
-C:\Users\Utilisateur\Documents\RKVCRYPT\RKV-CRYPT.runtimeconfig.json
