@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RKVCRYPT_2._0
+namespace Core
 {
     internal class Configuration
     {
