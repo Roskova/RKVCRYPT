@@ -9,9 +9,14 @@ namespace Core
     internal class Configuration
     {
         private string path;
-        public Configuration()
+        private string fileName;
+        private string fileExtension;
+
+        public Configuration(string path, string fileName, string fileExtension)
         {
-            this.path = "";
+            this.path = path;
+            this.fileName = fileName;
+            this.fileExtension = fileExtension;
         }
         public string Path
         {
