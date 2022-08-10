@@ -1,0 +1,14 @@
+#########################################################################
+#   FICHIER CONFIGURATION POUR LES TABLES DE CHIFFREMENT DE RKV-CRYPT   #
+# Ce fichier permet de configurer les différentes tables de chiffrement #
+# LA MODIFICATION DE CE FICHIER ENTRAINERA UNE INCOMPATIBILITÉ DISTANTE #
+# MAIS AUGMENTE CONSIDÉRABLEMENT LA SÉCURITÉ DU CHIFFREMENT CAR POUR    #
+# QUE QUELQU'UN PUISSE DÉCHIFFRER VOTRE MESSAGE, IL DOIT AVOIR UNE      #
+# COPIE DES TABLES DE CHIFFREMENT PRÉSENT DANS VOTRE FICHIER TABLE.TXT  #
+#########################################################################
+# TABLE DE NUMÉRISATION: TRANSFORME LES LETTRES EN CHIFFRES             #
+#########################################################################
+nu1¬ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ,.'
+nu2¬ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ,.';:()«»+-/#*[]=<>?!$¢@%\²³~{}_±|ÉÈÊÇÙÛÀÂÎÔ`^¸€‚©°¶÷"
+nu3¬abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ,.';:()«»+-/#*[]=<>?!$¢@%\²³~{}_±|ÉÈÊÇÙÛÀÂÎéèêçûùàâîôÔ`^¸€‚ƒ„…†‡ˆ‰Š‹Œ Ž  ‘’“”•–—˜™š›œžŸ¡£¤¥¦§¨©ª®¯°´µ¶·¸¹º¼½¾¿ÅÆÐ×ØÞå÷"
+nu4¬abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ,.';:()«»+-/#*[]=<>?!$¢@%\²³~{}_±|ôÔÉÈÊÇÙÛÀÂÎéèêçûùàâî`^¸€‚ƒ„…†‡ˆ‰Š‹Œ Ž  ‘’“”•–—˜™š›œžŸ¡£¤¥¦§¨©ª®¯°´µ¶·¸¹º¼½¾¿ÅÆÐ×ØÞå÷"АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя

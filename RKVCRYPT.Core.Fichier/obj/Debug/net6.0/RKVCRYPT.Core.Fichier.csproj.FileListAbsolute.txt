@@ -1,0 +1,12 @@
+C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core.Fichier\bin\Debug\net6.0\RKVCRYPT.Core.Fichier.deps.json
+C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core.Fichier\bin\Debug\net6.0\RKVCRYPT.Core.Fichier.dll
+C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core.Fichier\bin\Debug\net6.0\RKVCRYPT.Core.Fichier.pdb
+C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core.Fichier\obj\Debug\net6.0\RKVCRYPT.Core.Fichier.csproj.AssemblyReference.cache
+C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core.Fichier\obj\Debug\net6.0\RKVCRYPT.Core.Fichier.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core.Fichier\obj\Debug\net6.0\RKVCRYPT.Core.Fichier.AssemblyInfoInputs.cache
+C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core.Fichier\obj\Debug\net6.0\RKVCRYPT.Core.Fichier.AssemblyInfo.cs
+C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core.Fichier\obj\Debug\net6.0\RKVCRYPT.Core.Fichier.csproj.CoreCompileInputs.cache
+C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core.Fichier\obj\Debug\net6.0\RKVCRYPT.Core.Fichier.dll
+C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core.Fichier\obj\Debug\net6.0\refint\RKVCRYPT.Core.Fichier.dll
+C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core.Fichier\obj\Debug\net6.0\RKVCRYPT.Core.Fichier.pdb
+C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core.Fichier\obj\Debug\net6.0\ref\RKVCRYPT.Core.Fichier.dll
