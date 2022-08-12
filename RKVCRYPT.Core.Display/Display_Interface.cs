@@ -49,6 +49,5 @@ namespace RKVCRYPT.Core.Interface
         {
             get { return entete; }
         }
-
     }
 }

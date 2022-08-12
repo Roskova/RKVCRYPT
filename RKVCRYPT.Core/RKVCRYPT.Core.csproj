@@ -10,6 +10,7 @@
   <ItemGroup>
     <ProjectReference Include="..\RKVCRYPT.Core.Display\RKVCRYPT.Core.Interface.csproj" />
     <ProjectReference Include="..\RKVCRYPT.Core.GestionFichier\RKVCRYPT.Core.GestionFichier.csproj" />
+    <ProjectReference Include="..\RKVCRYPT.Module.Chiffrement\RKVCRYPT.Module.Chiffrement.csproj" />
   </ItemGroup>
 
 </Project>

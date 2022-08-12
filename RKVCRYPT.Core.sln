@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RKVCRYPT.Core.Interface", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RKVCRYPT.Core.GestionFichier", "RKVCRYPT.Core.GestionFichier\RKVCRYPT.Core.GestionFichier.csproj", "{59AAB0A5-2B65-4D38-9BD3-6B596A9C8B03}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RKVCRYPT.Module.Chiffrement", "RKVCRYPT.Module.Chiffrement\RKVCRYPT.Module.Chiffrement.csproj", "{E272E97C-FE2E-4C6C-AB4E-5AAEE9C34652}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{59AAB0A5-2B65-4D38-9BD3-6B596A9C8B03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59AAB0A5-2B65-4D38-9BD3-6B596A9C8B03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59AAB0A5-2B65-4D38-9BD3-6B596A9C8B03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E272E97C-FE2E-4C6C-AB4E-5AAEE9C34652}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E272E97C-FE2E-4C6C-AB4E-5AAEE9C34652}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E272E97C-FE2E-4C6C-AB4E-5AAEE9C34652}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E272E97C-FE2E-4C6C-AB4E-5AAEE9C34652}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

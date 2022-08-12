@@ -14,7 +14,7 @@ DESCRIPTION=Fichier de configuration par défault de l'interface d'accueil
 ##########################################################################
 LIGNE-DEBUT-ENTETE=21
 LIGNE-FIN-ENTETE=26
-ALIGNEMENT=CCGGCD
+ALIGNEMENT=CCCCCC
 ##########################################################################
 # METTRE LE CONTENU DE L'ENTÊTE SOUS CETTE LIGNE                         #
 ##########################################################################

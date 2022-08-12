@@ -18,3 +18,5 @@ C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core\bin\Debug\net6.0\RKVCR
 C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core\bin\Debug\net6.0\RKVCRYPT.Core.Interface.pdb
 C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core\bin\Debug\net6.0\RKVCRYPT.Core.GestionFichier.dll
 C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core\bin\Debug\net6.0\RKVCRYPT.Core.GestionFichier.pdb
+C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core\bin\Debug\net6.0\RKVCRYPT.Module.Chiffrement.dll
+C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core\bin\Debug\net6.0\RKVCRYPT.Module.Chiffrement.pdb

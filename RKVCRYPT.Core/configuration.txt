@@ -9,15 +9,15 @@
 ##########################################################################
 
 # Activer la journalisation de la console.
-JOURNALISATION=false
-REINITIALISER=false
+JOURNALISATION=true
+REINITIALISER=true
 
 # Nom du dossier où stocker la journalisation
 DOSSIER-JOURNALISATION=journalisation/
 
 # Veuillez lister tout les fichiers d'interface que vous voulez charger  
 # Ceux-ci doivent être écrite sous le format suivant: item1,item2,item3               
-INTERFACE-ACTIF=Accueil,Configuration
+MODULE-ACTIF=Accueil,Configuration
 
 # Nom du dossier pour les fichiers d'interface
 DOSSIER-INTERFACE=interface/

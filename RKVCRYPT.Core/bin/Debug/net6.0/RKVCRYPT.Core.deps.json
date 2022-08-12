@@ -9,7 +9,8 @@
       "RKVCRYPT.Core/1.0.0": {
         "dependencies": {
           "RKVCRYPT.Core.GestionFichier": "1.0.0",
-          "RKVCRYPT.Core.Interface": "1.0.0"
+          "RKVCRYPT.Core.Interface": "1.0.0",
+          "RKVCRYPT.Module.Chiffrement": "1.0.0"
         },
         "runtime": {
           "RKVCRYPT.Core.dll": {}
@@ -27,6 +28,11 @@
         "runtime": {
           "RKVCRYPT.Core.Interface.dll": {}
         }
+      },
+      "RKVCRYPT.Module.Chiffrement/1.0.0": {
+        "runtime": {
+          "RKVCRYPT.Module.Chiffrement.dll": {}
+        }
       }
     }
   },
@@ -42,6 +48,11 @@
       "sha512": ""
     },
     "RKVCRYPT.Core.Interface/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RKVCRYPT.Module.Chiffrement/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

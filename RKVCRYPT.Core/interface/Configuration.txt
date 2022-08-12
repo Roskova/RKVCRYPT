@@ -14,7 +14,7 @@ DESCRIPTION=Contient tout messages interne au logiciel
 ##########################################################################
 LIGNE-DEBUT-ENTETE=21
 LIGNE-FIN-ENTETE=27
-ALIGNEMENT=CCGGCCD
+ALIGNEMENT=CCCCCCC
 ##########################################################################
 # METTRE LE CONTENU DE L'ENTÊTE SOUS CETTE LIGNE                         #
 ##########################################################################

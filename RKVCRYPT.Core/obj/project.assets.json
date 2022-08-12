@@ -24,6 +24,16 @@
         "runtime": {
           "bin/placeholder/RKVCRYPT.Core.Interface.dll": {}
         }
+      },
+      "RKVCRYPT.Module.Chiffrement/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/RKVCRYPT.Module.Chiffrement.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RKVCRYPT.Module.Chiffrement.dll": {}
+        }
       }
     }
   },
@@ -37,12 +47,18 @@
       "type": "project",
       "path": "../RKVCRYPT.Core.Display/RKVCRYPT.Core.Interface.csproj",
       "msbuildProject": "../RKVCRYPT.Core.Display/RKVCRYPT.Core.Interface.csproj"
+    },
+    "RKVCRYPT.Module.Chiffrement/1.0.0": {
+      "type": "project",
+      "path": "../RKVCRYPT.Module.Chiffrement/RKVCRYPT.Module.Chiffrement.csproj",
+      "msbuildProject": "../RKVCRYPT.Module.Chiffrement/RKVCRYPT.Module.Chiffrement.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "RKVCRYPT.Core.GestionFichier >= 1.0.0",
-      "RKVCRYPT.Core.Interface >= 1.0.0"
+      "RKVCRYPT.Core.Interface >= 1.0.0",
+      "RKVCRYPT.Module.Chiffrement >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -83,6 +99,9 @@
             },
             "C:\\Users\\Roskova\\source\\repos\\RKVCRYPT.Core\\RKVCRYPT.Core.GestionFichier\\RKVCRYPT.Core.GestionFichier.csproj": {
               "projectPath": "C:\\Users\\Roskova\\source\\repos\\RKVCRYPT.Core\\RKVCRYPT.Core.GestionFichier\\RKVCRYPT.Core.GestionFichier.csproj"
+            },
+            "C:\\Users\\Roskova\\source\\repos\\RKVCRYPT.Core\\RKVCRYPT.Module.Chiffrement\\RKVCRYPT.Module.Chiffrement.csproj": {
+              "projectPath": "C:\\Users\\Roskova\\source\\repos\\RKVCRYPT.Core\\RKVCRYPT.Module.Chiffrement\\RKVCRYPT.Module.Chiffrement.csproj"
             }
           }
         }
