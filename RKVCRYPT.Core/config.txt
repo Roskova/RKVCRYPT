@@ -31,17 +31,6 @@ MK-CONFIG-OVERPASS=false
 MK-DEFAULT=N
 NUM-FORMAT=nu3
 ##########################################################################
-# Personnalisation du logo RKV-CRYPT 6x11                                #
-##########################################################################
-LOGO-ENABLE=true
-LOGO-CUSTOM=true
-L1=           
-L2=@....@     
-L3=(------)   
-L4=(> ___ <)  
-L5=^^ ~~~ ^^  
-L6=RKV-CRYPT 
-##########################################################################
 # MESSAGE D'ERREUR ET MESSAGE GÉNÉRAL                                    #
 ##########################################################################
 MESSAGE-SELECTEUR-INVALIDE=Veuillez sélectionnée une option valide
