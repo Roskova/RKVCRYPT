@@ -8,24 +8,24 @@
     ".NETCoreApp,Version=v6.0": {
       "RKVCRYPT.Core/1.0.0": {
         "dependencies": {
-          "RKVCRYPT.Core.Display": "1.0.0",
-          "RKVCRYPT.Core.Fichier": "1.0.0"
+          "RKVCRYPT.Core.GestionFichier": "1.0.0",
+          "RKVCRYPT.Core.Interface": "1.0.0"
         },
         "runtime": {
           "RKVCRYPT.Core.dll": {}
         }
       },
-      "RKVCRYPT.Core.Display/1.0.0": {
-        "dependencies": {
-          "RKVCRYPT.Core.Fichier": "1.0.0"
-        },
+      "RKVCRYPT.Core.GestionFichier/1.0.0": {
         "runtime": {
-          "RKVCRYPT.Core.Display.dll": {}
+          "RKVCRYPT.Core.GestionFichier.dll": {}
         }
       },
-      "RKVCRYPT.Core.Fichier/1.0.0": {
+      "RKVCRYPT.Core.Interface/1.0.0": {
+        "dependencies": {
+          "RKVCRYPT.Core.GestionFichier": "1.0.0"
+        },
         "runtime": {
-          "RKVCRYPT.Core.Fichier.dll": {}
+          "RKVCRYPT.Core.Interface.dll": {}
         }
       }
     }
@@ -36,12 +36,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "RKVCRYPT.Core.Display/1.0.0": {
+    "RKVCRYPT.Core.GestionFichier/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "RKVCRYPT.Core.Fichier/1.0.0": {
+    "RKVCRYPT.Core.Interface/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -8,8 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RKVCRYPT.Core.Display\RKVCRYPT.Core.Display.csproj" />
-    <ProjectReference Include="..\RKVCRYPT.Core.Fichier\RKVCRYPT.Core.Fichier.csproj" />
+    <ProjectReference Include="..\RKVCRYPT.Core.Display\RKVCRYPT.Core.Interface.csproj" />
+    <ProjectReference Include="..\RKVCRYPT.Core.Fichier\RKVCRYPT.Core.GestionFichier.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,5 @@
-﻿using System;
-using System.Text;
-namespace RKVCRYPT.Core
+﻿using System.Text;
+namespace RKVCRYPT.Core.GestionFichier
 {
     public class Fichier
     {
@@ -14,16 +13,15 @@ namespace RKVCRYPT.Core
             this.path = path;
             this.sym = '=';
             this.contenu = new List<string>();
-            
         }
         public void Create()
         {
-            StreamWriter sw = new StreamWriter(path+nom);
+            StreamWriter sw = new StreamWriter(path + nom);
             sw.Close();
         }
         public void Write(string message)
         {
-            StreamWriter sw = new StreamWriter(path+nom, true, Encoding.UTF8);
+            StreamWriter sw = new StreamWriter(path + nom, true, Encoding.UTF8);
             sw.WriteLine(message);
             sw.Close();
         }
@@ -45,20 +43,16 @@ namespace RKVCRYPT.Core
             string[] x = w.Split(sym);
             return x[1];
         }
-        public List<string> Print()
-        {
-            return contenu;
-        }
         private string Locate(string cible)
         {
-           foreach(string item in contenu)
-           {
-                if(item.StartsWith(cible))
+            foreach (string item in contenu)
+            {
+                if (item.StartsWith(cible))
                 {
                     return item;
                 }
-           }
-           return cible;
+            }
+            return cible;
         }
         public string Nom
         {
@@ -67,6 +61,10 @@ namespace RKVCRYPT.Core
         public string Path
         {
             get { return path; }
+        }
+        public List<string> Print
+        {
+            get { return contenu; }
         }
     }
 }

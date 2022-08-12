@@ -1,61 +1,23 @@
-##########################################################################
-# FICHIER DE CONFIGURATION DES INTERFACES DE RKV-CRYPT	     Version 1.1 #
+﻿##########################################################################
+# FICHIER DE CONFIGURATION GLOBALE DES INTERFACES RKV-CRYPT  Version 2.0 #
 # Ce fichier permet de configurer les différents interfaces de RKV-CRYPT #
 ##########################################################################
-INTERFACE-CONFIG-ENABLE=true
+ENABLE=true
 ##########################################################################
 # Personnalisation des interfaces de RKV-CRYPT                           #
 # CODE COULEUR: 0=Noire 1=Blanc 2=Bleu 3=Green 4=Rouge 5=Jaune           #
-# FORMAT: 01 (0 Backgroundcolor, 1 foregroundcolor)			 #
+# FORMAT: 01 (0 Backgroundcolor, 1 foregroundcolor)                      #
 ##########################################################################
-INTERFACE-BACKGROUND-COLOR=01
-INTERFACE-LINE-SYMBOL=#
-INTERFACE-ROSKOVA-CYRILIC=true
+BACKGROUND-COLOR=03
+LINE-SYMBOL=#
+LARGEUR-FIXE-INTERFACE=30
+SIGNATURE-IN-CYRILIC=true
+MARGIN=3
 ##########################################################################
-# Configuration du menu d'accueil de RKV-CRYPT                           #
+# Veuillez lister tout les fichiers d'interface que vous voulez charger  #
+# Ceux-ci doivent être écrite sous le format suivant:                    #
+# interface1,interface2,interface3,interface4                            #
+#                                                                        #
 ##########################################################################
-INTERFACE-ALIGNEMENT=CENTRE
-INTERFACE-NAME=ACCUEIL
-ACCUEIL-L1=
-ACCUEIL-L2=RKV-CRYPT
-ACCUEIL-L3=Cryptage Modulaire par Roskova
-ACCUEIL-L4=
-ACCUEIL-L5=
-ACCUEIL-L6=
-ACCUEIL-L7=|v|
-##########################################################################
-# Configuration du menu de cryptage de RKV-CRYPT                         #
-##########################################################################
-INTERFACE-ALIGNEMENT=DROITE
-INTERFACE-NAME=CRYPTAGE
-CRYPTAGE-L1=Interface du module de cryptage
-CRYPTAGE-L2=RKV-CRYPT: Cryptage Modulaire par Roskova
-CRYPTAGE-L3=
-CRYPTAGE-L4=
-CRYPTAGE-L5=
-CRYPTAGE-L6=
-CRYPTAGE-L7=|v|
-##########################################################################
-# Configuration du menu de cryptage de RKV-CRYPT                         #
-##########################################################################
-INTERFACE-ALIGNEMENT=DROITE
-INTERFACE-NAME=CRYPTAGE
-DECRYPTAGE-L1=Interface du module de Décryptage
-DECRYPTAGE-L2=RKV-CRYPT: Cryptage Modulaire par Roskova
-DECRYPTAGE-L3=
-DECRYPTAGE-L4=
-DECRYPTAGE-L5=
-DECRYPTAGE-L6=
-DECRYPTAGE-L7=|v|
-##########################################################################
-# Configuration du menu d'information de RKV-CRYPT                       #
-##########################################################################
-INTERFACE-ALIGNEMENT=DROITE
-INTERFACE-NAME=CRYPTAGE
-DECRYPTAGE-L1=Interface d'information de RKV-CRYPT
-DECRYPTAGE-L2=RKV-CRYPT: Cryptage Modulaire par Roskova
-DECRYPTAGE-L3=Début du projet: 06-12-2021 16h40
-DECRYPTAGE-L4=Dernière version publié: 01-01-2022 01h49
-DECRYPTAGE-L5=Version du logiciel: |v|
-DECRYPTAGE-L6=Github: http://github.com/Roskova/RKV-CRYPT/
-DECRYPTAGE-L7=|v|
+INTERFACE-ACTIVE=Accueil,Configuration
+DOSSIER-INTERFACE=interface/

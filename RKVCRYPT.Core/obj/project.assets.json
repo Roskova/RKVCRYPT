@@ -2,47 +2,47 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "RKVCRYPT.Core.Display/1.0.0": {
+      "RKVCRYPT.Core.GestionFichier/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/RKVCRYPT.Core.GestionFichier.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RKVCRYPT.Core.GestionFichier.dll": {}
+        }
+      },
+      "RKVCRYPT.Core.Interface/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "RKVCRYPT.Core.Fichier": "1.0.0"
+          "RKVCRYPT.Core.GestionFichier": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/RKVCRYPT.Core.Display.dll": {}
+          "bin/placeholder/RKVCRYPT.Core.Interface.dll": {}
         },
         "runtime": {
-          "bin/placeholder/RKVCRYPT.Core.Display.dll": {}
-        }
-      },
-      "RKVCRYPT.Core.Fichier/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/RKVCRYPT.Core.Fichier.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/RKVCRYPT.Core.Fichier.dll": {}
+          "bin/placeholder/RKVCRYPT.Core.Interface.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "RKVCRYPT.Core.Display/1.0.0": {
+    "RKVCRYPT.Core.GestionFichier/1.0.0": {
       "type": "project",
-      "path": "../RKVCRYPT.Core.Display/RKVCRYPT.Core.Display.csproj",
-      "msbuildProject": "../RKVCRYPT.Core.Display/RKVCRYPT.Core.Display.csproj"
+      "path": "../RKVCRYPT.Core.Fichier/RKVCRYPT.Core.GestionFichier.csproj",
+      "msbuildProject": "../RKVCRYPT.Core.Fichier/RKVCRYPT.Core.GestionFichier.csproj"
     },
-    "RKVCRYPT.Core.Fichier/1.0.0": {
+    "RKVCRYPT.Core.Interface/1.0.0": {
       "type": "project",
-      "path": "../RKVCRYPT.Core.Fichier/RKVCRYPT.Core.Fichier.csproj",
-      "msbuildProject": "../RKVCRYPT.Core.Fichier/RKVCRYPT.Core.Fichier.csproj"
+      "path": "../RKVCRYPT.Core.Display/RKVCRYPT.Core.Interface.csproj",
+      "msbuildProject": "../RKVCRYPT.Core.Display/RKVCRYPT.Core.Interface.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "RKVCRYPT.Core.Display >= 1.0.0",
-      "RKVCRYPT.Core.Fichier >= 1.0.0"
+      "RKVCRYPT.Core.GestionFichier >= 1.0.0",
+      "RKVCRYPT.Core.Interface >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -71,17 +71,18 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Roskova\\source\\repos\\RKVCRYPT.Core\\RKVCRYPT.Core.Display\\RKVCRYPT.Core.Display.csproj": {
-              "projectPath": "C:\\Users\\Roskova\\source\\repos\\RKVCRYPT.Core\\RKVCRYPT.Core.Display\\RKVCRYPT.Core.Display.csproj"
+            "C:\\Users\\Roskova\\source\\repos\\RKVCRYPT.Core\\RKVCRYPT.Core.Display\\RKVCRYPT.Core.Interface.csproj": {
+              "projectPath": "C:\\Users\\Roskova\\source\\repos\\RKVCRYPT.Core\\RKVCRYPT.Core.Display\\RKVCRYPT.Core.Interface.csproj"
             },
-            "C:\\Users\\Roskova\\source\\repos\\RKVCRYPT.Core\\RKVCRYPT.Core.Fichier\\RKVCRYPT.Core.Fichier.csproj": {
-              "projectPath": "C:\\Users\\Roskova\\source\\repos\\RKVCRYPT.Core\\RKVCRYPT.Core.Fichier\\RKVCRYPT.Core.Fichier.csproj"
+            "C:\\Users\\Roskova\\source\\repos\\RKVCRYPT.Core\\RKVCRYPT.Core.Fichier\\RKVCRYPT.Core.GestionFichier.csproj": {
+              "projectPath": "C:\\Users\\Roskova\\source\\repos\\RKVCRYPT.Core\\RKVCRYPT.Core.Fichier\\RKVCRYPT.Core.GestionFichier.csproj"
             }
           }
         }
@@ -101,7 +102,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -110,7 +112,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

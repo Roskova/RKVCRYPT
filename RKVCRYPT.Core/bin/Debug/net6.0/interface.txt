@@ -9,7 +9,7 @@ INTERFACE-CONFIG-ENABLE=true
 # FORMAT: 01 (0 Backgroundcolor, 1 foregroundcolor)			 #
 ##########################################################################
 INTERFACE-BACKGROUND-COLOR=
-INTERFACE-LINE-SYMBOL=
+INTERFACE-LINE-SYMBOL=#
 INTERFACE-ROSKOVA-CYRILIC=true
 ##########################################################################
 # Configuration du menu d'accueil de RKV-CRYPT                           #

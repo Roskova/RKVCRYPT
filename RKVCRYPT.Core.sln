@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RKVCRYPT.Core", "RKVCRYPT.Core\RKVCRYPT.Core.csproj", "{7F907A95-0495-4922-947F-B54C64BBBEFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RKVCRYPT.Core", "RKVCRYPT.Core\RKVCRYPT.Core.csproj", "{7F907A95-0495-4922-947F-B54C64BBBEFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RKVCRYPT.Core.Display", "RKVCRYPT.Core.Display\RKVCRYPT.Core.Display.csproj", "{630858FE-7C19-4F4D-92D3-A4CF79C64B4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RKVCRYPT.Core.Interface", "RKVCRYPT.Core.Display\RKVCRYPT.Core.Interface.csproj", "{630858FE-7C19-4F4D-92D3-A4CF79C64B4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RKVCRYPT.Core.Fichier", "RKVCRYPT.Core.Fichier\RKVCRYPT.Core.Fichier.csproj", "{59AAB0A5-2B65-4D38-9BD3-6B596A9C8B03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RKVCRYPT.Core.GestionFichier", "RKVCRYPT.Core.Fichier\RKVCRYPT.Core.GestionFichier.csproj", "{59AAB0A5-2B65-4D38-9BD3-6B596A9C8B03}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LHPnCwGW+WkoCQ/D2RM8PnmXAhOXaL/Knw1vFC+HjAEcP9dZyv8AxA3JpFsBi+RYRREQX5q/WdpdoCSnuOAPLg==",
+  "dgSpecHash": "/C0GbC8zp+ZQ09NOGwaVWOAyuyEfrdFzJtZlX8toCeMORp29BN93RUqAJOd5agPWgCyBpbNYMRF+6EmdrYQSRg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Roskova\\source\\repos\\RKVCRYPT.Core\\RKVCRYPT.Core.Fichier\\RKVCRYPT.Core.Fichier.csproj",
+  "projectFilePath": "C:\\Users\\Roskova\\source\\repos\\RKVCRYPT.Core\\RKVCRYPT.Core.Fichier\\RKVCRYPT.Core.GestionFichier.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

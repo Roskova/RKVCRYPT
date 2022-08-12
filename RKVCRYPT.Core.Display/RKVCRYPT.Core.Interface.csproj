@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RKVCRYPT.Core.Fichier\RKVCRYPT.Core.Fichier.csproj" />
+    <ProjectReference Include="..\RKVCRYPT.Core.Fichier\RKVCRYPT.Core.GestionFichier.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,18 +1,27 @@
-﻿using RKVCRYPT.Core;
-namespace RKVCRYPT.Core
+﻿using RKVCRYPT.Core.GestionFichier;
+namespace RKVCRYPT.Core.Interface
 {
     public class Display
     {
         private string nom;
+        private int margin;
+        private string line;
+        private string lineSymbol;
+        private int largeurDeLEntete;
         private Fichier Finterface;
         public Display(string nom, Fichier Finterface)
         {
             this.nom = nom;
             this.Finterface = Finterface;
+            this.margin = Convert.ToInt32(Finterface.Search("MARGIN="));
+            this.lineSymbol = Finterface.Search("LINE-SYMBOL=");
+            this.largeurDeLEntete = Convert.ToInt32(Finterface.Search("LARGEUR-FIXE-INTERFACE="));
+            this.line = LineGenerator();
+            BackGroundColor();
         }
         private void BackGroundColor()
         {
-            string param = Finterface.Search("INTERFACE-BACKGROUND-COLOR=");
+            string param = Finterface.Search("BACKGROUND-COLOR=");
             switch (param[0])
             {
                 case '0': Console.BackgroundColor = ConsoleColor.Black; break;
@@ -54,30 +63,26 @@ namespace RKVCRYPT.Core
                 default: Console.ForegroundColor = ConsoleColor.White; break;
             }
         }
-        public void Generate()
-        {
-
-        }
         private string LineGenerator()
         {
             string op = "";
             string logo = "           ";
-            string symbol = Finterface.Search("INTERFACE-LINE-SYMBOL=");
-            for (int i = 0; i < LargeurDeLEntete() + Convert.ToInt32(Finterface.Search("INTERFACE-MARGIN=")) * 2 + 2 + logo.Length; i++)
+            string symbol = lineSymbol;
+            for (int i = 0; i < largeurDeLEntete + margin * 2 + 2 + logo.Length; i++)
             {
                 op += symbol;
             }
-            if (op.Length > LargeurDeLEntete())
+            if (op.Length > largeurDeLEntete)
             {
-                op = op.Remove(LargeurDeLEntete() + Convert.ToInt32(Finterface.Search("INTERFACE-MARGIN=")) * 2 + 2 + logo.Length);
+                op = op.Remove(largeurDeLEntete + margin * 2 + 2 + logo.Length);
             }
             return op;
         }
         public string Marge(bool sens)
         {
             string op = "";
-            string symbol = Finterface.Search("INTERFACE-LINE-SYMBOL=");
-            int wide = Convert.ToInt32(Finterface.Search("INTERFACE-MARGIN="));
+            string symbol = lineSymbol;
+            int wide = margin;
             for (int i = 0; i < wide; i++)
             {
                 op += " ";
@@ -96,7 +101,7 @@ namespace RKVCRYPT.Core
         //Permet d'aligner le texte à gauche
         public string AlignementGauche(string chaine)
         {
-            int total = LargeurDeLEntete();
+            int total = largeurDeLEntete;
             if (chaine.Length % 2 == 1)
             {
                 chaine += " ";
@@ -111,9 +116,9 @@ namespace RKVCRYPT.Core
             return chaine;
         }
         //Permet d'aligner le texte à gauche avec le Copyright à droite.
-        public string AlignementGaucheDroite(string chaine1, string chaine2)
+        /*public string AlignementGaucheDroite(string chaine1, string chaine2)
         {
-            if (Finterface.Search("INTERFACE-ROSKOVA-CYRILIC=").EndsWith("true"))
+            if (Finterface.Search("ROSKOVA-CYRILIC=").EndsWith("true"))
             {
 
                 chaine2 = "Роскова © 2022";
@@ -135,11 +140,11 @@ namespace RKVCRYPT.Core
             }
             chaine1 = chaine1 + marge + chaine2;
             return chaine1;
-        }
+        }*/
         //Permet d'aligner le texte à droite
         public string AlignementDroite(string chaine)
         {
-            int total = LargeurDeLEntete();
+            int total = largeurDeLEntete;
             if (chaine.Length % 2 == 1)
             {
                 chaine += " ";
@@ -156,7 +161,7 @@ namespace RKVCRYPT.Core
         //Permet d'aligner le texte au centre
         public string AlignementCentrage(string chaine)
         {
-            int total = LargeurDeLEntete();
+            int total = largeurDeLEntete;
             if (chaine.Length % 2 == 1)
             {
                 chaine += " ";
@@ -170,30 +175,29 @@ namespace RKVCRYPT.Core
             chaine = marge + chaine + marge;
             return chaine;
         }
-        private string EnTete(string chaine, int number, string[] marge)
+        public string EnTete(List<string> chaine, string alignement, int number)
         {
+
+            string[] marge = { line, Marge(false), Marge(true) };
             string[] logo = { "           ", "@....@     ", "(------)   ", "(> ___ <)  ", "^^ ~~~ ^^  ", "RKV-CRYPT  ", "           ", "           ", "           " };
-            string op = "";
-            string alignement = Finterface.Search($"{chaine}-ALIGNEMENT=");
-            Console.WriteLine(marge[0]);
-            for (int i = 1; i < number + 1; i++)
+            string op = marge[0] + "\n";
+            for (int i = 0; i < number; i++)
             {
 
                 if (alignement.Length == number)
                 {
-                    switch (alignement[i - 1])
+                    switch (alignement[i])
                     {
-                        case 'D': op += marge[1] + logo[i - 1] + AlignementDroite(CodeAssembler(Finterface.Search($"{chaine}{i}="))) + marge[2] + "\n"; break;
-                        case 'C': op += marge[1] + logo[i - 1] + AlignementCentrage(CodeAssembler(Finterface.Search($"{chaine}{i}="))) + marge[2] + "\n"; break;
-                        case 'G': op += marge[1] + logo[i - 1] + AlignementGauche(CodeAssembler(Finterface.Search($"{chaine}{i}="))) + marge[2] + "\n"; break;
-                        case 'S': op += marge[1] + logo[i - 1] + AlignementGaucheDroite(CodeAssembler(Finterface.Search($"{chaine}{i}=")), "") + marge[2] + "\n"; break;
+                        case 'D': op += marge[1] + logo[i] + AlignementDroite(chaine[i]) + marge[2] + "\n"; break;
+                        case 'C': op += marge[1] + logo[i] + AlignementCentrage(chaine[i]) + marge[2] + "\n"; break;
+                        case 'G': op += marge[1] + logo[i] + AlignementGauche(chaine[i]) + marge[2] + "\n"; break;
+                            //case 'S': op += marge[1] + logo[i - 1] + AlignementGaucheDroite(chaine[i]) + marge[2] + "\n"; break;
                     }
-                    CodeAssembler(Finterface.Search($"{chaine}{i}="));
                 }
             }
 
             return op + marge[0];
-        }
+        }/*
         private string CodeAssembler(string chaine)
         {
             string[] tp = chaine.Split("|");
@@ -206,12 +210,12 @@ namespace RKVCRYPT.Core
                 chaine = tp[0] + tp[1] + tp[2];
             }
             return chaine;
-        }
+        }*/
         //Calcule la largeur de l'interface en fonction du contenu du fichier de interface.txt
-        private int LargeurDeLEntete()
+        /*private int LargeurDeLEntete()
         {
             int MaxLine = 0;
-            List<string> x = Finterface.Print();
+            List<string> x = Finterface.Print;
             for (int i = 0; i < x.Count; i++)
             {
                 if (x[i].StartsWith("#"))
@@ -223,8 +227,8 @@ namespace RKVCRYPT.Core
                     MaxLine = Finterface.Search(x[i]).Length;
                 }
             }
-            MaxLine += Convert.ToInt32(Finterface.Search("INTERFACE-OVER-LENGTH="));
+            MaxLine += Convert.ToInt32(Finterface.Search("LARGEUR-FIXE-INTERFACE="));
             return MaxLine;
-        }
+        }*/
     }
 }

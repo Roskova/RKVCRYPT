@@ -1,0 +1,32 @@
+﻿##########################################################################
+# Fichier de configuration d'interface RKVCRYPT Version du modèle: 1.0.1 #
+# Celui-ci permet de configurer une interface ainsi que les messages     #
+# ainsi que les messages associé à celui-ci                              #
+##########################################################################
+NAME=Configuration
+AUTHOR=Roskova
+VERSION=1.0.1
+ASSOCIATE-MODULE=Core
+DESCRIPTION=Contient tout messages interne au logiciel
+##########################################################################
+# Configuration de l'entête de l'interface                               #
+# Vous trouverez ci-dessous les configuration de l'entête                #
+##########################################################################
+LIGNE-DEBUT-ENTETE=21
+LIGNE-FIN-ENTETE=27
+ALIGNEMENT=CCGGCCD
+##########################################################################
+# METTRE LE CONTENU DE L'ENTÊTE SOUS CETTE LIGNE                         #
+##########################################################################
+
+RKV-CRYPT
+Cryptage Modulaire par Roskova
+Développer par Roskova
+
+CONFIGURATION DE L'INTERFACE
+2022-08-11
+##########################################################################
+# SECTION DE CONFIGURATION DES MESSAGES                                  #
+# Mettre ci-dessous les messages de l'interface Sous le format suivant:  #
+# HEADER=[MESSAGE]                                                       #
+##########################################################################
