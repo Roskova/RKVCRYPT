@@ -1,6 +1,6 @@
-﻿##########################################################################
+##########################################################################
 # FICHIER DE CONFIGURATION GLOBALE DES INTERFACES RKV-CRYPT  Version 2.0 #
-# Ce fichier permet de configurer les différents interfaces de RKV-CRYPT #
+# Ce fichier permet de configurer les diff�rents interfaces de RKV-CRYPT #
 ##########################################################################
 ENABLE=true
 ##########################################################################
@@ -13,11 +13,3 @@ LINE-SYMBOL=#
 LARGEUR-FIXE-INTERFACE=30
 SIGNATURE-IN-CYRILIC=true
 MARGIN=3
-##########################################################################
-# Veuillez lister tout les fichiers d'interface que vous voulez charger  #
-# Ceux-ci doivent être écrite sous le format suivant:                    #
-# interface1,interface2,interface3,interface4                            #
-#                                                                        #
-##########################################################################
-INTERFACE-ACTIVE=Accueil,Configuration
-DOSSIER-INTERFACE=interface/

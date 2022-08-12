@@ -30,8 +30,8 @@
   "libraries": {
     "RKVCRYPT.Core.GestionFichier/1.0.0": {
       "type": "project",
-      "path": "../RKVCRYPT.Core.Fichier/RKVCRYPT.Core.GestionFichier.csproj",
-      "msbuildProject": "../RKVCRYPT.Core.Fichier/RKVCRYPT.Core.GestionFichier.csproj"
+      "path": "../RKVCRYPT.Core.GestionFichier/RKVCRYPT.Core.GestionFichier.csproj",
+      "msbuildProject": "../RKVCRYPT.Core.GestionFichier/RKVCRYPT.Core.GestionFichier.csproj"
     },
     "RKVCRYPT.Core.Interface/1.0.0": {
       "type": "project",
@@ -81,8 +81,8 @@
             "C:\\Users\\Roskova\\source\\repos\\RKVCRYPT.Core\\RKVCRYPT.Core.Display\\RKVCRYPT.Core.Interface.csproj": {
               "projectPath": "C:\\Users\\Roskova\\source\\repos\\RKVCRYPT.Core\\RKVCRYPT.Core.Display\\RKVCRYPT.Core.Interface.csproj"
             },
-            "C:\\Users\\Roskova\\source\\repos\\RKVCRYPT.Core\\RKVCRYPT.Core.Fichier\\RKVCRYPT.Core.GestionFichier.csproj": {
-              "projectPath": "C:\\Users\\Roskova\\source\\repos\\RKVCRYPT.Core\\RKVCRYPT.Core.Fichier\\RKVCRYPT.Core.GestionFichier.csproj"
+            "C:\\Users\\Roskova\\source\\repos\\RKVCRYPT.Core\\RKVCRYPT.Core.GestionFichier\\RKVCRYPT.Core.GestionFichier.csproj": {
+              "projectPath": "C:\\Users\\Roskova\\source\\repos\\RKVCRYPT.Core\\RKVCRYPT.Core.GestionFichier\\RKVCRYPT.Core.GestionFichier.csproj"
             }
           }
         }

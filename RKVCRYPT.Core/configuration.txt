@@ -1,0 +1,33 @@
+##########################################################################
+# FICHIER DE CONFIGURATION DE RKV-CRYPT PAR ROSKOVA 2.0.0.1   2022-08-12 #
+# Ce fichier permet de configurer les différents composants de RKV-CRYPT #
+#  This file is used to configure the different components of RKV-CRYPT  #
+#       Vous ne devez en aucun moment modifier le nom des headers        #
+#                                                                        #
+##########################################################################
+#     SECTION 1 - INFORMATION GLOBALE CONCERNANT LE LOGICIEL             #
+##########################################################################
+
+# Activer la journalisation de la console.
+JOURNALISATION=false
+REINITIALISER=false
+
+# Nom du dossier où stocker la journalisation
+DOSSIER-JOURNALISATION=journalisation/
+
+# Veuillez lister tout les fichiers d'interface que vous voulez charger  
+# Ceux-ci doivent être écrite sous le format suivant: item1,item2,item3               
+INTERFACE-ACTIF=Accueil,Configuration
+
+# Nom du dossier pour les fichiers d'interface
+DOSSIER-INTERFACE=interface/
+
+##########################################################################
+#     SECTION 2 - MESSAGE SYSTÈME ET MESSAGE D'AFFICHAGE GÉNÉRAL         #
+##########################################################################
+JOURNALISATION-FILE-HEADER=Journalisation-
+DISPLAY-INTERFACE-NAME=Nom: 
+DISPLAY-INTERFACE-AUTHOR=Auteur du fichier: 
+DISPLAY-INTERFACE-VERSION=Version: 
+DISPLAY-INTERFACE-MODULE-PARENT=Module parent: 
+DISPLAY-INTERFACE-DESCRIPTION=Description: 

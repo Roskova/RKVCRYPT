@@ -3,7 +3,7 @@ namespace RKVCRYPT.Core.Interface
 {
     public class Display_Menu : Display_Interface
     {
-        public Display_Menu(string nom, Fichier Lf, Fichier LInterface) : base(nom, Lf, LInterface)
+        public Display_Menu(string nom, Fichier Config, Fichier Lf, Fichier LInterface) : base(nom, Config, Lf, LInterface)
         {
 
         }

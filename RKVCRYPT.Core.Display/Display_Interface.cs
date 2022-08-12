@@ -10,14 +10,16 @@ namespace RKVCRYPT.Core.Interface
         private string alignement;
         private string description;
         private string entete;
+        private Fichier config;
         private List<string> Lentete; //Contient l'entête extraite du contenu du fichier
         private List<string> Lcontenu; //Contient le contenu du fichier
-        public Display_Interface(string nom, Fichier Lf, Fichier LInterface) : base(nom, LInterface)
+        public Display_Interface(string nom, Fichier config, Fichier Lf, Fichier LInterface) : base(nom, LInterface)
         {
             this.nom = nom;
             this.Lf = Lf;
             this.nbLigneEntete = 0;
-            this.description = "Nom de l'interface: " + Lf.Search("NAME=") + "\n" + "Auteur du fichier: " + Lf.Search("AUTHOR=") + "\n" + "Version: " + Lf.Search("VERSION=") + "\n" + "Module parent: " + Lf.Search("ASSOCIATE-MODULE=") + "\n" + "Description: " + Lf.Search("DESCRIPTION=") + "\n";
+            this.config = config;
+            this.description = config.Search("DISPLAY-INTERFACE-NAME=") + Lf.Search("NAME=") + "\n" + config.Search("DISPLAY-INTERFACE-AUTHOR=") + Lf.Search("AUTHOR=") + "\n" + config.Search("DISPLAY-INTERFACE-VERSION=") + Lf.Search("VERSION=") + "\n" + config.Search("DISPLAY-INTERFACE-MODULE-PARENT=") + Lf.Search("ASSOCIATE-MODULE=") + "\n" + config.Search("DISPLAY-INTERFACE-DESCRIPTION=") + Lf.Search("DESCRIPTION=") + "\n";
             this.alignement = Lf.Search("ALIGNEMENT=");
             this.Lentete = new List<string>();
             this.Lcontenu = new List<string>();

@@ -1,0 +1,26 @@
+##########################################################################
+# Fichier de configuration d'interface RKVCRYPT                          #
+# Celui-ci permet de configurer une interface ainsi que les messages     #
+# ainsi que les messages associé à celui-ci                              #
+##########################################################################
+NAME= 
+AUTHOR= 
+VERSION= 
+ASSOCIATE-MODULE= 
+DESCRIPTION= 
+##########################################################################
+# Configuration de l'entête de l'interface                               #
+# Vous trouverez ci-dessous les configuration de l'entête                #
+##########################################################################
+LIGNE-DEBUT-ENTETE=21
+LIGNE-FIN-ENTETE=21
+ALIGNEMENT=C
+##########################################################################
+# METTRE LE CONTENU DE L'ENTÊTE SOUS CETTE LIGNE                         #
+##########################################################################
+Modèle par défault d'interface
+##########################################################################
+# SECTION DE CONFIGURATION DES MESSAGES                                  #
+# Mettre ci-dessous les messages de l'interface Sous le format suivant:  #
+# HEADER=[MESSAGE]                                                       #
+##########################################################################
