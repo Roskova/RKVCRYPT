@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cSMLUWJVjH4C7necPjW1K9lsVddHrA6UbzQvSxOVILJYUAJL9ReBDCDi9TbS/SA4Y/9FQDrSJ+CCCbqS+KoNxw==",
+  "dgSpecHash": "P4mEas2nXewQx9KnjHJzBIYES7+bXmjUmqZAcdJIhqvwu1NHTGgOOPBs1U3cUx/uyk4bg8U6zyXYHiplS5vT+Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Roskova\\source\\repos\\RKVCRYPT.Core\\RKVCRYPT.Core.GestionFichier\\RKVCRYPT.Core.GestionFichier.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Roskova\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\6.0.8\\microsoft.netcore.app.runtime.win-x86.6.0.8.nupkg.sha512",
-    "C:\\Users\\Roskova\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\6.0.8\\microsoft.windowsdesktop.app.runtime.win-x86.6.0.8.nupkg.sha512",
-    "C:\\Users\\Roskova\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\6.0.8\\microsoft.aspnetcore.app.runtime.win-x86.6.0.8.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

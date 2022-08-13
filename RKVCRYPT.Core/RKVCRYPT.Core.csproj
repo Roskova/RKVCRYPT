@@ -5,7 +5,12 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <ApplicationIcon>Logo1.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Logo1.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\RKVCRYPT.Core.Display\RKVCRYPT.Core.Interface.csproj" />

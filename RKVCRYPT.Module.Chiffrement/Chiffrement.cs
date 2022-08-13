@@ -4,6 +4,7 @@
     {
         private string tempString;
         private List<Ensemble> tableDeChiffrement;
+        private string key;
         public Chiffrement(string table)
         {
             tempString = "";
@@ -90,6 +91,97 @@
                 }
             }
             return tempString;
+        }
+        public string AddKey(string key, string message)
+        {
+            string key1 = "";
+            int count = 4;
+            this.key = key;
+            key1 = Chiffrage(key);
+            message = Chiffrage(message);
+            while(key1.Length <= message.Length)
+            {
+                    key1 += $"{key1}";
+            }
+            key1 = key1.Insert(message.Length, "~");
+            string[] key2 = key1.Split('~');
+            key1 = key2[0];
+            for (int i = count - 1; i < key1.Length; i += count)
+            {
+                key1 = key1.Insert(i, " ");
+            }
+            for (int i = count - 1; i < message.Length; i += count)
+            {
+                message = message.Insert(i, " ");
+            }
+            string[] m = message.Split(' ');
+            string[] k = key1.Split(' ');
+            for (int i = 0; i < m.Length; i++)
+            {
+                if(m.Length == k.Length)
+                {
+                    count = Convert.ToInt32(m[i]);
+                    key1 = Convert.ToString($"{count + Convert.ToInt32(k[i])}");
+                    if (key1.Length == 2)
+                    {
+                        key1 = $"0{key1}";
+                    }
+                    m[i] = key1;
+                }
+            }
+            message = "";
+            foreach(string s in m)
+            {
+                message += s;
+            }
+            return message;
+        }
+        public string RemoveKey(string key, string message)
+        {
+            string key1 = "";
+            int count = 4;
+            this.key = key;
+            key1 = Chiffrage(key);
+            while (key1.Length <= message.Length)
+            {
+                key1 += $"{key1}";
+            }
+            key1 = key1.Insert(message.Length, "~");
+            string[] key2 = key1.Split('~');
+            key1 = key2[0];
+            for (int i = count - 1; i < key1.Length; i += count)
+            {
+                key1 = key1.Insert(i, " ");
+            }
+            for (int i = count - 1; i < message.Length; i += count)
+            {
+                message = message.Insert(i, " ");
+            }
+            string[] m = message.Split(' ');
+            string[] k = key1.Split(' ');
+            for (int i = 0; i < m.Length; i++)
+            {
+                if (m.Length == k.Length)
+                {
+                    count = Convert.ToInt32(m[i]);
+                    key1 = Convert.ToString($"{count - Convert.ToInt32(k[i])}");
+                    if(key1.Length == 1)
+                    {
+                        key1 = $"00{key1}";
+                    }
+                    else if (key1.Length == 2)
+                    {
+                        key1 = $"0{key1}";
+                    }
+                    m[i] = key1;
+                }
+            }
+            message = "";
+            foreach (string s in m)
+            {
+                message += s;
+            }
+            return Dechiffrage(message);
         }
     }
 }
