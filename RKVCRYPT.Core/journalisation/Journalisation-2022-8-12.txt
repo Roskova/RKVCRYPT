@@ -1,9 +1,0 @@
-﻿[2022-08-12 19:47:21] ;     ;    @....@    RKV-CRYPT   ;    (------)      Cryptage Modulaire par Roskova      ;    (> ___ <)  Développer par Roskova   ;    ^^ ~~~ ^^      ;    RKV-CRYPT 2022-08-11  ; 
-[2022-08-12 19:47:21] Nom: Accueil; Auteur du fichier: Roskova; Version: 1.0.1; Module parent: Core; Description: Fichier de configuration par défault de l'interface d'accueil; 
-[2022-08-12 19:47:21] ;     ;    @....@    RKV-CRYPT   ;    (------)      Cryptage Modulaire par Roskova      ;    (> ___ <)  Développer par Roskova   ;    ^^ ~~~ ^^      ;    RKV-CRYPT      CONFIGURATION DE L'INTERFACE;2022-08-11  ; 
-[2022-08-12 19:47:21] Nom: Configuration; Auteur du fichier: Roskova; Version: 1.0.1; Module parent: Core; Description: Contient tout messages interne au logiciel; 
-[2022-08-12 19:47:21] Entrez le message:
-Message entrée: Roskova est une banane poilu comme roxy
-[2022-08-12 19:47:32] 044015019011015022001063005019020063021014005063002001014001014005063016015009012021063003015013013005063018015024025
-[2022-08-12 19:47:32] Roskova est une banane poilu comme roxy
-[2022-08-12 19:47:32] Entrez le message:

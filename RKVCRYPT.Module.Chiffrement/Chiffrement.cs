@@ -17,7 +17,6 @@
             {
                 j++;
                 tableDeChiffrement.Add(new Ensemble(c, j));
-                
             }
         }
         public string Chiffrage(string message)
@@ -77,7 +76,6 @@
             {
                 message = message.Insert(i," ");
             }
-            Console.WriteLine(message);
 
             string[] c = message.Split(' ');
             foreach (string s in c)

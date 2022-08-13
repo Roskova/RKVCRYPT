@@ -4,8 +4,10 @@
     {
         private string date;
         private bool active;
+        private string tempString;
         public Journalisation(string path, string journalisationFileHeader, bool active, bool reset) : base(path, $"{journalisationFileHeader}{DateTime.Today.Year}-{DateTime.Today.Month}-{DateTime.Today.Day}.txt")
         {
+            this.tempString = "";
             this.active = active;
             this.date = $"{DateTime.Today}";
             if (reset)
@@ -32,6 +34,15 @@
                 message = message.Replace("\n", "; ").Replace("#", "").Replace("       ", "");
                 Log(message);
             }
+        }
+        public string ReadLine()
+        {
+            tempString = Console.ReadLine();
+            if (active)
+            {
+                Log(tempString);
+            }
+            return tempString;
         }
         public string Date
         {
