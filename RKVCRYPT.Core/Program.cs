@@ -14,7 +14,7 @@ namespace RKVCRYPT.Core
             Fichier Fconfig = new Fichier(x, "configuration.txt");
             //  Fichier Finterface = new Fichier(x, "interface.txt");
             Journalisation log = new Journalisation(x + Fconfig.Search("DOSSIER-JOURNALISATION="), Fconfig.Search("JOURNALISATION-FILE-HEADER="), Convert.ToBoolean(Fconfig.Search("JOURNALISATION=")), Convert.ToBoolean(Fconfig.Search("REINITIALISER=")));
-            Chiffrement chiffrement = new Chiffrement("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ,.';:()«»+-/#*[]=<>?!$¢@%\\²³~{}_±|ôÔÉÈÊÇÙÛÀÂÎéèêçûùàâî`^¸€‚ƒ„…†‡ˆ‰Š‹Œ Ž  ‘’“”•–—˜™š›œžŸ¡£¤¥¦§¨©ª®¯°´µ¶·¸¹º¼½¾¿ÅÆÐ×ØÞå÷\"#АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя");
+            Chiffrement chiffrement = new Chiffrement("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ,.';:()«»+-/#*[]=<>?!$¢@%\\²³~{}_±|ôÔÉÈÊÇÙÛÀÂÎéèêçûùàâî`^¸€‚ƒ„…†‡ˆ‰Š‹Œ Ž  ‘’“”•–—˜™š›œžŸ¡£¤¥¦§¨©ª®¯°´µ¶·¸¹º¼½¾¿ÅÆÐ×ØÞå÷\"#");
             //  Séparation et activation des différentes interface active dans le fichier de configuration
             //  string Linterface = Fconfig.Search("MODULE-ACTIF=");
             //  string[] LinterfaceSplit = Linterface.Split(',');

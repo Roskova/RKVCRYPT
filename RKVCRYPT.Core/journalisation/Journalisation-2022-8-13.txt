@@ -1,19 +1,48 @@
-﻿[2022-08-13 02:54:49] Message: 
-[2022-08-13 02:54:49] Clé de chiffrement:
-[2022-08-13 02:54:49] 1: Chiffrage; 2:Déchiffrage; 3:Encryptage avec la clé; 4:Décryptage avec la clé; 5: Nouvelle clé; 6: Nouveau message
-[2022-08-13 02:54:50] 5
-[2022-08-13 02:54:55] Message: 
-[2022-08-13 02:54:55] Clé de chiffrement:AdamDumoulin
-[2022-08-13 02:54:55] 1: Chiffrage; 2:Déchiffrage; 3:Encryptage avec la clé; 4:Décryptage avec la clé; 5: Nouvelle clé; 6: Nouveau message
-[2022-08-13 02:54:58] 6
-[2022-08-13 02:55:07] Message: https://www.netflix.com/watch/80045650?trackId=155573560
-[2022-08-13 02:55:07] Clé de chiffrement:AdamDumoulin
-[2022-08-13 02:55:07] 1: Chiffrage; 2:Déchiffrage; 3:Encryptage avec la clé; 4:Décryptage avec la clé; 5: Nouvelle clé; 6: Nouveau message
-[2022-08-13 02:55:07] 3
-[2022-08-13 02:55:08] Message: 03502402102904908908809004403503207904190210190420300370800240270220890505021016038096074068074069067073085057084033048022016026056016089068085062059073086079072068
-[2022-08-13 02:55:08] Clé de chiffrement:AdamDumoulin
-[2022-08-13 02:55:08] 1: Chiffrage; 2:Déchiffrage; 3:Encryptage avec la clé; 4:Décryptage avec la clé; 5: Nouvelle clé; 6: Nouveau message
-[2022-08-13 02:55:10] 4
-[2022-08-13 02:55:10] Message: https://www.nÉ¿жwКªГ“ю“;
-[2022-08-13 02:55:10] Clé de chiffrement:AdamDumoulin
-[2022-08-13 02:55:10] 1: Chiffrage; 2:Déchiffrage; 3:Encryptage avec la clé; 4:Décryptage avec la clé; 5: Nouvelle clé; 6: Nouveau message
+﻿[2022-08-13 15:33:25] Message: 
+[2022-08-13 15:33:25] Clé de chiffrement:
+[2022-08-13 15:33:25] 1: Chiffrage; 2:Déchiffrage; 3:Encryptage avec la clé; 4:Décryptage avec la clé; 5: Nouvelle clé; 6: Nouveau message
+[2022-08-13 15:33:29] 5
+[2022-08-13 15:33:31] Message: 
+[2022-08-13 15:33:31] Clé de chiffrement:La bible
+[2022-08-13 15:33:31] 1: Chiffrage; 2:Déchiffrage; 3:Encryptage avec la clé; 4:Décryptage avec la clé; 5: Nouvelle clé; 6: Nouveau message
+[2022-08-13 15:33:33] 6
+[2022-08-13 15:33:36] Message: Yo les potos
+[2022-08-13 15:33:36] Clé de chiffrement:La bible
+[2022-08-13 15:33:36] 1: Chiffrage; 2:Déchiffrage; 3:Encryptage avec la clé; 4:Décryptage avec la clé; 5: Nouvelle clé; 6: Nouveau message
+[2022-08-13 15:33:37] 3
+[2022-08-13 15:33:37] Message: 089016126014014021075021053021078021
+[2022-08-13 15:33:37] Clé de chiffrement:La bible
+[2022-08-13 15:33:37] 1: Chiffrage; 2:Déchiffrage; 3:Encryptage avec la clé; 4:Décryptage avec la clé; 5: Nouvelle clé; 6: Nouveau message
+[2022-08-13 15:33:38] 4
+[2022-08-13 15:33:38] Message: Yo les potos
+[2022-08-13 15:33:38] Clé de chiffrement:La bible
+[2022-08-13 15:33:38] 1: Chiffrage; 2:Déchiffrage; 3:Encryptage avec la clé; 4:Décryptage avec la clé; 5: Nouvelle clé; 6: Nouveau message
+[2022-08-13 15:33:41] 3
+[2022-08-13 15:33:41] Message: 089016126014014021075021053021078021
+[2022-08-13 15:33:41] Clé de chiffrement:La bible
+[2022-08-13 15:33:41] 1: Chiffrage; 2:Déchiffrage; 3:Encryptage avec la clé; 4:Décryptage avec la clé; 5: Nouvelle clé; 6: Nouveau message
+[2022-08-13 15:33:44] 4
+[2022-08-13 15:33:44] Message: Yo les potos
+[2022-08-13 15:33:44] Clé de chiffrement:La bible
+[2022-08-13 15:33:44] 1: Chiffrage; 2:Déchiffrage; 3:Encryptage avec la clé; 4:Décryptage avec la clé; 5: Nouvelle clé; 6: Nouveau message
+[2022-08-13 15:33:49] 3
+[2022-08-13 15:33:49] Message: 089016126014014021075021053021078021
+[2022-08-13 15:33:49] Clé de chiffrement:La bible
+[2022-08-13 15:33:49] 1: Chiffrage; 2:Déchiffrage; 3:Encryptage avec la clé; 4:Décryptage avec la clé; 5: Nouvelle clé; 6: Nouveau message
+[2022-08-13 15:33:50] 5
+[2022-08-13 15:34:01] Message: 089016126014014021075021053021078021
+[2022-08-13 15:34:01] Clé de chiffrement:la bible
+[2022-08-13 15:34:01] 1: Chiffrage; 2:Déchiffrage; 3:Encryptage avec la clé; 4:Décryptage avec la clé; 5: Nouvelle clé; 6: Nouveau message
+[2022-08-13 15:34:05] 4
+[2022-08-13 15:34:05] Message: *o les pOtos
+[2022-08-13 15:34:05] Clé de chiffrement:la bible
+[2022-08-13 15:34:05] 1: Chiffrage; 2:Déchiffrage; 3:Encryptage avec la clé; 4:Décryptage avec la clé; 5: Nouvelle clé; 6: Nouveau message
+[2022-08-13 15:34:24] 3
+[2022-08-13 15:34:24] Message: 089016126014014021075021053021078021
+[2022-08-13 15:34:24] Clé de chiffrement:la bible
+[2022-08-13 15:34:24] 1: Chiffrage; 2:Déchiffrage; 3:Encryptage avec la clé; 4:Décryptage avec la clé; 5: Nouvelle clé; 6: Nouveau message
+[2022-08-13 15:34:26] 5
+[2022-08-13 15:34:30] Message: 089016126014014021075021053021078021
+[2022-08-13 15:34:30] Clé de chiffrement:Roskova
+[2022-08-13 15:34:30] 1: Chiffrage; 2:Déchiffrage; 3:Encryptage avec la clé; 4:Décryptage avec la clé; 5: Nouvelle clé; 6: Nouveau message
+[2022-08-13 15:34:32] 4

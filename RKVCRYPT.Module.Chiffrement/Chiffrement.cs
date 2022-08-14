@@ -94,10 +94,9 @@
         }
         public string AddKey(string key, string message)
         {
-            string key1 = "";
+            string key1 = key;
             int count = 4;
-            this.key = key;
-            key1 = Chiffrage(key);
+            key1 = Chiffrage(key1);
             message = Chiffrage(message);
             while(key1.Length <= message.Length)
             {
@@ -114,6 +113,10 @@
             {
                 message = message.Insert(i, " ");
             }
+
+            Console.WriteLine("Clé:    " + key1);
+            Console.WriteLine("Message:" + message);
+            Console.ReadLine();
             string[] m = message.Split(' ');
             string[] k = key1.Split(' ');
             for (int i = 0; i < m.Length; i++)
@@ -164,16 +167,16 @@
                 if (m.Length == k.Length)
                 {
                     count = Convert.ToInt32(m[i]);
-                    key1 = Convert.ToString($"{count - Convert.ToInt32(k[i])}");
-                    if(key1.Length == 1)
+                    key = Convert.ToString($"{count - Convert.ToInt32(k[i])}");
+                    if(key.Length == 1)
                     {
-                        key1 = $"00{key1}";
+                        key = $"00{key}";
                     }
                     else if (key1.Length == 2)
                     {
-                        key1 = $"0{key1}";
+                        key = $"0{key}";
                     }
-                    m[i] = key1;
+                    m[i] = key;
                 }
             }
             message = "";
@@ -181,6 +184,9 @@
             {
                 message += s;
             }
+            Console.WriteLine("Clé:    " + key1);
+            Console.WriteLine("Message:" + message);
+            Console.ReadLine();
             return Dechiffrage(message);
         }
     }
