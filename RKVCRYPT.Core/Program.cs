@@ -7,14 +7,14 @@ namespace RKVCRYPT.Core
         static void Main(string[] args)
         {
             // string x = "../../.././"
-            string x = "../../.././";
+            string x = "./";
             //  Section de chargements des fichiers et interfaces par défault
             //  List<Display_Interface> DI = new List<Display_Interface>();
             //  List<Fichier> LF = new List<Fichier>();
-            Fichier Fconfig = new Fichier(x, "configuration.txt");
             //  Fichier Finterface = new Fichier(x, "interface.txt");
+            Fichier Fconfig = new Fichier(x, "configuration.txt");
             Journalisation log = new Journalisation(x + Fconfig.Search("DOSSIER-JOURNALISATION="), Fconfig.Search("JOURNALISATION-FILE-HEADER="), Convert.ToBoolean(Fconfig.Search("JOURNALISATION=")), Convert.ToBoolean(Fconfig.Search("REINITIALISER=")));
-            Chiffrement chiffrement = new Chiffrement("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ,.';:()«»+-/#*[]=<>?!$¢@%\\²³~{}_±|ôÔÉÈÊÇÙÛÀÂÎéèêçûùàâî`^¸€‚ƒ„…†‡ˆ‰Š‹Œ Ž  ‘’“”•–—˜™š›œžŸ¡£¤¥¦§¨©ª®¯°´µ¶·¸¹º¼½¾¿ÅÆÐ×ØÞå÷\"#");
+            Chiffrement chiffrement = new Chiffrement("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ,.';:()«»+-/#*[]=<>?!$¢@%\\²³~{}_±|ôÔÉÈÊÇÙÛÀÂÎéèêçûùàâî`^¸€‚ƒ„…†‡ˆ‰Š‹Œ Ž  ‘’“”•–—˜™š›œžŸ¡£¤¥¦§¨©ª®¯°´µ¶·¸¹º¼½¾¿ÅÆÐ×ØÞå÷\"#&");
             //  Séparation et activation des différentes interface active dans le fichier de configuration
             //  string Linterface = Fconfig.Search("MODULE-ACTIF=");
             //  string[] LinterfaceSplit = Linterface.Split(',');
@@ -34,7 +34,7 @@ namespace RKVCRYPT.Core
                 Console.Clear();
                 log.WriteLine("Message: " + message);
                 log.WriteLine("Clé de chiffrement:" + key);
-                log.WriteLine("1: Chiffrage\n2:Déchiffrage\n3:Encryptage avec la clé\n4:Décryptage avec la clé\n5: Nouvelle clé\n6: Nouveau message");
+                log.WriteLine("1: Chiffrage\n2: Déchiffrage\n3: Encryptage avec la clé\n4: Décryptage avec la clé\n5: Nouvelle clé\n6: Nouveau message");
                 string select = log.ReadLine();
                 switch (select)
                 {
