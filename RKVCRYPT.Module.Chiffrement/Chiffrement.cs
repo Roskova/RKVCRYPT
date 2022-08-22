@@ -94,42 +94,39 @@
         }
         public string AddKey(string key, string message)
         {
-            string key1 = key;
             int count = 4;
-            key1 = Chiffrage(key1);
+            key = Chiffrage(key);
             message = Chiffrage(message);
-            while(key1.Length <= message.Length)
+            while(key.Length != message.Length)
             {
-                    key1 += $"{key1}";
+                if (key.Length > message.Length)
+                {
+                   key = key.Remove(message.Length);
+                }
+                else if (key.Length < message.Length)
+                {
+                    key += key;
+                }
             }
-            key1 = key1.Insert(message.Length, "~");
-            string[] key2 = key1.Split('~');
-            key1 = key2[0];
-            for (int i = count - 1; i < key1.Length; i += count)
+            for (int i = count - 1; i < key.Length; i += count)
             {
-                key1 = key1.Insert(i, " ");
+                key = key.Insert(i, " ");
             }
             for (int i = count - 1; i < message.Length; i += count)
             {
                 message = message.Insert(i, " ");
             }
-
-            Console.WriteLine("Clé:    " + key1);
-            Console.WriteLine("Message:" + message);
-            Console.ReadLine();
             string[] m = message.Split(' ');
-            string[] k = key1.Split(' ');
+            string[] k = key.Split(' ');
             for (int i = 0; i < m.Length; i++)
             {
-                if(m.Length == k.Length)
+                m[i] = Convert.ToString(Convert.ToInt32(m[i]) + Convert.ToInt32(k[i]));
+                if (m[i].Length == 1)
                 {
-                    count = Convert.ToInt32(m[i]);
-                    key1 = Convert.ToString($"{count + Convert.ToInt32(k[i])}");
-                    if (key1.Length == 2)
-                    {
-                        key1 = $"0{key1}";
-                    }
-                    m[i] = key1;
+                    m[i] = "00"+m[i];
+                }else if (m[i].Length == 2)
+                {
+                    m[i] = "0" + m[i];
                 }
             }
             message = "";
@@ -141,42 +138,39 @@
         }
         public string RemoveKey(string key, string message)
         {
-            string key1 = "";
             int count = 4;
-            this.key = key;
-            key1 = Chiffrage(key);
-            while (key1.Length <= message.Length)
+            key = Chiffrage(key);
+            while (key.Length != message.Length)
             {
-                key1 += $"{key1}";
+                if (key.Length > message.Length)
+                {
+                    key = key.Remove(message.Length);
+                }
+                else if (key.Length < message.Length)
+                {
+                    key += key;
+                }
             }
-            key1 = key1.Insert(message.Length, "~");
-            string[] key2 = key1.Split('~');
-            key1 = key2[0];
-            for (int i = count - 1; i < key1.Length; i += count)
+            for (int i = count - 1; i < key.Length; i += count)
             {
-                key1 = key1.Insert(i, " ");
+                key = key.Insert(i, " ");
             }
             for (int i = count - 1; i < message.Length; i += count)
             {
                 message = message.Insert(i, " ");
             }
             string[] m = message.Split(' ');
-            string[] k = key1.Split(' ');
+            string[] k = key.Split(' ');
             for (int i = 0; i < m.Length; i++)
             {
-                if (m.Length == k.Length)
+                m[i] = Convert.ToString(Convert.ToInt32(m[i]) - Convert.ToInt32(k[i]));
+                if (m[i].Length == 1)
                 {
-                    count = Convert.ToInt32(m[i]);
-                    key = Convert.ToString($"{count - Convert.ToInt32(k[i])}");
-                    if(key.Length == 1)
-                    {
-                        key = $"00{key}";
-                    }
-                    else if (key1.Length == 2)
-                    {
-                        key = $"0{key}";
-                    }
-                    m[i] = key;
+                    m[i] = "00" + m[i];
+                }
+                else if (m[i].Length == 2)
+                {
+                    m[i] = "0" + m[i];
                 }
             }
             message = "";
@@ -184,9 +178,6 @@
             {
                 message += s;
             }
-            Console.WriteLine("Clé:    " + key1);
-            Console.WriteLine("Message:" + message);
-            Console.ReadLine();
             return Dechiffrage(message);
         }
     }
