@@ -4,17 +4,16 @@
     {
         internal int ProtocoleHexadecimal(int input)
         {
-
             return input;
         }
         internal string ProtocoleLectureBinarosk(string message, bool type)
         {
-            if (type)
+            if (type) //Lecture
             {
                 message = message.Replace("AAAAAA", "060").Replace("AAAAA", "050").Replace("AAAA", "040").Replace("AAA", "030").Replace("AA", "020").Replace("A", "010");
                 message = message.Replace("BBBBBB", "061").Replace("BBBBB", "051").Replace("BBBB", "041").Replace("BBB", "031").Replace("BB", "021").Replace("B", "011");
             }
-            else
+            else //Retrait et amplification
             {
                 int count = 4;
                 for (int i = count - 1; i < message.Length; i += count)
@@ -42,17 +41,16 @@
                     }
                     message += m[i];
                 }
-
             }
             return message;
         }
         internal string ProtocoleBinarosk(string message, bool type)
         {
-            if (type)
+            if (type) //Conversion en binarosk
             {
-                return message.Replace("1", "BAAA").Replace("2","ABAA").Replace("3","AABA").Replace("4","AAAB").Replace("5", "BBAA").Replace("6", "AABB").Replace("7", "BABB").Replace("8", "BBAB").Replace("9","BAAB").Replace("0","ABBA");
+                return message.Replace("1", "BAAA").Replace("2", "ABAA").Replace("3", "AABA").Replace("4", "AAAB").Replace("5", "BBAA").Replace("6", "AABB").Replace("7", "BABB").Replace("8", "BBAB").Replace("9", "BAAB").Replace("0", "ABBA");
             }
-            else
+            else //Conversion en décimal
             {
                 int count = 5;
                 for (int i = count - 1; i < message.Length; i += count)
@@ -78,11 +76,8 @@
                     }
                     message += m[i];
                 }
-                return message.Replace("A", "0").Replace("B", "1");
-
+                return message;
             }
         }
-
     }
-    
 }

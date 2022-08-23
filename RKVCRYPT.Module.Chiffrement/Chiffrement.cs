@@ -4,8 +4,10 @@
     {
         private string tempString;
         private List<Ensemble> tableDeChiffrement;
+        private string BinaroskLastString;
         public Chiffrement(string table)
         {
+            BinaroskLastString = "";
             tempString = "";
             tableDeChiffrement = new List<Ensemble>();
             GenerationTableDeChiffrement(table);
@@ -110,9 +112,6 @@
             for (int i = count - 1; i < key.Length; i += count)
             {
                 key = key.Insert(i, " ");
-            }
-            for (int i = count - 1; i < message.Length; i += count)
-            {
                 message = message.Insert(i, " ");
             }
             string[] m = message.Split(' ');
@@ -154,15 +153,16 @@
             for (int i = count - 1; i < key.Length; i += count)
             {
                 key = key.Insert(i, " ");
-            }
-            for (int i = count - 1; i < message.Length; i += count)
-            {
                 message = message.Insert(i, " ");
             }
             string[] m = message.Split(' ');
             string[] k = key.Split(' ');
             for (int i = 0; i < m.Length; i++)
             {
+                if(Convert.ToInt32(m[i]) <= Convert.ToInt32(k[i]))
+                {
+                    m[i] += 100;
+                }
                 m[i] = Convert.ToString(Convert.ToInt32(m[i]) - Convert.ToInt32(k[i]));
                 if (m[i].Length == 1)
                 {
@@ -180,23 +180,41 @@
             }
             return Dechiffrage(message);
         }
+        //Permet de vérifier si la chaine est composé uniquement de chiffres
+        private bool IntValidation(string message)
+        {
+            foreach(char c in message)
+            {
+                if(!int.TryParse(Convert.ToString(c), out int x))
+                {
+                    BinaroskLastString += "f";
+                    return false;
+                }
+            }
+            BinaroskLastString += "v";
+            return true;
+        }
         public string Binarosk(string message, bool type, bool user)
         {
             if (type)
-            {   message = Chiffrage(message);
+            {
+                if (!user || !IntValidation(message))
+                {
+                    message = Chiffrage(message);
+                }
                 message = ProtocoleBinarosk(message, type);
                 message = ProtocoleLectureBinarosk(message, type);
-                if (user)
-                    message = Dechiffrage(message);
             }
             else
             {
-                message = Chiffrage(message);
                 message = ProtocoleLectureBinarosk(message, type);
                 message = ProtocoleBinarosk(message, type);
-                if (user)
+                if (BinaroskLastString.EndsWith('f'))
+                {;
                     message = Dechiffrage(message);
-            }
+                }
+                BinaroskLastString = BinaroskLastString.Remove(BinaroskLastString.Length - 1);
+            } 
             return message;
         }
     }
