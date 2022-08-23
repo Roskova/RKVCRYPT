@@ -7,4 +7,4 @@
 La structure de RKV-CRYPT est en cours de refonte complète. La version 1.x n'étant pas fondée en POO, cela rend l'ajout de fonctionnalité particulièrement compliqué et empêchait la compréhension et le travail d'équipe efficace (même si je travaille seul sur le projet actuellement). Une version fonctionnelle de RKV-CRYPT 2.x devrait être disponible d'ici août 2022.
 
 Vidéo PoC de RKVCRYPT 2.0
-![Video](https://raw.githubusercontent.com/Roskova/RKVCRYPT/main/video-1661221236.mp4)
+[Video](https://youtu.be/Qn9V6ffrxUA)
