@@ -7,7 +7,7 @@ namespace RKVCRYPT.Core
         static void Main(string[] args)
         {
             // string x = "../../.././"
-            string x = "../../.././";
+            string x = "./";
             //  Section de chargements des fichiers et interfaces par défault
             //  List<Display_Interface> DI = new List<Display_Interface>();
             //  List<Fichier> LF = new List<Fichier>();
