@@ -10,7 +10,7 @@
 
 # Activer la journalisation de la console.
 JOURNALISATION=true
-REINITIALISER=true
+REINITIALISER=false
 
 # Nom du dossier où stocker la journalisation
 DOSSIER-JOURNALISATION=journalisation/

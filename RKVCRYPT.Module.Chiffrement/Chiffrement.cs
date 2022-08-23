@@ -1,17 +1,16 @@
 ﻿namespace RKVCRYPT.Module.Chiffrement
 {
-    public class Chiffrement
+    public partial class Chiffrement
     {
         private string tempString;
         private List<Ensemble> tableDeChiffrement;
-        private string key;
         public Chiffrement(string table)
         {
             tempString = "";
             tableDeChiffrement = new List<Ensemble>();
             GenerationTableDeChiffrement(table);
         }
-        public void GenerationTableDeChiffrement(string table)
+        internal void GenerationTableDeChiffrement(string table)
         {
             int j = 0;
             foreach (char c in table)
@@ -23,11 +22,11 @@
         public string Chiffrage(string message)
         {
             tempString = "";
-            foreach(char c in message)
+            foreach (char c in message)
             {
                 foreach (Ensemble e in tableDeChiffrement)
                 {
-                    if(c == e.CharI)
+                    if (c == e.CharI)
                     {
                         if (tableDeChiffrement.Count < 100)
                         {
@@ -65,7 +64,7 @@
         {
             int count;
             tempString = "";
-            if(tableDeChiffrement.Count < 100)
+            if (tableDeChiffrement.Count < 100)
             {
                 count = 3;
             }
@@ -73,9 +72,9 @@
             {
                 count = 4;
             }
-            for (int i = count-1; i < message.Length; i+=count)
+            for (int i = count - 1; i < message.Length; i += count)
             {
-                message = message.Insert(i," ");
+                message = message.Insert(i, " ");
             }
 
             string[] c = message.Split(' ');
@@ -95,13 +94,13 @@
         public string AddKey(string key, string message)
         {
             int count = 4;
-            key = Chiffrage(key);
+            key = Binarosk(key,true,false);
             message = Chiffrage(message);
-            while(key.Length != message.Length)
+            while (key.Length != message.Length)
             {
                 if (key.Length > message.Length)
                 {
-                   key = key.Remove(message.Length);
+                    key = key.Remove(message.Length);
                 }
                 else if (key.Length < message.Length)
                 {
@@ -123,14 +122,15 @@
                 m[i] = Convert.ToString(Convert.ToInt32(m[i]) + Convert.ToInt32(k[i]));
                 if (m[i].Length == 1)
                 {
-                    m[i] = "00"+m[i];
-                }else if (m[i].Length == 2)
+                    m[i] = "00" + m[i];
+                }
+                else if (m[i].Length == 2)
                 {
                     m[i] = "0" + m[i];
                 }
             }
             message = "";
-            foreach(string s in m)
+            foreach (string s in m)
             {
                 message += s;
             }
@@ -139,7 +139,7 @@
         public string RemoveKey(string key, string message)
         {
             int count = 4;
-            key = Chiffrage(key);
+            key = Binarosk(key, true, false);
             while (key.Length != message.Length)
             {
                 if (key.Length > message.Length)
@@ -179,6 +179,25 @@
                 message += s;
             }
             return Dechiffrage(message);
+        }
+        public string Binarosk(string message, bool type, bool user)
+        {
+            if (type)
+            {   message = Chiffrage(message);
+                message = ProtocoleBinarosk(message, type);
+                message = ProtocoleLectureBinarosk(message, type);
+                if (user)
+                    message = Dechiffrage(message);
+            }
+            else
+            {
+                message = Chiffrage(message);
+                message = ProtocoleLectureBinarosk(message, type);
+                message = ProtocoleBinarosk(message, type);
+                if (user)
+                    message = Dechiffrage(message);
+            }
+            return message;
         }
     }
 }

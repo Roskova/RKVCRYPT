@@ -3,6 +3,12 @@ C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core\bin\Debug\net6.0\RKVCR
 C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core\bin\Debug\net6.0\RKVCRYPT.Core.runtimeconfig.json
 C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core\bin\Debug\net6.0\RKVCRYPT.Core.dll
 C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core\bin\Debug\net6.0\RKVCRYPT.Core.pdb
+C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core\bin\Debug\net6.0\RKVCRYPT.Core.GestionFichier.dll
+C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core\bin\Debug\net6.0\RKVCRYPT.Core.Interface.dll
+C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core\bin\Debug\net6.0\RKVCRYPT.Module.Chiffrement.dll
+C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core\bin\Debug\net6.0\RKVCRYPT.Core.Interface.pdb
+C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core\bin\Debug\net6.0\RKVCRYPT.Core.GestionFichier.pdb
+C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core\bin\Debug\net6.0\RKVCRYPT.Module.Chiffrement.pdb
 C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core\obj\Debug\net6.0\RKVCRYPT.Core.csproj.AssemblyReference.cache
 C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core\obj\Debug\net6.0\RKVCRYPT.Core.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core\obj\Debug\net6.0\RKVCRYPT.Core.AssemblyInfoInputs.cache
@@ -14,9 +20,3 @@ C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core\obj\Debug\net6.0\refin
 C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core\obj\Debug\net6.0\RKVCRYPT.Core.pdb
 C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core\obj\Debug\net6.0\RKVCRYPT.Core.genruntimeconfig.cache
 C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core\obj\Debug\net6.0\ref\RKVCRYPT.Core.dll
-C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core\bin\Debug\net6.0\RKVCRYPT.Core.Interface.dll
-C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core\bin\Debug\net6.0\RKVCRYPT.Core.Interface.pdb
-C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core\bin\Debug\net6.0\RKVCRYPT.Core.GestionFichier.dll
-C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core\bin\Debug\net6.0\RKVCRYPT.Core.GestionFichier.pdb
-C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core\bin\Debug\net6.0\RKVCRYPT.Module.Chiffrement.dll
-C:\Users\Roskova\source\repos\RKVCRYPT.Core\RKVCRYPT.Core\bin\Debug\net6.0\RKVCRYPT.Module.Chiffrement.pdb
