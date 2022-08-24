@@ -10,11 +10,11 @@
             this.tempString = "";
             this.active = active;
             this.date = $"{DateTime.Today}";
-            if (reset)
+            if (active)
             {
                 base.Create(reset);
             }
-            if (active)
+            if (reset)
             {
                 base.Delete();
             }

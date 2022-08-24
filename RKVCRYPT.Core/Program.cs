@@ -7,8 +7,8 @@ namespace RKVCRYPT.Core
         static void Main(string[] args)
         {
             // string x = "../../.././"
-            string x = "../../.././";
-            string table = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ,.';:()«»+-/#*[]=<>?!$¢@%²³~{}_±|ôÔÉÈÊÇÙÛÀÂÎéèêçûùàâî`^¸€‚ƒ„…†‡ˆ‰Š‹Œ Ž‘’“”•–—˜™š›œžŸ¡£¤¥¦§¨©ª®¯°´µ¶·¸¹º¼½¾¿ÅÆÐ×ØÞå÷#&\"\\\t\n";
+            string x = "./";
+            string table = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ,.';:()«»+-/#*[]=<>?!$¢@%²³~{}_±|ôÔÉÈÊÇÙÛÀÂÎéèêçûùàâî`^¸€‚ƒ„…†‡ˆ‰Š‹Œ Ž‘’“”•–—˜™š›œžŸ¡£¤¥¦§¨©ª®¯°´µ¶·¸¹º¼½¾¿ÅÆÐ×ØÞå÷#&\"\\\t\n";
             //  Section de chargements des fichiers et interfaces par défault
             //  List<Display_Interface> DI = new List<Display_Interface>();
             //  List<Fichier> LF = new List<Fichier>();
@@ -29,14 +29,14 @@ namespace RKVCRYPT.Core
             */
             //Retirer cette partie avant la mise en place de la version Release
             log.Log(Console.Title = $"RKVCRYPT PoC {DateTime.Now}");
-            log.Write("\t\t      Il s'agit d'une version Proof of Concept de RKVCRYPT\n\t\t      Pour toutes informations: https://roskova.github.io/RKVCRYPT/");
+            log.Log("\t\t      Il s'agit d'une version Proof of Concept de RKVCRYPT\n\t\t      Pour toutes informations: https://roskova.github.io/RKVCRYPT/");
             string message = "";
             string key = "";
             while (true)
             {
                 Console.Clear();
-                log.WriteLine("Message: \"" + message+"\"");
-                log.WriteLine("Clé de chiffrement: \"" + key+"\"");
+                log.WriteLine("Message: \"" + message + "\"");
+                log.WriteLine("Clé de chiffrement: \"" + key + "\"");
                 Console.WriteLine("1: Chiffrage\n2: Déchiffrage\n3: Encryptage avec la clé\n4: Décryptage avec la clé\n5: Application du Binarosk\n6: Retrait du Binarosk\n7: Nouvelle clé\n8: Nouveau message");
                 string select = log.ReadLine();
                 switch (select)
@@ -50,9 +50,9 @@ namespace RKVCRYPT.Core
                     case "7": log.WriteLine("Entrez la nouvelle clé de chiffrement"); key = log.ReadLine(); break;
                     case "8": log.WriteLine("Veuillez entrez le nouveau message"); message = log.ReadLine(); break;
                 }
-                if(key.Length == 0)
+                if (key.Length == 0)
                     key = " ";
-                if(message.Length == 0)
+                if (message.Length == 0)
                     message = " ";
             }
 

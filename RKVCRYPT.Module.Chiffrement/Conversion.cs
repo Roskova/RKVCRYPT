@@ -15,15 +15,18 @@
             }
             else //Retrait et amplification
             {
+                double l = 0;
                 int count = 4;
-                for (int i = count - 1; i < message.Length; i += count)
+                for (double i = count - 1; i < message.Length; i += count)
                 {
-                    message = message.Insert(i, " ");
+                    message = message.Insert(Convert.ToInt32(i), " ");
+                    Console.WriteLine(Math.Round(i * 100 / message.Length, 5) + "/100");
                 }
                 string[] m = message.Split(' ');
                 message = "";
                 for (int i = 0; i < m.Length; i++)
                 {
+                    Console.WriteLine(i + "/" + m.Length);
                     switch (m[i])
                     {
                         case "010": m[i] = "A"; break;
@@ -53,14 +56,17 @@
             else //Conversion en décimal
             {
                 int count = 5;
-                for (int i = count - 1; i < message.Length; i += count)
+                double l = 0;
+                for (double i = count - 1; i < message.Length; i += count)
                 {
-                    message = message.Insert(i, " ");
+                    message = message.Insert(Convert.ToInt32(i), " ");
+                    Console.WriteLine(Math.Round(i * 100 / message.Length, 5) + "/100");
                 }
                 string[] m = message.Split(' ');
                 message = "";
                 for (int i = 0; i < m.Length; i++)
                 {
+                    Console.WriteLine(i + "/" + m.Length);
                     switch (m[i])
                     {
                         case "BAAA": m[i] = "1"; break;

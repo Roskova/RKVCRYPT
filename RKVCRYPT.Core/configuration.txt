@@ -9,7 +9,7 @@
 ##########################################################################
 
 # Activer la journalisation de la console.
-JOURNALISATION=true
+JOURNALISATION=false
 REINITIALISER=false
 
 # Nom du dossier où stocker la journalisation
