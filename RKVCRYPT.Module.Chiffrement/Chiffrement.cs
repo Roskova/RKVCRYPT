@@ -1,4 +1,6 @@
-﻿namespace RKVCRYPT.Module.Chiffrement
+﻿using System.Text.RegularExpressions;
+
+namespace RKVCRYPT.Module.Chiffrement
 {
     public partial class Chiffrement
     {
@@ -11,15 +13,6 @@
             tempString = "";
             tableDeChiffrement = new List<Ensemble>();
             GenerationTableDeChiffrement(table);
-        }
-        internal void GenerationTableDeChiffrement(string table)
-        {
-            int j = 0;
-            foreach (char c in table)
-            {
-                j++;
-                tableDeChiffrement.Add(new Ensemble(c, j));
-            }
         }
         public string Chiffrage(string message)
         {
@@ -36,30 +29,35 @@
                         {
                             if (e.IntJ < 10)
                             {
-                                tempString += $"0{e.IntJ}";
+                                tempString += $" 0{e.IntJ}";
                             }
                             else if (e.IntJ >= 10 && e.IntJ < 100)
                             {
-                                tempString += $"{e.IntJ}";
+                                tempString += $" {e.IntJ}";
                             }
                         }
                         else if (tableDeChiffrement.Count >= 100)
                         {
                             if (e.IntJ < 10)
                             {
-                                tempString += $"00{e.IntJ}";
+                                tempString += $" 00{e.IntJ}";
                             }
                             else if (e.IntJ >= 10 && e.IntJ < 100)
                             {
-                                tempString += $"0{e.IntJ}";
+                                tempString += $" 0{e.IntJ}";
                             }
                             else if (e.IntJ >= 100 && e.IntJ < 1000)
                             {
-                                tempString += $"{e.IntJ}";
+                                tempString += $" {e.IntJ}";
                             }
                         }
                         break;
                     }
+                    
+                }
+                if (tempString.Length == 4)
+                {
+                    tempString = tempString.Replace(" ", "");
                 }
                 Console.WriteLine(l + "/" + message.Length);
             }
@@ -67,38 +65,42 @@
         }
         public string Dechiffrage(string message)
         {
-            int count;
-            double l = 0;
-            tempString = "";
-            if (tableDeChiffrement.Count < 100)
+            string pattern = @"^[0-9]*$";
+            Regex regex = new Regex(pattern);
+            if (regex.IsMatch(message))
             {
-                count = 3;
+                int count;
+                tempString = "";
+                if (tableDeChiffrement.Count < 100)
+                {
+                    count = 3;
+                }
+                else
+                {
+                    count = 4;
+                }
+                message = Space(message, count);
+                int l = 0;
+                string[] c = message.Split(' ');
+                foreach (string s in c)
+                {
+                    l++;
+                    foreach (Ensemble e in tableDeChiffrement)
+                    {
+                        if (Convert.ToInt32(s) == e.IntJ)
+                        {
+                            tempString += $"{e.CharI}";
+                            break;
+                        }
+                    }
+                    Console.WriteLine(l + "/" + c.Length);
+                }
+                return tempString;
             }
             else
             {
-                count = 4;
+                return message;
             }
-            for (double i = count - 1; i < message.Length; i += count)
-            {
-                message = message.Insert(Convert.ToInt32(i), " ");
-                Console.WriteLine(Math.Round(i * 100 / message.Length, 5) + "/100");
-            }
-            l = 0;
-            string[] c = message.Split(' ');
-            foreach (string s in c)
-            {
-                l++;
-                foreach (Ensemble e in tableDeChiffrement)
-                {
-                    if (Convert.ToInt32(s) == e.IntJ)
-                    {
-                        tempString += $"{e.CharI}";
-                        break;
-                    }
-                }
-                Console.WriteLine(l + "/" + c.Length);
-            }
-            return tempString;
         }
         public string AddKey(string key, string message)
         {
@@ -123,7 +125,11 @@
                 l++;
                 key = key.Insert(i, " ");
                 message = message.Insert(i, " ");
-                Console.WriteLine(Math.Round(l * 1000 / message.Length, 2) + "/1000");
+                if (i * 1000 / message.Length != l)
+                {
+                    l = i * 1000 / message.Length;
+                    Console.WriteLine(l + "/1000");
+                }
             }
             l = 0;
             string[] m = message.Split(' ');
@@ -151,68 +157,57 @@
         }
         public string RemoveKey(string key, string message)
         {
-            double l = 0;
-            int count = 4;
-            key = Binarosk(key, true, false);
-            while (key.Length != message.Length)
+            string patternTrue = @"^[0-9]*$";
+            Regex t = new Regex(patternTrue);
+            if (t.IsMatch(message) && message.Length != 0)
             {
-                if (key.Length > message.Length)
+                double l = 0;
+                int count = 4;
+                key = Binarosk(key, true, false);
+                while (key.Length != message.Length)
                 {
-                    key = key.Remove(message.Length);
+                    if (key.Length > message.Length)
+                    {
+                        key = key.Remove(message.Length);
+                    }
+                    else if (key.Length < message.Length)
+                    {
+                        key += key;
+                    }
+                    Console.WriteLine(key.Length + "/" + message.Length);
                 }
-                else if (key.Length < message.Length)
+                message = Space(message, count);
+                key = Space(key, count);
+                string[] m = message.Split(' ');
+                string[] k = key.Split(' ');
+                l = 0;
+                for (int i = 0; i < m.Length; i++)
                 {
-                    key += key;
+                    l++;
+                    Console.WriteLine(l + "/" + m.Length);
+                    if (Convert.ToInt32(m[i]) <= Convert.ToInt32(k[i]))
+                    {
+                        m[i] += 125;
+                    }
+
+                    m[i] = Convert.ToString(Convert.ToInt32(m[i]) - Convert.ToInt32(k[i]));
+                    if (m[i].Length == 1)
+                    {
+                        m[i] = "00" + m[i];
+                    }
+                    else if (m[i].Length == 2)
+                    {
+                        m[i] = "0" + m[i];
+                    }
                 }
-                Console.WriteLine(key.Length + "/" + message.Length);
+                message = "";
+                foreach (string s in m)
+                {
+                    message += s;
+                }
+                message = Dechiffrage(message);
             }
-            for (double i = count - 1; i < key.Length; i += count)
-            {
-                Console.WriteLine(Math.Round(i * 1000 / message.Length, 2) + "/1000");
-                key = key.Insert(Convert.ToInt32(i), " ");
-                message = message.Insert(Convert.ToInt32(i), " ");
-            }
-            string[] m = message.Split(' ');
-            string[] k = key.Split(' ');
-            l = 0;
-            for (int i = 0; i < m.Length; i++)
-            {
-                l++;
-                Console.WriteLine(l + "/" + m.Length);
-                if (Convert.ToInt32(m[i]) <= Convert.ToInt32(k[i]))
-                {
-                    m[i] += 125;
-                }
-                m[i] = Convert.ToString(Convert.ToInt32(m[i]) - Convert.ToInt32(k[i]));
-                if (m[i].Length == 1)
-                {
-                    m[i] = "00" + m[i];
-                }
-                else if (m[i].Length == 2)
-                {
-                    m[i] = "0" + m[i];
-                }
-            }
-            message = "";
-            foreach (string s in m)
-            {
-                message += s;
-            }
-            return Dechiffrage(message);
-        }
-        //Permet de vérifier si la chaine est composé uniquement de chiffres
-        private bool IntValidation(string message)
-        {
-            foreach (char c in message)
-            {
-                if (!int.TryParse(Convert.ToString(c), out int x))
-                {
-                    BinaroskLastString += "f";
-                    return false;
-                }
-            }
-            BinaroskLastString += "v";
-            return true;
+            return message;
         }
         public string Binarosk(string message, bool type, bool user)
         {
@@ -227,16 +222,20 @@
             }
             else
             {
-                message = ProtocoleLectureBinarosk(message, type);
-                message = ProtocoleBinarosk(message, type);
-                if (BinaroskLastString.EndsWith('f'))
+                string pattern = @"^[0-6]*$";
+                Regex rg = new Regex(pattern);
+                if (rg.IsMatch(message))
                 {
-                    ;
-                    message = Dechiffrage(message);
-                }
-                if (user)
-                {
-                    BinaroskLastString = BinaroskLastString.Remove(BinaroskLastString.Length - 1);
+                    message = ProtocoleLectureBinarosk(message, type);
+                    message = ProtocoleBinarosk(message, type);
+                    if (BinaroskLastString.EndsWith('f'))
+                    {
+                        message = Dechiffrage(message);
+                    }
+                    if (user)
+                    {
+                        BinaroskLastString = BinaroskLastString.Remove(BinaroskLastString.Length - 1);
+                    }
                 }
             }
             return message;

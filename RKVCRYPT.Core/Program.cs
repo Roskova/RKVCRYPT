@@ -7,7 +7,7 @@ namespace RKVCRYPT.Core
         static void Main(string[] args)
         {
             // string x = "../../.././"
-            string x = "./";
+            string x = "../../.././";
             string table = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ,.';:()«»+-/#*[]=<>?!$¢@%²³~{}_±|ôÔÉÈÊÇÙÛÀÂÎéèêçûùàâî`^¸€‚ƒ„…†‡ˆ‰Š‹Œ Ž‘’“”•–—˜™š›œžŸ¡£¤¥¦§¨©ª®¯°´µ¶·¸¹º¼½¾¿ÅÆÐ×ØÞå÷#&\"\\\t\n";
             //  Section de chargements des fichiers et interfaces par défault
             //  List<Display_Interface> DI = new List<Display_Interface>();

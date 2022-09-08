@@ -24,3 +24,4 @@ Modèle par défault d'interface
 # Mettre ci-dessous les messages de l'interface Sous le format suivant:  #
 # HEADER=[MESSAGE]                                                       #
 ##########################################################################
+Cet ouvrage s’adresse aux élèves des écoles d’ingénieurs, aux élèves d’IUT, de DUT, de BTS, aux auditeurs des organismes de formation continue et aux autodidactes qui souhaitent se doter de bases pratiques et théoriques en algorithmique. Le niveau de maîtrise attendu correspond à la seconde année de licence.
