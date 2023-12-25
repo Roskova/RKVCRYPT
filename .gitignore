@@ -12,6 +12,7 @@
 OLD_RKVCRYPT/
 CNAME
 .DS_Store
+.gitignore
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
