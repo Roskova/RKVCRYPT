@@ -1,5 +1,0 @@
-﻿Automatic generated Crypted files by RKVCRYPT | Fichier crypté généré automatiquement
-Version:	[AutoGen]		UUID: [AutoGen 16HexChar]		Date: [AutoGen ****-**-** **:**:**]      
-Méthode: 53(1)13(2)52		Clé utilisé: ["Roskova est une poney"],["Cégep de Jonquière"]
-Message:
-[Message crypté généré par RKVCRYPT]

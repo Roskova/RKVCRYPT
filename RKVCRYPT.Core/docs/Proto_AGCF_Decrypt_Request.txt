@@ -1,6 +1,0 @@
-﻿RKVCRYPT Formulaire de décryptage autonme (FDA)
-Information:	[Bool]		Adresse de la table: ["Fichier de table"]
-Nom: [AutoGen ou overpass]	Dossier de sortie: ["output/"]
-Méthode: 53(1)3(2)52		Clé à utilisé: ["Clé #1"],["Clé #2"]
-Message:
-[Message à décrypté]
