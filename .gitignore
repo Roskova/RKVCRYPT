@@ -10,6 +10,8 @@
 *.userosscache
 *.sln.docstates
 OLD_RKVCRYPT/
+CNAME
+.DS_Store
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
